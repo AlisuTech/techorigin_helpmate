@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* Border format */
+
+.bg-lightgray {
+  background-color: lightgray;
+}
+
+.border-red {
+  border: 2px solid red;
+}
+
+.border-green {
+  border: 1px solid green;
+}
+
+.border-black {
+  border: 1px solid black;
+}
+
+.border-magenta {
+  border: 1px solid darkmagenta;
+}
+
+.border-blue {
+  border: 1px solid blue;
+}
+
+.border-yellow {
+  border: 3px solid yellow;
+}
