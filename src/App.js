@@ -3,13 +3,13 @@ import './index.css'
 import Login from './pages/auth/login/Login';
 import Signup from './pages/auth/signup/Signup';
 import HomePage from './pages/homepage/HomePage';
-import Header from './components/header/Header';
+import NavigationBar from './components/navigationBar/NavigationBar'
 
 
 function App() {
   return (
     <Router>
-      <Header />
+      <NavigationBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<Login />} />
