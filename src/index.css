@@ -2,9 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-
+*{
+  padding: 0;
+  margin: 0;
+}
 
 /* Border format */
+
 
 .bg-lightgray {
   background-color: lightgray;

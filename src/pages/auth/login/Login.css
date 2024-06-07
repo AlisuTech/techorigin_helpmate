@@ -1,0 +1,119 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.background-div {
+    background-color: #7091e6;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.second-bac-div {
+    width: 60%;
+    height: 85vh;
+    display: flex;
+}
+
+.div-one {
+    background-color: #3d52a0;
+    width: 50%;
+    height: 85vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-one-head {
+    align-items: center;
+    font-size: 35px;
+    color: white;
+    font-weight: 600;
+}
+
+.div-one-text {
+    position: absolute;
+    bottom: 0;
+    font-size: 15px;
+}
+
+.div-two {
+    background-color: white;
+    /* background-color: #ede8f5; */
+    width: 50%;
+    position: relative;
+}
+
+.center-div {
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-txt {
+    padding-bottom: 5vh;
+    color: #3d52a0;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.icon-div {
+    text-align: start;
+    text-align: center;
+    margin-bottom: 7vh;
+}
+
+.input-div {
+    border: none;
+    border-bottom: 2px solid #3d52a0;
+    width: 100%;
+    padding: 2vh;
+    background-color: transparent;
+    margin-bottom: 10%;
+}
+
+.forget-pword {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    margin-top: -7%;
+    font-size: 12px;
+}
+
+#cBox{
+    margin-right: 3px;
+}
+
+.forgot:hover{
+    color: #ADBBDA;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.login-button {
+    background-color: #3d52a0;
+    color: white;
+    padding: 4%;
+    width: 100%;
+    border: none;
+    margin: 8vh 0 3vh 0;
+}
+
+.login-button:active{
+    padding-bottom: 3px;
+}
+
+.create-account {
+    font-size: 15px;
+    text-align: center;
+}
+
+.create-account:hover{
+    color: #ADBBDA;
+    text-decoration: underline;
+    cursor: pointer;
+}
