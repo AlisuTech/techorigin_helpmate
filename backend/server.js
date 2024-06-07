@@ -10,7 +10,10 @@ const connectDB = require('./config/dbConn')
 const mongoose = require('mongoose') 
 
 connectDB()
+
+app.use(express.json())
 app.use(cors(corsOptions))
+app.use('/users', require('./routes/userRoutes'))
 
 
 mongoose.connection.once('open', () => {
