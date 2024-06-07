@@ -20,9 +20,6 @@ const userSchema = new Schema({
     dateOfBirth: {
         type: Number
     },
-    isServiceProvider: {
-        type: Boolean
-    },
     country: {
         type: String
     },

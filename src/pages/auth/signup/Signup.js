@@ -3,19 +3,28 @@ import { useForm } from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup'
 import { DevTool } from '@hookform/devtools';
 import { userSchema } from '../../../validations/userValidation';
+import { useDispatch, useSelector } from 'react-redux';
+import { signupUser } from '../../../app/user/userSlice';
+import './Signup.css'
 
 
 function Signup () {
 
-const{register, handleSubmit, control, formState: {errors}} = useForm({
-  resolver: yupResolver(userSchema)
-});
+  const { status, error } = useSelector(state => state.user);
+  const dispatch = useDispatch();
+  const{register, handleSubmit, control, formState: {errors}} = useForm({
+    resolver: yupResolver(userSchema)
+  });
   
  const onSubmit=(data)=>{
       console.log(data)
+      dispatch(signupUser(data));
     }
   return (
     <>
+      {status === 'loading' && <p>Loading...</p>}
+      {status === 'succeeded' && <p>Sign up succeeded!</p>}
+      {status === 'failed' && <p>Error: {error}</p>}
       <div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <label htmlFor='firstName'>First Name: </label> <input type='text' id='firstName' placeholder="First Name..." {...register("firstName")}/>
