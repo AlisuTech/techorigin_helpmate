@@ -1,19 +1,20 @@
 import React from 'react'
 import './Login.css'
 import { Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
     <div>
       <Container fluid className="background-div border-red">
-        <Row className="second-bac-div border-yellow">
-          <Col className="div-one border-red col-6">
+        <Row className="second-bac-divi border-yellow w-[50%]">
+          {/* <Col className="div-one border-red" md={12} xl={6}>
             <h1 className="div-one-head">Welcome Back</h1>
-            <p className="div-one-text">
+            <p className="div-one-text position-absolute bottom-0">
               Help mate connects you to professionals
             </p>
-          </Col>
-          <Col className="div-two border-blue col-6">
+          </Col> */}
+          <Col className="div-two border-blue "  xl={12}>
               <div className="center-div">
                 <div>
                   <h1 className="login-txt">Login Your Account</h1>
@@ -39,7 +40,9 @@ const Login = () => {
                   </div>
                   <button className="login-button">LOGIN</button>
                   <br></br>
-                  <p className="create-account">Create Account</p>
+                  <div className='text-center'>
+                    <p className='text-[11px]'>Dont have an account? <Link className="create-account" to="/signup">Create Account</Link></p>
+                  </div>
                 </div>
               </div>
           </Col>

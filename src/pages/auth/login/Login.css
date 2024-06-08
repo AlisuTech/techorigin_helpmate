@@ -4,9 +4,10 @@
 }
 .background-div {
     background-color: #7091e6;
-    width: 100%;
+    /* width: 100%; */
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -19,9 +20,9 @@
 
 .div-one {
     background-color: #3d52a0;
-    width: 50%;
-    height: 85vh;
-    position: relative;
+    /* width: 50%; */
+    /* height: 85vh; */
+    /* position: relative; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,16 +36,16 @@
 }
 
 .div-one-text {
-    position: absolute;
-    bottom: 0;
+    /* position: absolute; */
+    /* bottom: 0; */
     font-size: 15px;
 }
 
 .div-two {
     background-color: white;
     /* background-color: #ede8f5; */
-    width: 50%;
-    position: relative;
+    /* width: 50%; */
+    /* position: relative; */
 }
 
 .center-div {
