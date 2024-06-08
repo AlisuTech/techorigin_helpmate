@@ -49,7 +49,7 @@ function Signup () {
       {status === 'succeeded' && <p>Sign up succeeded!</p>}
       {status === 'failed' && <p>Error: {error}</p>}
       <div>
-        <form className="border-red" onSubmit={handleSubmit(onSubmit)}>
+        <form  onSubmit={handleSubmit(onSubmit)}>
           <label htmlFor='firstName'>First Name: </label> <input type='text' id='firstName' placeholder="First Name..." {...register("firstName")}/>
           
           <p>{errors.firstName?.message}</p>
