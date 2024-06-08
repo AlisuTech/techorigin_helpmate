@@ -8,13 +8,13 @@ const Login = () => {
     <div>
       <Container fluid className="background-div border-red">
         <Row className="second-bac-divi border-yellow w-[50%]">
-          {/* <Col className="div-one border-red" md={12} xl={6}>
+          <Col className="div-one border-red" md={12} xl={6}>
             <h1 className="div-one-head">Welcome Back</h1>
             <p className="div-one-text position-absolute bottom-0">
               Help mate connects you to professionals
             </p>
-          </Col> */}
-          <Col className="div-two border-blue "  xl={12}>
+          </Col>
+          <Col className="div-two border-blue "  xl={6}>
               <div className="center-div">
                 <div>
                   <h1 className="login-txt">Login Your Account</h1>
