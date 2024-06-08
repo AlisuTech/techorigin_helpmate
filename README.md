@@ -2,11 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## npm install [file_name]
-
-Please Install the following dependencies to run this project:
-### `npm i react-scripts @reduxjs/toolkit react-redux tailwindcss react-router-dom axios react-bootstrap bootstrap @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/fontawesome-svg-core`
-
 ## Available Scripts
 
 In the project directory, you can run:
@@ -73,9 +68,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-### Backend
-
-Please Install the following dependencies to run this project:
-### `npm i express dotenv nodemon uuid mongoose-sequence mongoose jsonwebtoken date-fns crypto cors cookie-parser connect-mongo bcrypt`
