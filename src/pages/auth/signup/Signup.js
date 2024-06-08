@@ -7,11 +7,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { signupUser } from '../../../app/user/userSlice';
 import './Signup.css'
 import { getCountriesAndCities } from '../../../services/countryService';
+import { useNavigate } from 'react-router-dom';
 
 
 function Signup () {
 
   const { status, error } = useSelector(state => state.user);
+  const navigate = useNavigate()
   const dispatch = useDispatch();
   const{register, handleSubmit, watch, control, formState: {errors}} = useForm({
     resolver: yupResolver(userSchema)
@@ -39,6 +41,7 @@ function Signup () {
  const onSubmit=(data)=>{
       console.log(data)
       dispatch(signupUser(data));
+      navigate('/login')
     }
   return (
     <>
