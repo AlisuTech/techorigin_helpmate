@@ -6,3 +6,69 @@ input {
 select {
     background: transparent;
 }
+
+.bg-main {
+background-color:#7091e6 ;
+padding-top: 50px;
+height: 980px;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.bg-form{
+    
+background-color:#ede8f5;
+    margin-left: 300px;
+    width: 600px;
+    height:850px;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-radius: 1px;
+    border-color:  #ede8f5;
+    display: grid;
+    grid-template-columns: auto;
+
+    
+}
+.sign-up{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    color: #3d52a0;
+    
+
+}
+/* .sign-up-bg{
+    background-color: #6075bd ;
+    width: 600px;
+    height: 20vh;
+} */
+.create-account{
+    font-size: 20px;
+    opacity: 4;
+    text-align: center;
+    color: grey;
+    padding-bottom: 15px;
+
+}
+.place-holder{
+    width: 400px;
+    border-color: #a6adbc;
+    background-color: #eff1f5;
+}
+.submit{
+width: 100px;
+border-style: solid;
+border-radius: 7px;
+border-color:#7091e6;
+padding: 15px;
+background-color: #7091e6;
+text-align: center;
+justify-self: center;
+margin-bottom: 10px;
+}
