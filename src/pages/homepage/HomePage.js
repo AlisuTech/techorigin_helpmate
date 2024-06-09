@@ -1,9 +1,14 @@
 import React from 'react'
+import Footer from '../../components/footer/Footer'
 
 const HomePage = () => {
   return (
     <>
-        <div>HomePage</div>
+        <div className='border-green'>
+          Homepage
+          
+        </div>
+        <Footer/>
     </>
   )
 }
