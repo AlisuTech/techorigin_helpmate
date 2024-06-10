@@ -12,6 +12,7 @@ const NavigationBar = () => {
               <Link to="/">Home</Link>
               <Link >About</Link>
               <Link >Contact</Link>
+              <Link to="/dashboard">Dashboard</Link>
               <Link to="/login">Log In</Link>
               <Link to="/signup">Register</Link>
           </ul>
