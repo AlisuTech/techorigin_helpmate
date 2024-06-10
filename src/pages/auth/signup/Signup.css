@@ -10,7 +10,7 @@ select {
 .bg-main {
 background-color:#7091e6 ;
 padding-top: 50px;
-height: 980px;
+height: 1200px;
 }
 *{
     margin: 0px;
@@ -19,9 +19,9 @@ height: 980px;
 .bg-form{
     
 background-color:#ede8f5;
-    margin-left: 300px;
+    margin-left: 350px;
     width: 600px;
-    height:850px;
+    height:1150px;
     justify-content: center;
     align-items: center;
     border-style: solid;
