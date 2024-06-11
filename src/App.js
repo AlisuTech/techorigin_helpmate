@@ -5,6 +5,11 @@ import Signup from './pages/auth/signup/Signup';
 import HomePage from './pages/homepage/HomePage';
 import NavigationBar from './components/navigationBar/NavigationBar'
 import Dashboard from './pages/auth/dashboard/Dashboard';
+import Footer from './components/footer/Footer';
+import Psychological from './pages/departments/psychological/Psychological';
+import Education from './pages/departments/education/Education';
+import Medical from './pages/departments/medical/Medical';
+import Appointment from './pages/appointment/Appointment';
 
 
 function App() {
@@ -16,7 +21,12 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/medicine" element={<Medical />} />
+        <Route path="/education" element={<Education />} />
+        <Route path="/psychological" element={<Psychological />} />
+        <Route path="/appointment" element={<Appointment />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

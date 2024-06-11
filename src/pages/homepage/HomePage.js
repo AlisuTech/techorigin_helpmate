@@ -1,5 +1,4 @@
 import React from 'react'
-import Footer from '../../components/footer/Footer'
 
 const HomePage = () => {
   return (
@@ -8,7 +7,6 @@ const HomePage = () => {
           Homepage
           
         </div>
-        <Footer/>
     </>
   )
 }
