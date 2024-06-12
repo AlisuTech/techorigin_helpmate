@@ -22,7 +22,20 @@ const serviceProviderSlice = createSlice({
     error: null,
   },
   reducers: {},
-  
+  extraReducers: (builder) => {
+    builder
+      .addCase(signupServiceProvider.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(signupServiceProvider.fulfilled, (state, action) => {
+        state.status = 'succeeded';
+        state.user = action.payload;
+      })
+      .addCase(signupServiceProvider.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.payload;
+      });
+  },
 });
 
 export default serviceProviderSlice.reducer;
