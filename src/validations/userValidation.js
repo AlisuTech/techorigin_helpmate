@@ -12,7 +12,7 @@ export const userSchema = yup.object().shape({
     .email("Pls use a valid email")
     .required("Your email is required"),
   officeAddress: yup.string().required("Your office address is required"),
-  dateOfbirth: yup.date("must be a date").required("pls enter your date of birth"),
+  dateOfbirth: yup.date("must be a date"),
   Age: yup
     .number()
     .typeError("Age must be a number")

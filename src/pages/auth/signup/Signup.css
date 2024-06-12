@@ -18,10 +18,10 @@ height: 1200px;
 }
 .bg-form{
     
-background-color:#ede8f5;
+    background-color:#ede8f5;
     margin-left: 350px;
     width: 600px;
-    height:1150px;
+    /* height:1150px; */
     justify-content: center;
     align-items: center;
     border-style: solid;

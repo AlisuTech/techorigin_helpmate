@@ -1,36 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const BaseUser = require('./BaseUser');
 
 const userSchema = new Schema({
-    firstName: {
-        type: String
-    },
-    lastName: {
-        type: String
-    },
-    phoneNumber: {
-        type: String
-    },
-    email: {
-        type: String
-    },
-    officeAddress: {
-        type: String
-    },
-    dateOfBirth: {
-        type: Number
-    },
-    country: {
-        type: String
-    },
-    stateOfOrigin: {
-        type: String
-    },
-    password: {
-        type: String
-    }
-}, {
-    timestamps: true
+    appointments: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Appointment'
+    }]
 });
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = BaseUser.discriminator('User', userSchema);
