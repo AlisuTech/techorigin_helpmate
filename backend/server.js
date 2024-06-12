@@ -14,6 +14,10 @@ connectDB()
 app.use(express.json())
 app.use(cors(corsOptions))
 app.use('/users', require('./routes/userRoutes'))
+app.use('/serviceProviders', require('./routes/serviceProviderRoutes'))
+app.use('/appointments', require('./routes/appointmentRoutes'))
+
+
 
 
 mongoose.connection.once('open', () => {

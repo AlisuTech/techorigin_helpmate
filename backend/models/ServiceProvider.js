@@ -5,40 +5,40 @@ const Schema = mongoose.Schema;
 const serviceProviderSchema = new Schema({
     photo: {
         type: String,
-        required: true
+        // required: true
     },
     officeAddress: {
         type: String,
-        required: [true, "Your office address is required"]
+        // required: [true, "Your office address is required"]
     },
     price: {
         type: Number,
-        required: true
+        // required: true
     },
-    ratings: {
+    rating: {
         type: Number,
-        required: true,
-        min: 0,
-        max: 5
+        // required: true,
+        // min: 0,
+        // max: 5
     },
     yearsOfExperience: {
         type: Number,
-        required: true
+        // required: true
     },
     clientReviews: [{
         type: String
     }],
     meansOfId: {
         type: String,
-        required: true
+        // required: true
     },
     validIdFile: {
         type: String,
-        required: true
+        // required: true
     },
     certificateFile: {
         type: String,
-        required: true
+        // required: true
     }
 });
 
