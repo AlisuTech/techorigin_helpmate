@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { DevTool } from "@hookform/devtools";
+//import { DevTool } from "@hookform/devtools";
 import { userSchema } from "../../../validations/userValidation";
 import { useDispatch, useSelector } from "react-redux";
 import { signupUser } from "../../../app/user/userSlice";
@@ -21,6 +21,7 @@ function Signup() {
     formState: { errors },
   } = useForm({
     resolver: yupResolver(userSchema),
+    
   });
   const [countries, setCountries] = useState([]);
   const [cities, setCities] = useState([]);
@@ -77,7 +78,7 @@ function Signup() {
               {...register("lastName")}
             />
             <p>{errors.lastName?.message}</p>
-            <label>Phone Number: </label>{" "}
+            <label htmlFor="phoneNumber">Phone Number: </label>{" "}
             <input
               className="place-holder"
               type="Number"
@@ -85,16 +86,26 @@ function Signup() {
               {...register("phoneNumber")}
             />
             <p>{errors.phoneNumber?.message}</p>
-            <label>Email: </label>{" "}
+            <label htmlFor="Email">Email: </label>{" "}
             <input
               className="place-holder"
-              type="text"
+              type="Email"
               id="Email"
               placeholder="Email..."
               {...register("Email")}
             />
-            <p>{errors.email?.message}</p>
-            <label>Office Address: </label>{" "}
+            <p>{errors.Email?.message}</p>
+            <br></br>
+
+            <labe htmlFor="Gender">Gender: </labe>
+            <select className="place-holder"  {...register("Gender")}>{" "}
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+            <p>{errors.Gender?.message}</p>
+            <br></br>
+            
+            <label htmlFor="officeAddress">Office Address: </label>{" "}
             <input
               className="place-holder"
               type="text"
@@ -102,15 +113,26 @@ function Signup() {
               {...register("officeAddress")}
             />
             <p>{errors.officeAddress?.message}</p>
-            <label>Date Of Birth: </label>
+            <br></br>
+            <label htmlFor="dateOfBirth">Date Of Birth: </label>
             <input
               className="place-holder"
-              type="Number"
+              type="Date"
               placeholder="Date of Birth..."
               {...register("dateOfBirth")}
             />
             <p>{errors.dateOfbirth?.message}</p>
-            <label>Country : </label>{" "}
+
+            <label htmlFor="Age" className="place-holder">Age: </label>
+            <input
+              className="place-holder"
+              type="Number"
+              placeholder="Age..."
+              {...register("Age")}
+            />
+            <p>{errors.Age?.message}</p>
+            <br></br>
+            <label htmlFor="country">Country : </label>{" "}
             <select className="place-holder" {...register("country")}>
               <option value="">Select Country</option>
               {countries.map((country, index) => (
@@ -120,7 +142,7 @@ function Signup() {
               ))}
             </select>
             <br></br>
-            <label>State Of Origin: </label>{" "}
+            <label htmlFor="stateOfOrigin">State Of Origin: </label>{" "}
             <select className="place-holder" {...register("stateOfOrigin")}>
               <option value="">Select City</option>
               {filteredCities.map((city, index) => (
@@ -130,25 +152,46 @@ function Signup() {
               ))}
             </select>
             <br></br>
-            <label>Password: </label>{" "}
+            <label htmlFor="Category">Category: </label>{" "}
+            <labe>
             <input
-              className="place-holder"
-              type="text"
-              placeholder="Password..."
-              {...register("password")}
+              type="checkbox"
+              placeholder="Category..."
+              {...register("Category")}  
             />
+            User
+            </labe>
+
+            <labe>
+            <input
+              type="checkbox"
+              {...register("Category")}
+            />
+            Service Provider
+            </labe>
+
             <br></br>
-            <label>Confirm Password: </label>{" "}
+            <label className="place-holder" htmlFor="Password">Password: </label>{" "}
+            <input
+              type="password"
+              placeholder="Password..."
+              {...register("Password")}
+            />
+            <p>{errors.Password?.message}</p>
+            <br></br>
+            
+            <label htmlFor="confirmPassword">Confirm Password: </label>{" "}
             <input
               className="place-holder"
-              type="text"
+              type="password"
               placeholder="Confirm password..."
               {...register("confirmPassword")}
             />
+            <p>{errors.confirmPassword?.message}</p>
             <br></br>
             <input className="submit" type="submit" />
           </form>
-          <DevTool control={control} />
+          
         </div>
       </div>
     </>

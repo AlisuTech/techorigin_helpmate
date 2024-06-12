@@ -3,7 +3,7 @@ import * as yup from "yup";
 export const userSchema = yup.object().shape({
   firstName: yup.string().required("Your first name is required"),
   lastName: yup.string().required("Your last name is required"),
-  PhoneNumber: yup
+  phoneNumber: yup
     .string()
     .matches(/^\d{11}$/, "phone number must be 11 digits")
     .required(),
@@ -12,7 +12,7 @@ export const userSchema = yup.object().shape({
     .email("Pls use a valid email")
     .required("Your email is required"),
   officeAddress: yup.string().required("Your office address is required"),
-  dateOfbirth: yup.date("must be a date").required("pls enter your date of birth"),
+  dateOfBirth: yup.date("must be a date",).required("pls enter your date of birth"),
   Age: yup
     .number()
     .typeError("Age must be a number")
@@ -30,7 +30,11 @@ export const userSchema = yup.object().shape({
   Password: yup
     .string()
     .required("password is required")
-    .min(5, "password must be atleast 8 characters"),
+    .min(5, "password must be atleast 5 characters")
+    .matches(/[!@#$%^&*(),.?"":{}|<>]/, "password must contain atleast one symbol")
+    .matches(/[0-9]/, "password must contain one number")
+    .matches(/[A-Z]/, "password must contain atleast one uppercase letter")
+    .matches(/[a-z]/, "must contain atleast one lowercase letter"),
   confirmPassword: yup
     .string()
     .oneOf([yup.ref("password")], "password must match")

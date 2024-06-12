@@ -28,8 +28,20 @@ const userSchema = new Schema({
     },
     password: {
         type: String
-    }
-}, {
+    },
+    
+    Category:{
+            user: String,
+            ServiceProvider: String
+    },
+    accountDetails:{
+        accountName: String,
+        accountNumber: Number,
+        bankName: String
+    },
+    },
+ 
+{
     timestamps: true
 });
 

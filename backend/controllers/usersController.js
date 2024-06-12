@@ -30,9 +30,37 @@ const createNewUser = asyncHandler(async (req, res) => {
     } else {
         res.status(400).json({ message: 'Invalid user data received' })
     }
+});
+
+const fetchUser = asyncHandler(async(req, res) => {
+ const {Email}=req.query
+ const user= userSchema.find({"email":Email})
+ 
+ if (user){
+    res.status(201).json({ message: `${email} is users email`})
+ } else {
+    res.query(400).json({message:`invalid user email`})
+ }
+});
+
+const updateUser = asyncHandler(async(req,res)=>{
+    const body=req.body
+    updateModel={
+        accountName:body.accountName.accountDetail,
+        accountNumber:body.accountNumber.accountDetail,
+        bankName:body.bankName.accountDetail,
+    }
+    userSchema.create(updateModel)
 })
 
+if (user){
+    res.status(201).json({ message: `${accountDetail} updated successfully`})
+ } else {
+    res.query(400).json({message:`invalid accoun details`})
+ }
 
 module.exports = {
-    createNewUser
+    createNewUser,
+    fetchUser,
+    updateUser
 }
