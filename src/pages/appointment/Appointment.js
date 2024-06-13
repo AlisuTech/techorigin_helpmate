@@ -83,3 +83,46 @@ const Appointment = () => {
 }
 
 export default Appointment
+/**
+ * 
+ *  <div class="backgrounddiv">
+        <div class="bookappointment2">
+        <div class="bookappointment fonts">Book Appointment</div></div><br><br>
+        <div class="userdiv"><i class="fas fa-user fa-7x icon icons"></i><br>
+            <b>Hello,....</b>
+        </div>
+        
+        <div>
+            <p>Preferred Date of appointment: &nbsp;<input type="date" placeholder="Date" class="inputdesign">
+            </p>
+            <p> Service Provider: &nbsp;<input list="search" class="inputdesign" /><datalist id="search">
+                        <option>DR.Gideon</option>
+                        <option>DR. Jose</option>
+                        <option>DR. Ihuoma</option>
+                        <option>DR. victory</option>
+                        <option>DR. Joy</option>
+                        <option>DR. Humphrey</option>
+                        <option>DR. Esohe</option>
+                    </datalist></p>
+            <p> Time of appointment: &nbsp;<input type="time" placeholder="time" class="inputdesign"></p>
+        </div>
+        <br>
+        <div class="paymentdetails fonts2"> Payment Details</div>
+        <div>
+            <p><strong>Payment Method</strong>
+                <span> <input type="checkbox" id="creditcard" ;>
+                    <label for="creditcard" ;>Credit/Debit Card</label></span>
+            </p>
+            <p> Do you want a free three session trial?</p>
+            <p> <input type="radio" name="choose" id="yes">
+                <label for="yes">Yes</label>
+                    <input type="radio" name="choose" id="no">
+                    <label for="no">No</label>
+            </p>
+        </div>
+        <div>
+            <button class="buttons">Cancel</button>&nbsp;&nbsp;&nbsp;<button class="buttons">Book Now</button>
+        </div>
+    </div>
+ * 
+ */
