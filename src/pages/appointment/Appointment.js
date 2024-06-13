@@ -13,7 +13,7 @@ const Appointment = () => {
   const [departments, setDepartments] = useState([]);
   const [serviceProviders, setServiceProviders] = useState([]);
 
-  
+  //changed
   const {
     register,
     handleSubmit,
