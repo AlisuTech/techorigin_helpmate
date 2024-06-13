@@ -1,5 +1,5 @@
 
-@media(min-width:200px) and (max-width:1281px) {
+@media(min-width:200px) and (max-width:3881px) {
 
     .backgrounddiv {
         background-color: #EDE8F5;
@@ -7,7 +7,7 @@
         width: 98%;
         border: 5px solid whitesmoke;
         padding-left: 10px;
-        cursor: pointer;
+        /* cursor: pointer; */
     }
 
     .bookappointment {
@@ -99,4 +99,3 @@
         height: 30px;
     }
 }
-
