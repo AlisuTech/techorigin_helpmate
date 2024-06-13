@@ -38,6 +38,9 @@ const baseUserSchema = new Schema({
     password: {
         type: String,
         required: true
+    },
+    refreshToken: {
+        type: String
     }
 }, options);
 
