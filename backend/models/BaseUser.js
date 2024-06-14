@@ -38,7 +38,7 @@ const baseUserSchema = new Schema({
     password: {
         type: String,
         required: true
-    }
+    },
 }, options);
 
 module.exports = mongoose.model('BaseUser', baseUserSchema);

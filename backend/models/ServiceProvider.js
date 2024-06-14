@@ -9,11 +9,11 @@ const serviceProviderSchema = new Schema({
     },
     officeAddress: {
         type: String,
-        // required: [true, "Your office address is required"]
+        required: [true, "Your office address is required"]
     },
     price: {
         type: Number,
-        // required: true
+        required: true
     },
     rating: {
         type: Number,
@@ -23,14 +23,14 @@ const serviceProviderSchema = new Schema({
     },
     yearsOfExperience: {
         type: Number,
-        // required: true
+        required: true
     },
     clientReviews: [{
         type: String
     }],
     meansOfId: {
         type: String,
-        // required: true
+        required: true
     },
     validIdFile: {
         type: String,
