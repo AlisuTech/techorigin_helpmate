@@ -20,10 +20,10 @@ const loginUser = asyncHandler(async (req, res) => {
 
   const isMatch = await bcrypt.compare(password, user.password);
   if (!isMatch) {
-    return res.status(401).json({ message: 'Invalid credentials' });
+    return res.status(401).json({ message: 'Invalid Password' });
   }
 
-  const accessToken = jwt.sign({ userId: user._id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '52m' });
+  const accessToken = jwt.sign({ userId: user._id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '5m' });
   const refreshToken = jwt.sign({ userId: user._id }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: '7d' });
 
   user.refreshToken = refreshToken;
@@ -41,18 +41,16 @@ const refreshToken = asyncHandler(async (req, res) => {
     return res.status(400).json({ message: 'Refresh token is required' });
   }
 
-  try {
-    const decoded = jwt.verify(token, process.env.REFRESH_TOKEN_SECRET);
-    const user = await User.findById(decoded.userId).exec();
-    if (!user || user.refreshToken !== token) {
-      return res.status(403).json({ message: 'Invalid refresh token' });
-    }
 
-    const accessToken = jwt.sign({ userId: user._id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '15m' });
-    res.json({ accessToken });
-  } catch (error) {
+  const decoded = jwt.verify(token, process.env.REFRESH_TOKEN_SECRET);
+  const user = await User.findById(decoded.userId).exec();
+  if (!user || user.refreshToken !== token) {
     return res.status(403).json({ message: 'Invalid refresh token' });
   }
+
+  const accessToken = jwt.sign({ userId: user._id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '5m' });
+  res.json({ accessToken });
+
 });
 
 // @desc Logout user
@@ -64,8 +62,6 @@ const logoutUser = asyncHandler(async (req, res) => {
   if (!token) {
     return res.status(400).json({ message: 'Refresh token is required' });
   }
-  console.log(token)
-
 
   const user = await User.findOneAndUpdate({ refreshToken: token }, { refreshToken: null }).exec();
   if (!user) {
