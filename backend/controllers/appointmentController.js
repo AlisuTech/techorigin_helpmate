@@ -3,9 +3,7 @@ const User = require('../models/User');
 const ServiceProvider = require('../models/ServiceProvider');
 const asyncHandler = require('express-async-handler');
 
-// @desc Get all appointments
-// @route GET /appointments
-// @access Private
+
 const getAllAppointments = asyncHandler(async (req, res) => {
     const appointments = await Appointment.find().populate('serviceProvider').lean();
 

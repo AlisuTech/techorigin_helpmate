@@ -1,4 +1,6 @@
 const User = require('../models/User')
+const Appointment = require('../models/appointment');
+const ServiceProvider = require("../models/ServiceProvider");
 const asyncHandler = require('express-async-handler')
 const bcrypt = require('bcrypt')
 
@@ -45,23 +47,25 @@ const fetchUser = asyncHandler(async(req, res) => {
 
 const updateUser = asyncHandler(async(req,res)=>{
     const body=req.body
-    updateModel={
-        accountName:body.accountName.accountDetail,
-        accountNumber:body.accountNumber.accountDetail,
-        bankName:body.bankName.accountDetail,
+    const updateModel={
+        firstName, 
+        lastName,
+        address,
+        password,
+
     }
     userSchema.create(updateModel)
 })
 
-// if (user){
-//     res.status(201).json({ message: `${accountDetail} updated successfully`})
-//  } else {
-//     res.query(400).json({message:`invalid accoun details`})
-//  }
+ if (updateModel){
+    res.status(201).json({ message: `updated successfully`})
+  } else {
+    res.query(400).json({message:`invalid details`})
+ }
 
 module.exports = {
     createNewUser,
     fetchUser,
-    updateUser
+    updateUser,
             
 }
