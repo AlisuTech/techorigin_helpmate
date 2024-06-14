@@ -53,34 +53,15 @@ const updateUser = asyncHandler(async(req,res)=>{
     userSchema.create(updateModel)
 })
 
-<<<<<<< HEAD
-if (user){
-    res.status(201).json({ message: `${accountDetail} updated successfully`})
- } else {
-    res.query(400).json({message:`invalid accoun details`})
- }
+// if (user){
+//     res.status(201).json({ message: `${accountDetail} updated successfully`})
+//  } else {
+//     res.query(400).json({message:`invalid accoun details`})
+//  }
 
 module.exports = {
     createNewUser,
     fetchUser,
     updateUser
-=======
-// @desc Get all users
-// @route GET /users
-// @access Private
-const getAllUsers = asyncHandler(async (req, res) => {
-    const users = await User.find().select('-password -confirmPassword').lean();
-
-    if (!users?.length) {
-        return res.status(400).json({ message: 'No users found' });
-    }
-
-    res.json(users);
-});
-
-
-module.exports = {
-    createNewUser,
-    getAllUsers
->>>>>>> feat/isUser_or_sp
+            
 }
