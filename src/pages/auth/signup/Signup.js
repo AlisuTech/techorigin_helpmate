@@ -8,13 +8,11 @@ import { signupUser } from "../../../app/user/userSlice";
 import "./Signup.css";
 import { getCountriesAndCities } from "../../../services/countryService";
 import { useNavigate } from "react-router-dom";
-import { signupServiceProvider } from "../../../app/serviceProvider/serviceProviderSlice";
 
 function Signup() {
   const { status, error } = useSelector((state) => state.user);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [userType, setUserType] = useState("user");
   const {
     register,
     handleSubmit,
@@ -47,17 +45,11 @@ function Signup() {
     (city) => city.country === selectedCountry
   );
 
-  const onUserSubmit = (data) => {
+  const onSubmit = (data) => {
     console.log(data);
     dispatch(signupUser(data));
     navigate("/login");
   };
-  const onServiceProviderSubmit = (data) => {
-    console.log(data);
-    dispatch(signupServiceProvider(data));
-    navigate("/login");
-  };
-
   return (
     <>
       {status === "loading" && <p>Loading...</p>}
@@ -65,29 +57,7 @@ function Signup() {
       {status === "failed" && <p>Error: {error}</p>}
       <div className="bg-main">
         <div>
-          {/* User Type Selection */}
-          <div>
-            <label>
-              <input
-                type="radio"
-                value="user"
-                checked={userType === "user"}
-                onChange={() => setUserType("user")}
-              />
-              User
-            </label>
-            <label>
-              <input
-                type="radio"
-                value="serviceProvider"
-                checked={userType === "serviceProvider"}
-                onChange={() => setUserType("serviceProvider")}
-              />
-              ServiceProvider
-            </label>
-          </div>
-
-          <div className="bg-form">
+          <form className="bg-form" onSubmit={handleSubmit(onSubmit)}>
             <p className="sign-up"> Sign up</p> <br></br>
             <p className="create-account">Create your account</p>
             <label htmlFor="firstName">First Name: </label>{" "}
@@ -124,7 +94,6 @@ function Signup() {
               placeholder="Email..."
               {...register("Email")}
             />
-<<<<<<< HEAD
             <p>{errors.Email?.message}</p>
             <br></br>
 
@@ -146,10 +115,6 @@ function Signup() {
             <p>{errors.officeAddress?.message}</p>
             <br></br>
             <label htmlFor="dateOfBirth">Date Of Birth: </label>
-=======
-            <p>{errors.email?.message}</p>
-            <label>Date Of Birth: </label>
->>>>>>> feat/isUser_or_sp
             <input
               className="place-holder"
               type="Date"
@@ -224,43 +189,9 @@ function Signup() {
             />
             <p>{errors.confirmPassword?.message}</p>
             <br></br>
-<<<<<<< HEAD
             <input className="submit" type="submit" />
           </form>
           
-=======
-            {userType === "user" && (
-              <button
-                type="button"
-                className="submit"
-                onClick={handleSubmit(onUserSubmit)}
-              >
-                Submit
-              </button>
-            )}
-            {userType === "serviceProvider" && (
-              <>
-                <label>Office Address: </label>{" "}
-                <input
-                  className="place-holder"
-                  type="text"
-                  placeholder="Office address..."
-                  {...register("officeAddress")}
-                />
-                <p>{errors.officeAddress?.message}</p>
-                <button
-                  type="button"
-                  className="submit"
-                  onClick={handleSubmit(onServiceProviderSubmit)}
-                >
-                  Submit
-                </button>
-              </>
-            )}
-          </div>
-
-          <DevTool control={control} />
->>>>>>> feat/isUser_or_sp
         </div>
       </div>
     </>
