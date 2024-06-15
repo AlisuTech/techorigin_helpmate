@@ -11,9 +11,9 @@ const NavigationBar = () => {
           <ul className='my-auto space-x-4'>
               <Link to="/">Home</Link>
               <Link >About</Link>
-              <div className="dropdown border-red">
-                <button className="dropbtn border-greenx">Departments <i className="fas fa-caret-down"></i></button>
-                <div className="dropdown-content border-yellow">
+              <div className="dropdown">
+                <button className="dropbtn">Departments <i className="fas fa-caret-down"></i></button>
+                <div className="dropdown-content">
                   <Link to="/medical">Medical</Link>
                   <Link to="/education">Education</Link>
                   <Link to="/psychological">Psychological</Link>

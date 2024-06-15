@@ -50,20 +50,20 @@ const Appointment = () => {
   return (
     <>
       <div className="backgrounddiv">
-        <div class="bookappointment2">
+        <div class="bookappointment2 flex flex-column">
           <div class="bookappointment fonts">Book Appointment</div><br></br>
           <div class="userdiv"><i class="fas fa-user fa-7x icon icons"></i><br></br>
             <b>Hello,....</b>
           </div>
 
-          <div>
-            <label for="date">Preferred Date of appointment: &nbsp;</label>
+          <div className='flex flex-column'>
+            <label className=' font-bold' for="date">Preferred Date of appointment: &nbsp;</label>
             <input className='inputdesign' type="date" id="date" name="date" required {...register("date")}/>
 
-            <label for="time">Time of appointment: &nbsp;</label>
+            <label className=' font-bold' for="time">Time of appointment: &nbsp;</label>
             <input className='inputdesign' type="time" id="time" name="time" required {...register("time")}/>
 
-            <label for="department">Department:</label>
+            <label className=' font-bold' for="department">Department:</label>
             <select id="department" {...register("department")}>
                 <option value="">Select Department</option>
                 {departments.map((department, index) => (
@@ -74,7 +74,7 @@ const Appointment = () => {
                 
             </select>
 
-            <label for="service_provider">Service Provider: &nbsp;</label>
+            <label className=' font-bold' for="service_provider">Service Provider: &nbsp;</label>
             <select id="service_provider" {...register("serviceProvider")}>
                 <option value="">Select Service Provider</option>
                 {filteredServiceProviders.map((serviceProvider, index) => (
