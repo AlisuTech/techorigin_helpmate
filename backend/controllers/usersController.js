@@ -46,21 +46,17 @@ const fetchUser = asyncHandler(async(req, res) => {
 });
 
 const updateUser = asyncHandler(async(req,res)=>{
-    const body=req.body
-    const updateModel={
-        firstName, 
-        lastName,
-        address,
-        password,
 
-    }
-    userSchema.create(updateModel)
+    const { firstName, lastName, address, password } = req.body;
+    const updateModel = { firstName, lastName, address, password };
+    
+    const user = await userSchema.create(updateModel).lean().exec()
 })
 
- if (updateModel){
+ if (user){
     res.status(201).json({ message: `updated successfully`})
   } else {
-    res.query(400).json({message:`invalid details`})
+    res.status(400).json({message:`invalid details`})
  }
 
 module.exports = {
