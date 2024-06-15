@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const options = { discriminatorKey: 'role', _id: false, timestamps: true };
+const options = { discriminatorKey: 'role', timestamps: true };
 
 const baseUserSchema = new Schema({
     firstName: {
@@ -21,10 +21,10 @@ const baseUserSchema = new Schema({
         required: [true, "Your email is required"],
         unique: true,
         lowercase: true,
-        trim: true
+        trim: true 
     },
     dateOfBirth: {
-        type: Number,
+        type: Date,
         required: [true, "Your age must be 16 and above"]
     },
     country: {
