@@ -1,0 +1,88 @@
+
+.container{
+    background-color: #8697c4;
+    width: 100%;
+    height: 100vh;
+
+
+    
+}
+.SP-details{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    text-align: center;
+    column-gap: 15px;
+    justify-content:center;
+    vertical-align: middle;
+}
+.SP-image{
+   width: 150px;
+   height: 140px;
+   margin-top: 20px;
+   margin-left: 30px;
+}
+.SP-name-position{
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    justify-content: center;
+    align-self: center;
+
+}
+.relationship-expert{
+    font-size: 18px ;
+}
+.SP-body{
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    justify-content: center;
+    margin-left: 30px;
+}
+.body-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 80px;
+    margin-top: 30px;
+}
+.client-feedback-text{
+    font-size: 25px;
+    font-family:monospace;
+    text-align: center;
+    font-style: italic;
+}
+.client-feedback{
+    background-color:rgb(255,255,255); 
+    width: 350px;
+     height: 260px; 
+     color: black; 
+    border-color:rgb(250, 250, 250); 
+    border-style: solid;
+    border-radius: 10px;
+    line-height: 30px;
+    font-size: 20px;
+    position: relative;
+    border-width: 5px;
+    margin-top: 20px;
+}
+
+.client-feedback-bottom{
+display: flex;
+flex-direction: row;
+margin-top: 10px;
+text-align: center;
+column-gap: 15px;
+justify-content:left;
+vertical-align: middle;
+}
+.apostrophe_icon{
+    position: relative;
+    top:-20px;
+    left:30px;
+    background-color: #7091e6;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+}
