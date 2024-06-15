@@ -53,12 +53,6 @@ const updateUser = asyncHandler(async(req,res)=>{
     const user = await userSchema.create(updateModel).lean().exec()
 })
 
- if (user){
-    res.status(201).json({ message: `updated successfully`})
-  } else {
-    res.status(400).json({message:`invalid details`})
- }
-
 module.exports = {
     createNewUser,
     fetchUser,

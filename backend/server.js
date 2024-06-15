@@ -7,7 +7,8 @@ const corsOptions = require('./config/corsOptions')
 const PORT = process.env.PORT_NUMBER || 6333
 
 const connectDB = require('./config/dbConn')
-const mongoose = require('mongoose') 
+const mongoose = require('mongoose')
+const verifyJWT = require('./middleware/authMiddleware')
 
 connectDB()
 
@@ -15,7 +16,9 @@ app.use(express.json())
 app.use(cors(corsOptions))
 app.use('/users', require('./routes/userRoutes'))
 app.use('/serviceProviders', require('./routes/serviceProviderRoutes'))
-app.use('/appointments', require('./routes/appointmentRoutes'))
+
+app.use('/auth', require('./routes/authRoutes'));
+app.use('/appointments', verifyJWT, require('./routes/appointmentRoutes'))
 
 
 
