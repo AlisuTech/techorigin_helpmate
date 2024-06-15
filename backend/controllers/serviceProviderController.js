@@ -13,10 +13,7 @@ const createNewServiceProvider = asyncHandler(async (req, res) => {
     stateOfOrigin,
     password,
     officeAddress,
-    price,
-    meansOfId,
-    yearsOfExperience,
-    photo,
+    price
     
   } = req.body;
 
@@ -29,10 +26,8 @@ const createNewServiceProvider = asyncHandler(async (req, res) => {
     "country",
     "stateOfOrigin",
     "password",
-    "price",
-    "meansOfId",
-    "yearsOfExperience",
-    "photo",
+    "officeAddress",
+    "price"
   ];
 
   const missingField = requiredFields.find((field) => !req.body[field]);
@@ -40,31 +35,41 @@ const createNewServiceProvider = asyncHandler(async (req, res) => {
     return res.status(400).json({ message: `${missingField} is required` });
   }
 
-  const duplicate = await ServiceProvider.findOne({ email }).lean().exec();
+  try {
+    const duplicate = await ServiceProvider.findOne({ email }).lean().exec();
 
-  if (duplicate) {
-    return res.status(409).json({ message: "Duplicate email" });
-  }
+    if (duplicate) {
+      return res.status(409).json({ message: "Duplicate email" });
+    }
 
-  const hashedPwd = await bcrypt.hash(password, 10);
+    const hashedPwd = await bcrypt.hash(password, 10);
 
-  const userObject = {
-    firstName,
-    email,
-    password: hashedPwd,
-    lastName,
-    phoneNumber,
-    dateOfBirth,
-    country,
-    stateOfOrigin,
-  };
+    const userObject = {
+      firstName,
+      email,
+      password: hashedPwd,
+      lastName,
+      phoneNumber,
+      dateOfBirth,
+      country,
+      stateOfOrigin,
+      officeAddress,
+      price
+    };
 
-  const serviceProvider = await ServiceProvider.create(userObject);
+    const serviceProvider = await ServiceProvider.create(userObject);
 
-  if (serviceProvider) {
-    res.status(201).json({ message: `New user ${email} created` });
-  } else {
-    res.status(400).json({ message: "Invalid user data received" });
+    if (serviceProvider) {
+      res.status(201).json({ message: `New user ${email} created` });
+    } else {
+      res.status(400).json({ message: "Invalid user data received" });
+    }
+  } catch (error) {
+    if (error.code === 11000) { // Duplicate key error
+      res.status(409).json({ message: 'Duplicate email' });
+    } else {
+        res.status(500).json({ message: 'Something went wrong', error: error.message });
+    }
   }
 });
 

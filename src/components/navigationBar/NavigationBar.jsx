@@ -21,7 +21,7 @@ const NavigationBar = () => {
               </div>
               <Link to="/dashboard">Dashboard</Link>
               <Link to="/login">Log In</Link>
-              <Link to="/signup">Register</Link>
+              <Link to="/choice">Register</Link>
               <Link to="/appointment">Book an Appointment</Link>
           </ul>
         </div>

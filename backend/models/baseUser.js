@@ -24,7 +24,7 @@ const baseUserSchema = new Schema({
         trim: true
     },
     dateOfBirth: {
-        type: Number,
+        type: Date,
         required: [true, "Your age must be 16 and above"]
     },
     country: {

@@ -2,15 +2,15 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { DevTool } from "@hookform/devtools";
-import { userSchema } from "../../../validations/userValidation";
 import { useDispatch, useSelector } from "react-redux";
-import { signupUser } from "../../../app/user/userSlice";
 import "./Signup.css";
 import { getCountriesAndCities } from "../../../services/countryService";
 import { useNavigate } from "react-router-dom";
+import { signupServiceProvider } from "../../../app/serviceProvider/serviceProviderSlice";
+import { serviceProviderSchema } from "../../../validations/serviceProviderValidation";
 
-function Signup() {
-  const { status, error } = useSelector((state) => state.user);
+function ServiceProvider() {
+  const { status, error } = useSelector((state) => state.serviceProvider);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const {
@@ -20,7 +20,7 @@ function Signup() {
     control,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(userSchema),
+    resolver: yupResolver(serviceProviderSchema),
   });
   const [countries, setCountries] = useState([]);
   const [cities, setCities] = useState([]);
@@ -44,9 +44,9 @@ function Signup() {
     (city) => city.country === selectedCountry
   );
 
-  const onUserSubmit = (data) => {
+  const onServiceProviderSubmit = (data) => {
     console.log(data);
-    dispatch(signupUser(data));
+    dispatch(signupServiceProvider(data));
   };
 
   useEffect(() => {
@@ -56,6 +56,7 @@ function Signup() {
     } 
 
   }, [status, navigate]);
+
 
   return (
     <>
@@ -132,6 +133,29 @@ function Signup() {
               ))}
             </select>
             <br></br>
+
+            <label htmlFor="officeAdd">Office Address: </label>{" "}
+            <input
+              className="place-holder"
+              type="text"
+              id="officeAdd"
+              placeholder="Office address..."
+              {...register("officeAddress")}
+            />
+            <p>{errors.officeAddress?.message}</p>
+            <br></br>
+
+            <label htmlFor="price">Price: </label>{" "}
+            <input
+                className="place-holder"
+                type="number"
+                id="price"
+                placeholder="Price..."
+                {...register("price")}
+            />
+            <p>{errors.price?.message}</p>
+            <br></br>
+
             <label htmlFor="pwd">Password: </label>{" "}
             <input
               className="place-holder"
@@ -153,7 +177,7 @@ function Signup() {
             <button
               type="button"
               className="submit"
-              onClick={handleSubmit(onUserSubmit)}
+              onClick={handleSubmit(onServiceProviderSubmit)}
             >
               Submit
             </button>
@@ -165,4 +189,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default ServiceProvider;

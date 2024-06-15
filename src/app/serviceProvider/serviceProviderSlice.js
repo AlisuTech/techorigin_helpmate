@@ -3,10 +3,10 @@ import axios from 'axios';
 const ROOT_API = `http://localhost:5024`
 
 export const signupServiceProvider = createAsyncThunk(
-  'serviceProvider/signup',
-  async (userData, { rejectWithValue }) => {
+  'serviceProvider/signup-service_provider',
+  async (serviceProviderData, { rejectWithValue }) => {
     try {
-      const response = await axios.post(`${ROOT_API}/serviceProviders`, userData);
+      const response = await axios.post(`${ROOT_API}/serviceProviders`, serviceProviderData);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response.data);
@@ -29,7 +29,7 @@ const serviceProviderSlice = createSlice({
       })
       .addCase(signupServiceProvider.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.user = action.payload;
+        state.serviceProvider = action.payload;
       })
       .addCase(signupServiceProvider.rejected, (state, action) => {
         state.status = 'failed';

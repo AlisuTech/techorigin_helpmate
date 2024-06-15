@@ -13,7 +13,7 @@ const serviceProviderSchema = new Schema({
     },
     price: {
         type: Number,
-        required: true
+        required: [true, "Price is required"]
     },
     rating: {
         type: Number,
@@ -23,14 +23,14 @@ const serviceProviderSchema = new Schema({
     },
     yearsOfExperience: {
         type: Number,
-        required: true
+        // required: true
     },
     clientReviews: [{
         type: String
     }],
     meansOfId: {
         type: String,
-        required: true
+        // required: true
     },
     validIdFile: {
         type: String,
