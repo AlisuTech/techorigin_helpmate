@@ -12,6 +12,7 @@ import Appointment from './pages/appointment/Appointment';
 import Medical from './pages/departments/medical/Medical';
 import Choice from './pages/auth/Choice';
 import ServiceProvider from './pages/auth/signup/ServiceProvider';
+import ServiceProviderProfile from './pages/profile/serviceProvider/ServiceProviderProfile';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/education" element={<Education />} />
         <Route path="/psychological" element={<Psychological />} />
         <Route path="/appointment" element={<Appointment />} />
+        <Route path="/service_provider_profile" element={<ServiceProviderProfile />} />
       </Routes>
       <Footer />
     </Router>

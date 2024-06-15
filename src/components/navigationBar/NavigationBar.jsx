@@ -22,6 +22,7 @@ const NavigationBar = () => {
               <Link to="/dashboard">Dashboard</Link>
               <Link to="/login">Log In</Link>
               <Link to="/choice">Register</Link>
+              <Link to="/service_provider_profile">Profile</Link>
               <Link to="/appointment">Book an Appointment</Link>
           </ul>
         </div>
