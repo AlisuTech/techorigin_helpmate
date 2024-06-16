@@ -30,12 +30,10 @@ const userSlice = createSlice({
       .addCase(signupUser.fulfilled, (state, action) => {
         state.status = 'succeeded';
         state.user = action.payload;
-        state.error = null;
       })
       .addCase(signupUser.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.payload;
-        state.error = null;
       });
   },
 });

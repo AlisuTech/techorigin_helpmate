@@ -3,9 +3,6 @@
     background-color: #8697c4;
     width: 100%;
     height: 100vh;
-
-
-    
 }
 .SP-details{
     display: flex;
@@ -54,12 +51,10 @@
     font-style: italic;
 }
 .client-feedback{
-    background-color:rgb(255,255,255); 
     width: 350px;
-     height: 260px; 
-     color: black; 
+    height: 260px; 
+    color: black; 
     border-color:rgb(250, 250, 250); 
-    border-style: solid;
     border-radius: 10px;
     line-height: 30px;
     font-size: 20px;
@@ -79,10 +74,28 @@ vertical-align: middle;
 }
 .apostrophe_icon{
     position: relative;
-    top:-20px;
+    top:-5px;
     left:30px;
     background-color: #7091e6;
     color: white;
     padding: 12px;
     border-radius: 50%;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 12px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: none; 
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: none;
+    border-radius: 10px;
+    border: 1px solid #f1f1f1;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

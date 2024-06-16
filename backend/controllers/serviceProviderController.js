@@ -65,7 +65,7 @@ const createNewServiceProvider = asyncHandler(async (req, res) => {
       res.status(400).json({ message: "Invalid user data received" });
     }
   } catch (error) {
-    if (error.code === 11000) { // Duplicate key error
+    if (error.code === 11000) {
       res.status(409).json({ message: 'Duplicate email' });
     } else {
         res.status(500).json({ message: 'Something went wrong', error: error.message });

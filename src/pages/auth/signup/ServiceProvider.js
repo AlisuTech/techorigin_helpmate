@@ -62,7 +62,7 @@ function ServiceProvider() {
     <>
       {status === "loading" && <p>Loading...</p>}
       {status === "succeeded" && <p>Sign up succeeded!</p>}
-      {status === "failed" && <p>Error: {error.message}</p>}
+      {status === "failed" && <p>Error: {error?.message}</p>}
       <div className="bg-main">
         <div>
           <div className="bg-form">
@@ -112,7 +112,7 @@ function ServiceProvider() {
               placeholder="Date of Birth..."
               {...register("dateOfBirth")}
             />
-            <p>{errors.dateOfbirth?.message}</p>
+            <p>{errors.dateOfBirth?.message}</p>
             <label>Country : </label>{" "}
             <select className="place-holder" {...register("country")}>
               <option value="">Select Country</option>
@@ -145,7 +145,7 @@ function ServiceProvider() {
             <p>{errors.officeAddress?.message}</p>
             <br></br>
 
-            <label htmlFor="price">Price: </label>{" "}
+            <label htmlFor="price">Price:($) </label>{" "}
             <input
                 className="place-holder"
                 type="number"

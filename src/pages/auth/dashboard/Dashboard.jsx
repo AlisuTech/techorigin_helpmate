@@ -1,6 +1,5 @@
 import React from 'react'
 import ServiceProviderList from '../../../components/cards/serviceProvider/ServiceProviderList';
-import Booking from '../../../components/cards/BookAppointment/Booking';
 
 const Dashboard = () => {
   return (
@@ -10,7 +9,7 @@ const Dashboard = () => {
             <ServiceProviderList/>
         </div>
         <div class="col-span-2 border-yellow">
-            <Booking/>
+            <div>hello</div>
         </div>
         <div class="row-span-1 col-span-2 border-blue">03</div>
       </div>
