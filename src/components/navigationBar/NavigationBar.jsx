@@ -19,7 +19,8 @@ const NavigationBar = () => {
                   <Link to="/psychological">Psychological</Link>
                 </div>
               </div>
-              <Link to="/dashboard">Dashboard</Link>
+              <Link to="/user">user Dashboard</Link>
+              <Link to="/service_provider">service Dashboard</Link>
               <Link to="/login">Log In</Link>
               <Link to="/choice">Register</Link>
               <Link to="/service_provider_profile">Profile</Link>

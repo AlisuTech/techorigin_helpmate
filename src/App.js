@@ -13,6 +13,7 @@ import Medical from './pages/departments/medical/Medical';
 import Choice from './pages/auth/Choice';
 import ServiceProvider from './pages/auth/signup/ServiceProvider';
 import ServiceProviderProfile from './pages/profile/serviceProvider/ServiceProviderProfile';
+import ServiceProviderDashboard from './pages/auth/serviceProvider/dashboard/Dashboard';
 
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
       <NavigationBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/user" element={<Dashboard />} />
+        <Route path="/service_provider" element={<ServiceProviderDashboard />} />
         <Route path="/choice" element={<Choice />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
