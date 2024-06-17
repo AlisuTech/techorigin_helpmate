@@ -4,7 +4,7 @@ import Login from './pages/auth/login/Login';
 import Signup from './pages/auth/signup/Signup';
 import HomePage from './pages/homepage/HomePage';
 import NavigationBar from './components/navigationBar/NavigationBar'
-import Dashboard from './pages/auth/dashboard/Dashboard';
+import Dashboard from './pages/auth/users/dashboard/Dashboard';
 import Footer from './components/footer/Footer';
 import Psychological from './pages/departments/psychological/Psychological';
 import Education from './pages/departments/education/Education';

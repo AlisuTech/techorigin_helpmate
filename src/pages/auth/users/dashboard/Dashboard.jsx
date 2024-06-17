@@ -1,5 +1,5 @@
 import React from 'react'
-import ServiceProviderList from '../../../components/cards/serviceProvider/ServiceProviderList';
+import ServiceProviderList from '../../../../components/cards/serviceProvider/ServiceProviderList';
 
 const Dashboard = () => {
   return (
