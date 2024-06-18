@@ -15,7 +15,7 @@ const NavigationBar = () => {
                 <button className="dropbtn">Departments <i className="fas fa-caret-down"></i></button>
                 <div className="dropdown-content">
                   <Link to="/medical">Medical</Link>
-                  <Link to="/careerMentorship">Education</Link>
+                  <Link to="/careerMentorship">Career</Link>
                   <Link to="/psychological">Psychological</Link>
                 </div>
               </div>
