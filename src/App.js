@@ -7,13 +7,13 @@ import NavigationBar from './components/navigationBar/NavigationBar'
 import Dashboard from './pages/auth/users/dashboard/Dashboard';
 import Footer from './components/footer/Footer';
 import Psychological from './pages/departments/psychological/Psychological';
-import Careermentorship from './pages/departments/CareerMentorship/careerMentorship';
 import Appointment from './pages/appointment/Appointment';
 import Medical from './pages/departments/medical/Medical';
 import Choice from './pages/auth/Choice';
 import ServiceProvider from './pages/auth/signup/ServiceProvider';
 import ServiceProviderProfile from './pages/profile/serviceProvider/ServiceProviderProfile';
 import ServiceProviderDashboard from './pages/auth/serviceProvider/dashboard/Dashboard';
+import CareerMentorship from './pages/departments/careerMentorship/CareerMentorship';
 
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/signup-service_provider" element={<ServiceProvider />} />
         <Route path="/medical" element={<Medical />} />
-        <Route path="/Careermentorship" element={<Careermentorship />} />
+        <Route path="/careerMentorship" element={<CareerMentorship />} />
         <Route path="/psychological" element={<Psychological />} />
         <Route path="/appointment" element={<Appointment />} />
         <Route path="/service_provider_profile" element={<ServiceProviderProfile />} />

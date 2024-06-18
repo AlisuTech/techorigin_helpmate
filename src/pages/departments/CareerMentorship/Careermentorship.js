@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Careermentorship = () => {
+const CareerMentorship = () => {
   return (
     <div>Education</div>
   )
 }
 
-export default Careermentorship
+export default CareerMentorship
