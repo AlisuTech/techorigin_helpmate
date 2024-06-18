@@ -47,22 +47,22 @@ const NavigationBar = () => {
         <img
           src={user}
           alt=""
-          className="w-[40px] border-green rounded-[50%] cursor-pointer ml-[30px]"
+          className="w-[40px] border-greenx rounded-[50%] cursor-pointer ml-[30px]"
           onClick={toggleBtn}
         />
 
         <div
           className={`${
             isMenuOpen ? "max-h-[500px]" : "max-h-0 overflow-hidden"
-          } sub-menu-wrap border-green absolute top-[100%] right-[10%] max-h-0 overflow-hidden w-[320px]`}
+          } sub-menu-wrap border-greenx absolute top-[100%] right-[10%] max-h-0 overflow-hidden w-[320px]`}
           id="subMenu"
         >
           <div className="sub-menu bg-white p-[20px] m-[10px]">
-            <div className="user-info border-yellow flex items-center">
+            <div className="user-info border-yellowx flex items-center">
               <img
                 src={user}
                 alt=""
-                className="w-[60px] border-green rounded-[50%] me-[15px] cursor-pointer"
+                className="w-[60px] border-greenx rounded-[50%] me-[15px] cursor-pointer"
               />
               <h3 className="font-[500]">Gideon Edoghotu</h3>
             </div>
