@@ -9,11 +9,13 @@ import logo from '../../assets/logo_3.png'
 
 import { useDispatch } from 'react-redux'
 import { selectAppointment } from '../../app/user/appointmentSlice';
-import NavLink from '../NavLink'
+// import NavLink from '../CustomNavLink'
+import CustomNavLink from '../CustomNavLink'
 
 
 const NavigationBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const dispatch = useDispatch();
 
 
@@ -29,6 +31,10 @@ const NavigationBar = () => {
     setIsMenuOpen(false);
   }
 
+  const showSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  }
+
   return (
     <>
       <nav className="bg-[#3d52a0] w-[100%] py-4 px-4 flex items-center justify-between relative">
@@ -38,19 +44,102 @@ const NavigationBar = () => {
             alt=""
             className="w-[60px] border-greenx rounded-[50%] me-[15px] cursor-pointer"
           />
-          <NavLink to="/" className="helpmate text-white" closeMenu={closeMenu}>
+          <CustomNavLink
+            to="/"
+            className="helpmate text-white"
+            closeMenu={closeMenu}
+          >
             Helpmate
-          </NavLink>
+          </CustomNavLink>
         </div>
-        <ul className="w-[100%] text-right">
+
+        {/* bars */}
+        <ul className={isSidebarOpen ? "sidebar border-redx" : "hidden"}>
+          <div className='border-yellowx text-white flex justify-between'>
+            <li onClick={showSidebar}>
+              <i class="fa-solid fa-xmark cursor-pointer"></i>
+            </li>
+            <img
+                src={user}
+                alt=""
+                className="w-[40px] border-greenx rounded-[50%] cursor-pointer ml-[30px]"
+                onClick={toggleBtn}
+              />
+          </div>
+          
           <li>
-            <NavLink to="/" closeMenu={closeMenu}>
+            <CustomNavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+              closeMenu={closeMenu}
+            >
               Home
-            </NavLink>
+            </CustomNavLink>
           </li>
-          {/* <li><NavLink to="/features" closeMenu={closeMenu}>Features</NavLink></li> */}
-          {/* <li><NavLink closeMenu={closeMenu}>About</NavLink></li> */}
-          {/* <li><NavLink to="/contact" closeMenu={closeMenu}>Contact</NavLink></li> */}
+          <li>
+            <div className="dropdown ">
+              <button
+                class="btn dropdown-toggle ms-0 ps-0"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Departments
+              </button>
+              <ul className="dropdown-menu">
+                <li>
+                  <CustomNavLink to="/medical" closeMenu={closeMenu}>
+                    Medical
+                  </CustomNavLink>
+                </li>
+                <li>
+                  <CustomNavLink to="/education" closeMenu={closeMenu}>
+                    Education
+                  </CustomNavLink>
+                </li>
+                <li>
+                  <CustomNavLink to="/psychological" closeMenu={closeMenu}>
+                    Psychological
+                  </CustomNavLink>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <CustomNavLink
+              to="/login"
+              className="btn btn-primary font-bold text-[15px]"
+              closeMenu={closeMenu}
+            >
+              Log In
+            </CustomNavLink>
+          </li>
+          <li>
+            <CustomNavLink
+              to="/choice"
+              className="btn btn-primary font-bold text-[15px]"
+              closeMenu={closeMenu}
+            >
+              Register
+            </CustomNavLink>
+          </li>
+        </ul>
+
+
+        <ul className="w-[100%] text-right md:hidden lg:block hidden">
+          <li>
+            <CustomNavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+              closeMenu={closeMenu}
+            >
+              Home
+            </CustomNavLink>
+          </li>
           <li>
             <div className="dropdown ">
               <button
@@ -63,59 +152,62 @@ const NavigationBar = () => {
               </button>
               <ul className="dropdown-menu">
                 <li>
-                  <NavLink to="/medical" closeMenu={closeMenu}>
+                  <CustomNavLink to="/medical" closeMenu={closeMenu}>
                     Medical
-                  </NavLink>
+                  </CustomNavLink>
                 </li>
                 <li>
-                  <NavLink to="/education" closeMenu={closeMenu}>
+                  <CustomNavLink to="/education" closeMenu={closeMenu}>
                     Education
-                  </NavLink>
+                  </CustomNavLink>
                 </li>
                 <li>
-                  <NavLink to="/psychological" closeMenu={closeMenu}>
+                  <CustomNavLink to="/psychological" closeMenu={closeMenu}>
                     Psychological
-                  </NavLink>
+                  </CustomNavLink>
                 </li>
               </ul>
             </div>
           </li>
-          {/* <li>
-            <NavLink to="/service_provider" closeMenu={closeMenu}>
-              service Dashboard
-            </NavLink>
-          </li> */}
           <li>
-            <NavLink to="/login" className='btn btn-primary font-bold text-[15px]' closeMenu={closeMenu}>
+            <CustomNavLink
+              to="/login"
+              className="btn btn-primary font-bold text-[15px]"
+              closeMenu={closeMenu}
+            >
               Log In
-            </NavLink>
+            </CustomNavLink>
           </li>
           <li>
-            <NavLink to="/choice" className='btn btn-primary font-bold text-[15px]' closeMenu={closeMenu}>
+            <CustomNavLink
+              to="/choice"
+              className="btn btn-primary font-bold text-[15px]"
+              closeMenu={closeMenu}
+            >
               Register
-            </NavLink>
+            </CustomNavLink>
           </li>
-          {/* <li>
-            <NavLink to="/service_provider_profile" closeMenu={closeMenu}>
-              Profile
-            </NavLink>
-          </li> */}
-          {/* <li><NavLink to="/appointment" closeMenu={closeMenu}>Book an Appointment</NavLink></li> */}
         </ul>
+
         <img
           src={user}
           alt=""
-          className="w-[40px] border-greenx rounded-[50%] cursor-pointer ml-[30px]"
+          className="w-[40px] border-greenx lg:block hidden rounded-[50%] cursor-pointer ml-[30px]"
           onClick={toggleBtn}
         />
 
+        <li onClick={showSidebar}>
+          <i className="fa-solid fa-bars lg:hidden block  cursor-pointer"></i>
+        </li>
+
+        {/* profile */}
         <div
           className={`${
             isMenuOpen ? "max-h-[500px]" : "max-h-0 overflow-hidden"
-          } sub-menu-wrap border-greenx absolute top-[100%] right-[10%] max-h-0 overflow-hidden w-[320px]`}
+          } sub-menu-wrap border-greenx absolute top-[100%] xl:left-[78%] md:left-[30%] lg:left-[60%]  left-[10%] max-h-0 overflow-hidden w-[320px]`}
           id="subMenu"
         >
-          <div className="sub-menu bg-white p-[20px] m-[10px]">
+          <div className="sub-menu bg-[#adbbda] p-[20px] ">
             <div className="user-info border-yellowx flex items-center">
               <img
                 src={user}
@@ -126,15 +218,15 @@ const NavigationBar = () => {
             </div>
             <hr className="h-[1px] w-[100%] bg-[#ccc] mt-4" />
 
-            <NavLink className="sub-menu-link" closeMenu={closeMenu}>
+            <CustomNavLink className="sub-menu-link" closeMenu={closeMenu}>
               <img src={profile} alt="" />
               <p>Edit Profile</p>
               <span>
                 <i class="fa-solid fa-chevron-right"></i>
               </span>
-            </NavLink>
+            </CustomNavLink>
 
-            <NavLink
+            <CustomNavLink
               onClick={activateUser}
               to="/appointment"
               className="sub-menu-link border-greenx"
@@ -145,31 +237,31 @@ const NavigationBar = () => {
               <span>
                 <i class="fa-solid fa-chevron-right"></i>
               </span>
-            </NavLink>
+            </CustomNavLink>
 
-            <NavLink className="sub-menu-link" closeMenu={closeMenu}>
+            <CustomNavLink className="sub-menu-link" closeMenu={closeMenu}>
               <img src={setting} alt="" />
               <p>Settings & Privacy</p>
               <span>
                 <i class="fa-solid fa-chevron-right"></i>
               </span>
-            </NavLink>
+            </CustomNavLink>
 
-            <NavLink className="sub-menu-link" closeMenu={closeMenu}>
+            <CustomNavLink className="sub-menu-link" closeMenu={closeMenu}>
               <img src={help} alt="" />
               <p>Help & Support</p>
               <span>
                 <i class="fa-solid fa-chevron-right"></i>
               </span>
-            </NavLink>
+            </CustomNavLink>
 
-            <NavLink className="sub-menu-link" closeMenu={closeMenu}>
+            <CustomNavLink className="sub-menu-link" closeMenu={closeMenu}>
               <img src={logout} alt="" />
               <p>Logout</p>
               <span>
                 <i class="fa-solid fa-chevron-right"></i>
               </span>
-            </NavLink>
+            </CustomNavLink>
           </div>
         </div>
       </nav>

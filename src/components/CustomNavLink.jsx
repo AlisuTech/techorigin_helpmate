@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { deselectAppointment } from '../app/user/appointmentSlice';
 
-const NavLink = ({ to, children, onClick, closeMenu, ...props}) => {
+const CustomNavLink = ({ to, children, onClick, closeMenu, ...props}) => {
   const dispatch = useDispatch();
 
   const handleClick = (e) => {
@@ -17,10 +17,10 @@ const NavLink = ({ to, children, onClick, closeMenu, ...props}) => {
   };
 
   return (
-    <Link to={to} onClick={handleClick} {...props}>
+    <NavLink to={to} onClick={handleClick} {...props}>
       {children}
-    </Link>
+    </NavLink>
   );
 };
 
-export default NavLink;
+export default CustomNavLink;

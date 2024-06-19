@@ -14,6 +14,14 @@
     background-color: #8697c4;
 }
 
+nav {
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+}
+
+nav li:hover {
+    color: #7091e6;
+}
+
 .dropdown-content a {
     padding: 12px 16px;
     text-decoration: none;
@@ -82,7 +90,29 @@ li {
 .helpmate {
     font-size: 24px;
     font-weight: bold;
-    color: #007bff; /* blue color */
-    /* text-decoration: underline; */
-    /* text-underline-offset: 4px; */
+    color: #007bff;
   }
+  
+  .nav-link.active {
+    color: #007bff;
+    /* font-weight: bold; */
+  }
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #3d52a0;
+    backdrop-filter: blur(10px);
+    /* display: flex; */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
