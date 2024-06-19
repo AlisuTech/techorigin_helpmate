@@ -29,6 +29,7 @@ const NavigationBar = () => {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+    setIsSidebarOpen(false)
   }
 
   const showSidebar = () => {
