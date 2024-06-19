@@ -1,0 +1,12 @@
+.nav-tabs .nav-link {
+    color: #000; /* Example: change link color to black */
+  }
+  
+  .nav-tabs .nav-link.active {
+    color: #007bff; /* Example: change active link color to blue */
+  }
+  
+  .nav-tabs .nav-link.disabled {
+    color: #ccc; /* Example: change disabled link color to gray */
+  }
+  

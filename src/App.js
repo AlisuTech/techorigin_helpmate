@@ -14,14 +14,18 @@ import Choice from './pages/auth/Choice';
 import ServiceProvider from './pages/auth/signup/ServiceProvider';
 import ServiceProviderProfile from './pages/profile/serviceProvider/ServiceProviderProfile';
 import ServiceProviderDashboard from './pages/auth/serviceProvider/dashboard/Dashboard';
+import AppointmentHistory from './components/cards/user/appointmentHistory/AppointmentHistory';
+import {useSelector } from "react-redux";
 
 
 function App() {
+  const { isSelected } = useSelector((state) => state.appointment);
   return (
     <Router>
       <NavigationBar />
+      {isSelected && <Dashboard />}
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        {!isSelected && <Route path="/" element={<HomePage />} />}
         <Route path="/user" element={<Dashboard />} />
         <Route path="/service_provider" element={<ServiceProviderDashboard />} />
         <Route path="/choice" element={<Choice />} />
@@ -32,6 +36,7 @@ function App() {
         <Route path="/education" element={<Education />} />
         <Route path="/psychological" element={<Psychological />} />
         <Route path="/appointment" element={<Appointment />} />
+        <Route path="/appointment-history" element={<AppointmentHistory />} />
         <Route path="/service_provider_profile" element={<ServiceProviderProfile />} />
       </Routes>
       <Footer />
