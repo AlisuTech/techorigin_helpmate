@@ -5,6 +5,8 @@ import profile from '../../assets/profile.png'
 import setting from '../../assets/setting.png'
 import help from '../../assets/help.png'
 import logout from '../../assets/logout.png'
+import logo from '../../assets/logo_3.png'
+
 import { useDispatch } from 'react-redux'
 import { selectAppointment } from '../../app/user/appointmentSlice';
 import NavLink from '../NavLink'
@@ -29,30 +31,76 @@ const NavigationBar = () => {
 
   return (
     <>
-      <nav className="bg-[#adbbda] w-[100%] py-4 px-4 flex items-center justify-between relative">
-        <div className="text-[35px] font-[600]">HelpMate</div>
+      <nav className="bg-[#3d52a0] w-[100%] py-4 px-4 flex items-center justify-between relative">
+        <div className="text-[35px] font-[600] flex items-center">
+          <img
+            src={logo}
+            alt=""
+            className="w-[60px] border-greenx rounded-[50%] me-[15px] cursor-pointer"
+          />
+          <NavLink to="/" className="helpmate text-white" closeMenu={closeMenu}>
+            Helpmate
+          </NavLink>
+        </div>
         <ul className="w-[100%] text-right">
-          <li><NavLink to="/" closeMenu={closeMenu}>Home</NavLink></li>
-          <li><NavLink to="/features" closeMenu={closeMenu}>Features</NavLink></li>
-          <li><NavLink closeMenu={closeMenu}>About</NavLink></li>
-          <li><NavLink to="/contact" closeMenu={closeMenu}>Contact</NavLink></li>
           <li>
-            <div className="dropdown">
-              <button className="dropbtn">
-                Departments <i className="fas fa-caret-down"></i>
+            <NavLink to="/" closeMenu={closeMenu}>
+              Home
+            </NavLink>
+          </li>
+          {/* <li><NavLink to="/features" closeMenu={closeMenu}>Features</NavLink></li> */}
+          {/* <li><NavLink closeMenu={closeMenu}>About</NavLink></li> */}
+          {/* <li><NavLink to="/contact" closeMenu={closeMenu}>Contact</NavLink></li> */}
+          <li>
+            <div className="dropdown ">
+              <button
+                class="btn dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Departments
               </button>
-              <div className="dropdown-content">
-                <NavLink to="/medical" closeMenu={closeMenu}>Medical</NavLink>
-                <NavLink to="/education" closeMenu={closeMenu}>Education</NavLink>
-                <NavLink to="/psychological" closeMenu={closeMenu}>Psychological</NavLink>
-              </div>
+              <ul className="dropdown-menu">
+                <li>
+                  <NavLink to="/medical" closeMenu={closeMenu}>
+                    Medical
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/education" closeMenu={closeMenu}>
+                    Education
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/psychological" closeMenu={closeMenu}>
+                    Psychological
+                  </NavLink>
+                </li>
+              </ul>
             </div>
           </li>
-          <li><NavLink to="/service_provider" closeMenu={closeMenu}>service Dashboard</NavLink></li>
-          <li><NavLink to="/login" closeMenu={closeMenu}>Log In</NavLink></li>
-          <li><NavLink to="/choice" closeMenu={closeMenu}>Register</NavLink></li>
-          <li><NavLink to="/service_provider_profile" closeMenu={closeMenu}>Profile</NavLink></li>
-          <li><NavLink to="/appointment" closeMenu={closeMenu}>Book an Appointment</NavLink></li>
+          {/* <li>
+            <NavLink to="/service_provider" closeMenu={closeMenu}>
+              service Dashboard
+            </NavLink>
+          </li> */}
+          <li>
+            <NavLink to="/login" className='btn btn-primary font-bold text-[15px]' closeMenu={closeMenu}>
+              Log In
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/choice" className='btn btn-primary font-bold text-[15px]' closeMenu={closeMenu}>
+              Register
+            </NavLink>
+          </li>
+          {/* <li>
+            <NavLink to="/service_provider_profile" closeMenu={closeMenu}>
+              Profile
+            </NavLink>
+          </li> */}
+          {/* <li><NavLink to="/appointment" closeMenu={closeMenu}>Book an Appointment</NavLink></li> */}
         </ul>
         <img
           src={user}
@@ -68,11 +116,11 @@ const NavigationBar = () => {
           id="subMenu"
         >
           <div className="sub-menu bg-white p-[20px] m-[10px]">
-            <div className="user-info border-yellow flex items-center">
+            <div className="user-info border-yellowx flex items-center">
               <img
                 src={user}
                 alt=""
-                className="w-[60px] border-green rounded-[50%] me-[15px] cursor-pointer"
+                className="w-[60px] border-greenx rounded-[50%] me-[15px] cursor-pointer"
               />
               <h3 className="font-[500]">Gideon Edoghotu</h3>
             </div>
@@ -86,9 +134,14 @@ const NavigationBar = () => {
               </span>
             </NavLink>
 
-            <NavLink onClick={activateUser} className="sub-menu-link border-green" closeMenu={closeMenu}>
+            <NavLink
+              onClick={activateUser}
+              to="/appointment"
+              className="sub-menu-link border-greenx"
+              closeMenu={closeMenu}
+            >
               <img src={profile} alt="" />
-              <p>Appointment History</p>
+              <p>Appointment</p>
               <span>
                 <i class="fa-solid fa-chevron-right"></i>
               </span>

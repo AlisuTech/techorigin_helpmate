@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Dashboard.css'
 
 const Dashboard = () => {
@@ -7,25 +7,28 @@ const Dashboard = () => {
     <>
       <ul className="nav nav-tabs">
         <li className="nav-item">
-          <Link to="/appointment-history" className="nav-link activex" aria-current="page">
+          <NavLink to="/appointment" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+            aria-current="page">
             Book Appointment
-          </Link>
+          </NavLink>
         </li>
         <li className="nav-item">
-          <Link to="#" className="nav-link activex" aria-current="page">
+          <NavLink to="/appointment-history" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+            aria-current="page">
             Upcoming Appointment
-          </Link>
+          </NavLink>
         </li>
-        <li className="nav-item">
-          <Link className="nav-link">
+        {/* <li className="nav-item">
+          <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+            aria-current="page">
             Past Appointments
-          </Link>
+          </NavLink>
         </li>
         <li class="nav-item">
-          <Link class="nav-link disabled" aria-disabled="true">
+          <NavLink class="nav-link disabled" aria-disabled="true">
             Disabled
-          </Link>
-        </li>
+          </NavLink>
+        </li> */}
       </ul>
     </>
   );
@@ -43,26 +46,5 @@ export default Dashboard
         </div>
         <div class="row-span-1 col-span-2 border-blue">03</div>
       </div>
- * 
- */
-
-/**
- * <ul className="nav nav-tabs">
-        <li className="nav-item">
-          <Link to="appointment-history" className="nav-link active" aria-current="page">
-            Active
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link">
-            Link
-          </Link>
-        </li>
-        <li class="nav-item">
-          <Link class="nav-link disabled" aria-disabled="true">
-            Disabled
-          </Link>
-        </li>
-      </ul>
  * 
  */

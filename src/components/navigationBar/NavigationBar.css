@@ -3,11 +3,15 @@
     display: inline-block;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
+.dropdown button {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+
+}
+
+.dropdown-menu {
     background-color: #8697c4;
-    min-width: 160px;
 }
 
 .dropdown-content a {
@@ -29,6 +33,9 @@ li {
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .sub-menu-wrap {
@@ -71,3 +78,11 @@ li {
 .sub-menu-link:hover p{
     font-weight: 600;
 }
+
+.helpmate {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff; /* blue color */
+    /* text-decoration: underline; */
+    /* text-underline-offset: 4px; */
+  }
