@@ -20,8 +20,16 @@ const userSlice = createSlice({
     user: null,
     status: 'idle',
     error: null,
+    isUserLogged: false
   },
-  reducers: {},
+  reducers: {
+    activateUserLoggedIn(state, action) {
+      state.isUserLogged = action.payload;
+    },
+    deactivateUserLoggedIn(state) {
+      state.isUserLogged = false;
+    }
+  },
   extraReducers: (builder) => {
     builder
       .addCase(signupUser.pending, (state) => {
@@ -38,4 +46,5 @@ const userSlice = createSlice({
   },
 });
 
+export const { activateUserLoggedIn, deactivateUserLoggedIn } = userSlice.actions;
 export default userSlice.reducer;

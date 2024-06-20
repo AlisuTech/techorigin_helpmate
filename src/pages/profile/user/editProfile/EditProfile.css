@@ -1,0 +1,7 @@
+input {
+    cursor: text;
+}
+
+.set_label label {
+    font-weight: bold;
+}

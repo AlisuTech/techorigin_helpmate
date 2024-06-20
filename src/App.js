@@ -16,6 +16,7 @@ import ServiceProviderProfile from './pages/profile/serviceProvider/ServiceProvi
 import ServiceProviderDashboard from './pages/auth/serviceProvider/dashboard/Dashboard';
 import AppointmentHistory from './components/cards/user/appointmentHistory/AppointmentHistory';
 import {useSelector } from "react-redux";
+import EditProfile from './pages/profile/user/editProfile/EditProfile';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <Routes>
         {!isSelected && <Route path="/" element={<HomePage />} />}
         <Route path="/user" element={<Dashboard />} />
+        <Route path="/edit_profile" element={<EditProfile />} />
         <Route path="/service_provider" element={<ServiceProviderDashboard />} />
         <Route path="/choice" element={<Choice />} />
         <Route path="/login" element={<Login />} />

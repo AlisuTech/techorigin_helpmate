@@ -1,22 +1,28 @@
 import React, { useState } from 'react'
 import './NavigationBar.css'
-import user from '../../assets/user.png'
 import profile from '../../assets/profile.png'
 import setting from '../../assets/setting.png'
 import help from '../../assets/help.png'
 import logout from '../../assets/logout.png'
 import logo from '../../assets/logo_3.png'
+import person from '../../assets/person_2.jpeg'
 
-import { useDispatch } from 'react-redux'
+
+import { useDispatch, useSelector } from 'react-redux'
 import { selectAppointment } from '../../app/user/appointmentSlice';
 // import NavLink from '../CustomNavLink'
 import CustomNavLink from '../CustomNavLink'
+import { activateUserLoggedIn } from '../../app/user/userSlice'
+import { useNavigate } from 'react-router-dom'
 
 
 const NavigationBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const isUserLogged = useSelector((state) => state.user.isUserLogged)
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
 
 
   const toggleBtn = ()=> {
@@ -34,6 +40,12 @@ const NavigationBar = () => {
 
   const showSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
+  }
+
+  const loggedOutUser = () => {
+    dispatch(activateUserLoggedIn(false))
+    navigate('/login')
+    closeMenu()
   }
 
   return (
@@ -60,12 +72,12 @@ const NavigationBar = () => {
             <li onClick={showSidebar}>
               <i class="fa-solid fa-xmark cursor-pointer"></i>
             </li>
-            <img
-                src={user}
+            {isUserLogged && <img
+                src={person}
                 alt=""
                 className="w-[40px] border-greenx rounded-[50%] cursor-pointer ml-[30px]"
                 onClick={toggleBtn}
-              />
+              />}
           </div>
           
           <li>
@@ -108,7 +120,7 @@ const NavigationBar = () => {
               </ul>
             </div>
           </li>
-          <li>
+          {!isUserLogged && <li>
             <CustomNavLink
               to="/login"
               className="btn btn-primary font-bold text-[15px]"
@@ -116,8 +128,8 @@ const NavigationBar = () => {
             >
               Log In
             </CustomNavLink>
-          </li>
-          <li>
+          </li>}
+          {!isUserLogged && <li>
             <CustomNavLink
               to="/choice"
               className="btn btn-primary font-bold text-[15px]"
@@ -125,7 +137,7 @@ const NavigationBar = () => {
             >
               Register
             </CustomNavLink>
-          </li>
+          </li>}
         </ul>
 
 
@@ -170,7 +182,7 @@ const NavigationBar = () => {
               </ul>
             </div>
           </li>
-          <li>
+          {!isUserLogged && <li>
             <CustomNavLink
               to="/login"
               className="btn btn-primary font-bold text-[15px]"
@@ -178,8 +190,8 @@ const NavigationBar = () => {
             >
               Log In
             </CustomNavLink>
-          </li>
-          <li>
+          </li>}
+          {!isUserLogged && <li>
             <CustomNavLink
               to="/choice"
               className="btn btn-primary font-bold text-[15px]"
@@ -187,15 +199,15 @@ const NavigationBar = () => {
             >
               Register
             </CustomNavLink>
-          </li>
+          </li>}
         </ul>
 
-        <img
-          src={user}
+        {isUserLogged && <img
+          src={person}
           alt=""
           className="w-[40px] border-greenx lg:block hidden rounded-[50%] cursor-pointer ml-[30px]"
           onClick={toggleBtn}
-        />
+        />}
 
         <li onClick={showSidebar}>
           <i className="fa-solid fa-bars lg:hidden block  cursor-pointer"></i>
@@ -211,7 +223,7 @@ const NavigationBar = () => {
           <div className="sub-menu bg-[#adbbda] p-[20px] ">
             <div className="user-info border-yellowx flex items-center">
               <img
-                src={user}
+                src={person}
                 alt=""
                 className="w-[60px] border-greenx rounded-[50%] me-[15px] cursor-pointer"
               />
@@ -219,7 +231,7 @@ const NavigationBar = () => {
             </div>
             <hr className="h-[1px] w-[100%] bg-[#ccc] mt-4" />
 
-            <CustomNavLink className="sub-menu-link" closeMenu={closeMenu}>
+            <CustomNavLink to='/edit_profile' className="sub-menu-link" closeMenu={closeMenu}>
               <img src={profile} alt="" />
               <p>Edit Profile</p>
               <span>
@@ -256,13 +268,13 @@ const NavigationBar = () => {
               </span>
             </CustomNavLink>
 
-            <CustomNavLink className="sub-menu-link" closeMenu={closeMenu}>
+            <div onClick={loggedOutUser} className="sub-menu-link cursor-pointer" closeMenu={closeMenu}>
               <img src={logout} alt="" />
               <p>Logout</p>
               <span>
                 <i class="fa-solid fa-chevron-right"></i>
               </span>
-            </CustomNavLink>
+            </div>
           </div>
         </div>
       </nav>

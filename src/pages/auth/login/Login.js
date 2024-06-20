@@ -1,11 +1,21 @@
 import React, { useState } from 'react'
 import './Login.css'
 import { Col, Container, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { activateUserLoggedIn } from '../../../app/user/userSlice';
+import { useDispatch } from 'react-redux'
+
 
 const Login = () => {
   const [email, emailChanged] = useState('')
   const [password, passwordChanged] = useState('')
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const loggedInUser = () => {
+    dispatch(activateUserLoggedIn(true))
+    navigate("/");
+  }
 
   return (
     <div>
@@ -47,7 +57,7 @@ const Login = () => {
                   </div>
                   <p className="forgot">Forgot Password?</p>
                 </div>
-                <button className="login-button">LOGIN</button>
+                <button onClick={loggedInUser} className="login-button">LOGIN</button>
                 <br></br>
                 <div className="text-center">
                   <p className="text-[10px]">
