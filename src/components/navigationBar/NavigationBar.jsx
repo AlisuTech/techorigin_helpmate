@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './NavigationBar.css'
 import profile from '../../assets/profile.png'
 import setting from '../../assets/setting.png'
@@ -22,6 +22,8 @@ const NavigationBar = () => {
   const isUserLogged = useSelector((state) => state.user.isUserLogged)
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const sidebarRef = useRef(null);
+  const menuRef = useRef(null);
 
 
 
@@ -48,6 +50,22 @@ const NavigationBar = () => {
     closeMenu()
   }
 
+  const handleClickOutside = (event) => {
+    if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+      setIsSidebarOpen(false);
+    }
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
     <>
       <nav className="bg-[#3d52a0] w-[100%] py-4 px-4 flex items-center justify-between relative">
@@ -66,8 +84,8 @@ const NavigationBar = () => {
           </CustomNavLink>
         </div>
 
-        {/* bars */}
-        <ul className={isSidebarOpen ? "sidebar border-redx" : "hidden"}>
+        {/* Menu bars */}
+        <ul className={isSidebarOpen ? "sidebar border-redx" : "hidden"} ref={sidebarRef}>
           <div className='border-yellowx text-white flex justify-between'>
             <li onClick={showSidebar}>
               <i class="fa-solid fa-xmark cursor-pointer"></i>
@@ -140,7 +158,7 @@ const NavigationBar = () => {
           </li>}
         </ul>
 
-
+        {/* Top Menu */}
         <ul className="w-[100%] text-right md:hidden lg:block hidden">
           <li>
             <CustomNavLink
@@ -213,12 +231,13 @@ const NavigationBar = () => {
           <i className="fa-solid fa-bars lg:hidden block  cursor-pointer"></i>
         </li>
 
-        {/* profile */}
+        {/* profile Menu */}
         <div
           className={`${
             isMenuOpen ? "max-h-[500px]" : "max-h-0 overflow-hidden"
           } sub-menu-wrap border-greenx absolute top-[100%] xl:left-[78%] md:left-[30%] lg:left-[60%]  left-[10%] max-h-0 overflow-hidden w-[320px]`}
           id="subMenu"
+          ref={menuRef}
         >
           <div className="sub-menu bg-[#adbbda] p-[20px] ">
             <div className="user-info border-yellowx flex items-center">
