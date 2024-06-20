@@ -13,7 +13,7 @@ import Choice from './pages/auth/Choice';
 import ServiceProvider from './pages/auth/signup/ServiceProvider';
 import ServiceProviderProfile from './pages/profile/serviceProvider/ServiceProviderProfile';
 import ServiceProviderDashboard from './pages/auth/serviceProvider/dashboard/Dashboard';
-import CareerMentorship from './pages/departments/careerMentorship/CareerMentorship';
+import CareerMentorship from './pages/departments/CareerMentorship/CareerMentorship';
 
 
 function App() {
