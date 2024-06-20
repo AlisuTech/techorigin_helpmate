@@ -9,7 +9,7 @@ import person from '../../assets/person_2.jpeg'
 
 
 import { useDispatch, useSelector } from 'react-redux'
-import { selectAppointment } from '../../app/user/appointmentSlice';
+import { deselectAppointment, selectAppointment } from '../../app/user/appointmentSlice';
 // import NavLink from '../CustomNavLink'
 import CustomNavLink from '../CustomNavLink'
 import { activateUserLoggedIn } from '../../app/user/userSlice'
@@ -46,6 +46,7 @@ const NavigationBar = () => {
 
   const loggedOutUser = () => {
     dispatch(activateUserLoggedIn(false))
+    dispatch(deselectAppointment())
     navigate('/login')
     closeMenu()
   }
