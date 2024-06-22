@@ -116,8 +116,8 @@ const Psychological = () => {
               <strong>
                 Through Interviews, observation and
                 <br />
-                psychological tests, our professsionals can properly <br />
-                and accurately diagnose the issue at hand
+                psychological tests, our professsionals can  <br />properly
+                and accurately diagnose the issue  <br />at hand
               </strong>
             </span>
           </div>

@@ -1,7 +1,8 @@
 @media(min-width:200px) and (max-width:1981px) {
 
     .backgrounddiv {
-         background-color: #ccd4f4 !important; 
+         /* background-color: #ccd4f4 !important;  */
+         background-color: whitesmoke !important;
         height: 1800px;
         width: 100%;
         border: 1px solid whitesmoke;
@@ -137,8 +138,8 @@
     }
 
     .childgrid {
-        background-color: #ccd4f4;
-        height: 535px;
+        background-color:whitesmoke;
+        height: 450px;
         width: 350px;
         transition: transform 2s;
         text-align: center;
