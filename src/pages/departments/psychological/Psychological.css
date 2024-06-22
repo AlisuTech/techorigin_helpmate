@@ -1,7 +1,7 @@
-@media(min-width:200px) and (max-width:1281px) {
+@media(min-width:200px) and (max-width:1981px) {
 
     .backgrounddiv {
-         background-color: #ccd4f4; 
+         background-color: #ccd4f4 !important; 
         height: 1800px;
         width: 100%;
         border: 1px solid whitesmoke;
@@ -16,14 +16,14 @@
     }
 
     .background {
-        background-image: url(./WhatsApp\ Image\ 2024-06-20\ at\ 10.29.33\ PM.jpeg);
+        background-image: url("../../../assets/psychological/photo_1.jpeg");
         /* height: 600px; */
         background-repeat: no-repeat;
         max-width: 100%;
         color: white;
         background-size: cover;
         background-position: center;
-        opacity: 0.9;
+        /* opacity: 0.9; */
         padding: 100px;
     }
 
@@ -102,7 +102,7 @@
     }
 
     .buttons:hover {
-        background-color: #3e3d3f;
+        background-color: #3e3d3f !important;
     }
 
     .buttons2 {
@@ -131,7 +131,7 @@
         display: grid;
         grid-template-columns: auto auto auto auto auto auto auto;
         text-wrap: nowrap;
-        overflow-x: scroll;
+        /* overflow-x: scroll; */
         column-gap: 8px;
 
     }
