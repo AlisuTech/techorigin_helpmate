@@ -14,6 +14,7 @@ import ServiceProvider from './pages/auth/signup/ServiceProvider';
 import ServiceProviderProfile from './pages/profile/serviceProvider/ServiceProviderProfile';
 import ServiceProviderDashboard from './pages/auth/serviceProvider/dashboard/Dashboard';
 import CareerMentorship from './pages/departments/CareerMentorship/Careermentorship';
+import ServiceProviderList from './components/cards/serviceProvider/ServiceProviderList';
 // import CareerMentorship from './pages/departments/careerMentorship/CareerMentorship';
 
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/signup-service_provider" element={<ServiceProvider />} />
         <Route path="/medical" element={<Medical />} />
+        <Route path="/serv" element={<ServiceProviderList />} />
         <Route path="/careerMentorship" element={<CareerMentorship />} />
         <Route path="/psychological" element={<Psychological />} />
         <Route path="/appointment" element={<Appointment />} />

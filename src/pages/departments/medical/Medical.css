@@ -1,8 +1,8 @@
 
 .backgroundImage1 {
-    background-image: url(banner2.png);
+    background-image: url("../../../assets/medicalPage/banner2.png");
     height: 480px;
-    background-size:contain;
+    /* background-size:contain; */
     background-repeat: no-repeat;
 }
 
@@ -159,7 +159,7 @@ tr td:nth-child(3) {
 .bg-department{
     display: grid;
     grid-template-columns: auto auto auto;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-left: 50px;
     margin-right: 50px;
     text-align: center;
@@ -205,7 +205,7 @@ tr td:nth-child(3) {
     
 }
 .bg-client {
-    background-image: url(happy\ client.png);
+    background-image: url("../../../assets/medicalPage/happy_client.png");
   width: 100%;
     height:500px;
     background-size: cover;
@@ -215,8 +215,8 @@ tr td:nth-child(3) {
     align-items: center;
     justify-content: center;
     opacity: 0.4;
-    z-index: -1;
-    position: absolute;
+    /* z-index: -1; */
+    position: relative;
     
 }
 
@@ -229,7 +229,10 @@ tr td:nth-child(3) {
     opacity: 1;
     font-size: 35px;
     font-family:sans-serif;
-    position: relative;
+    position: absolute;
+    left: 30%;
+    top: 240%;
+    line-height: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -257,7 +260,7 @@ tr td:nth-child(3) {
     height: 5px;
     background-color: #7e93cc;
     display: flex;
-    position: relative;
+    /* position: relative; */
     top: 50%;
     left: 47%; 
     align-items: center;
