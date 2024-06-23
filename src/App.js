@@ -15,6 +15,7 @@ import ServiceProviderProfile from './pages/profile/serviceProvider/ServiceProvi
 import ServiceProviderDashboard from './pages/auth/serviceProvider/dashboard/Dashboard';
 import CareerMentorship from './pages/departments/CareerMentorship/Careermentorship';
 import ServiceProviderList from './components/cards/serviceProvider/ServiceProviderList';
+import 'bootstrap/dist/css/bootstrap.min.css'
 // import CareerMentorship from './pages/departments/careerMentorship/CareerMentorship';
 
 
