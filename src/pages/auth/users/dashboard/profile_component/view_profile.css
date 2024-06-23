@@ -1,0 +1,107 @@
+.view-profile-container-div {
+    height: 120vh;
+    overflow: scroll;
+    width: 100%;
+
+}
+
+.view-profile-div-1 {
+    border: 1px solid #3d52a0;
+    height: 120vh;
+    overflow: scroll;
+}
+
+.view-profile-top-div {
+    width: 100%;
+    height: 5vh;
+    background-color: #3d52a0;
+}
+
+.view-profile-about-text {
+    padding-top: 5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.view-profile-row {
+    /* background-color: white; */
+    justify-content: center;
+    border: 1px solid #3d52a0;
+    border-top: none;
+}
+
+.view-profile-div-2 {
+    height: auto;
+}
+
+.view-profile-div-3 {
+    border: 1px solid #3d52a0;
+    height: auto;
+}
+
+.view-profile-div {
+    margin: 3% 0;
+    padding: 3%;
+    border: 1px solid #3d52a0;
+    display: flex;
+    align-items: center;
+}
+
+.profile-icon,
+.profile-label {
+    padding-right: 4%;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.profile_details {
+    font-size: 11px;
+}
+
+.notification-border {
+    border: 1px solid #3d52a0;
+    border-top: none;
+    height: 120vh;
+        overflow: scroll;
+}
+
+.view-profile-notification {
+    padding: 5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+}
+
+.profile-line {
+    color: #3d52a0;
+    /* background-color: #3d52a0; */
+}
+
+.notification-list {
+    font-size: 15px;
+    border-bottom: 1px solid #3d52a0;
+    border-top: none;
+    padding: 4%;
+    /* padding-left: 2%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.display-div-flex {
+    width: 90%;
+}
+
+.user-notification-header {
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.user-notification-date {
+    font-weight: 700;
+    font-size: 12px;
+    color: #3d52a0;
+}
+
+.user-notification-time {
+    font-weight: 600;
+}
