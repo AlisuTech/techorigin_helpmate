@@ -1,0 +1,36 @@
+.Arranged-flex{
+    margin-top: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.Revenue{
+    width: 300px;
+    height: 150px;
+    font-size: large;
+    background-color: blue;
+    color: azure;
+    padding: 60px;
+    border-radius: 4px;
+}
+.signed-up{
+    width: 300px;
+    height: 150px;
+    background-color: greenyellow;
+    color: azure;
+    padding: 60px;
+    border-radius: 4px;
+}
+.Open-Apointment{
+    width: 300px;
+    height: 150px;
+    background-color: #7091e6  ;
+    color: azure;
+    padding: 60px;
+    border-radius: 4px;
+}
+.progressBar{
+    margin: 100px;
+}

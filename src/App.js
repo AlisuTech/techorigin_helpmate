@@ -13,16 +13,12 @@ import Choice from './pages/auth/Choice';
 import ServiceProvider from './pages/auth/signup/ServiceProvider';
 import ServiceProviderProfile from './pages/profile/serviceProvider/ServiceProviderProfile';
 import ServiceProviderDashboard from './pages/auth/serviceProvider/dashboard/Dashboard';
-<<<<<<< HEAD
 import ViewProfile from './pages/auth/users/dashboard/profile_component/view_profile';
 import EditProfil from './pages/auth/users/dashboard/profile_component/edit_profil';
 import ChangePassword from './pages/auth/users/dashboard/profile_component/change_password';
 import CareerMentorship from './pages/departments/CareerMentorship/Careermentorship';
-=======
-import CareerMentorship from './pages/departments/CareerMentorship/Careermentorship';
 import ServiceProviderList from './components/cards/serviceProvider/ServiceProviderList';
-import CareerMentorship from './pages/departments/careerMentorship/CareerMentorship';
->>>>>>> 90df95ba1e5d5f9886b036e3f2a828b3d24aa464
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 function App() {
@@ -41,12 +37,8 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/signup-service_provider" element={<ServiceProvider />} />
         <Route path="/medical" element={<Medical />} />
-<<<<<<< HEAD
-        {<Route path="/careerMentorship" element={<CareerMentorship></CareerMentorship>}></Route> }
-=======
         <Route path="/serv" element={<ServiceProviderList />}/>
         <Route path="/careerMentorship" element={<CareerMentorship />} />
->>>>>>> 90df95ba1e5d5f9886b036e3f2a828b3d24aa464
         <Route path="/psychological" element={<Psychological />} />
         <Route path="/appointment" element={<Appointment />} />
         <Route path="/view-profile" element={<ViewProfile></ViewProfile>}></Route>
