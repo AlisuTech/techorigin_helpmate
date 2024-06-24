@@ -7,15 +7,15 @@ const NavigationBar = () => {
 
   return (
     <header className="header border-yellow">
-      <nav className="bg-[#3d52a0] nav nav_containerx border-red">
-        <div className="nav__data border-blue">
+      <nav className="bg-[#3d52a0] nav nav_container border-redx">
+        <div className="nav__data border-bluex">
           <Link to="/" className="nav__logo">
             <i className="ri-home-7-line"></i> HelpMate
           </Link>
         </div>
 
         <div
-          className="nav_toggle"
+          className="nav_toggle md:hidden "
           id="nav-toggle"
           onClick={() => setMenuOpen(!menuOpen)}
         >
@@ -32,8 +32,7 @@ const NavigationBar = () => {
         </div>
 
         <div
-          className={`${menuOpen ? "nav__menu" : "hidden"} border-green`}
-          id="nav-menu"
+          className={`${menuOpen ? "nav__menu pd:hidden" : " hidden md:block"}`}
         >
           <ul className="nav__list border-yellow">
             <li>

@@ -125,6 +125,6 @@ body {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .nav_container {
-  max-width: 1120px !important;
-  margin-inline: 1.5rem !important;
+  /* max-width: 1120px; */
+  margin-inline: 1.5rem;
 }
