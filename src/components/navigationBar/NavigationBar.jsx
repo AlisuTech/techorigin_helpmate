@@ -1,35 +1,180 @@
-import React from 'react'
-import './NavigationBar.css'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import './NavigationBar.css';
+import { Link } from 'react-router-dom';
+import CustomNavLink from '../customs/CustomNavLink';
 
 const NavigationBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <>
-      <nav className="grid md:grid-cols-2 grid-cols-1 bg-[#adbbda] py-4 px-4 space-y-4 md:space-y-0 border-green">
-        <div className='text-[35px] font-[600]'>HelpMate</div>
-        <div className='md:text-end'>
-          <ul className='my-auto space-x-4 custom-links'>
-              <Link to="/">Home</Link>
-              <Link >About</Link>
-              <div className="dropdown">
-                <button className="dropbtn">Departments <i className="fas fa-caret-down"></i></button>
-                <div className="dropdown-content">
-                  <Link to="/medical">Medical</Link>
-                  {/* <Link to="/careerMentorship">Career</Link> */}
-                  <Link to="/psychological">Psychological</Link>
-                </div>
-              </div>
-              <Link to="/user">user Dashboard</Link>
-              <Link to="/service_provider">service Dashboard</Link>
-              <Link to="/login">Log In</Link>
-              <Link to="/choice">Register</Link>
-              <Link to="/service_provider_profile">Profile</Link>
-              <Link to="/appointment">Book an Appointment</Link>
+      <nav className="border-blue position-sticky top-0 flex flex-col items-start justify-between bg-[--color-blue-100]">
+        <CustomNavLink
+          to="/"
+          className="title text-decoration-none text-white text-[1.5rem] m-4 font-bold"
+        >
+          HelpMate
+        </CustomNavLink>
+        <div className={`${
+              isMenuOpen ? "flex" : "hidden"
+            } md:flex w-full mb-2 justify-center items-center flex-col`}>
+          <div className="menu position-absolute md:hidden top-[0.75rem] right-2 flex-col justify-between w-9 h-8">
+            <span onClick={toggleMenu}>
+              <i className="fa-solid border-redx fa-bars fa-2x cursor-pointer"></i>
+            </span>
+          </div>
+
+          {/* <div
+            className={`${
+              isMenuOpen ? "flex" : "hidden"
+            } md:flex w-full mb-2 justify-center items-center flex-col`}
+          >
+            <ul className="border-red w-full flex flex-col items-center ps-0">
+              <li className="border-yellow w-full text-center">
+                <CustomNavLink
+                  to="/about"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  About
+                </CustomNavLink>
+              </li>
+              <li className="border-yellow w-full text-center">
+                <CustomNavLink to="/services">Services</CustomNavLink>
+              </li>
+              <li className="border-yellow w-full text-center">
+                <CustomNavLink to="/contact">Contact</CustomNavLink>
+              </li>
+            </ul>
+          </div> */}
+        </div>
+        <div className="menu position-absolute md:hidden top-[0.75rem] right-2 flex-col justify-between w-9 h-8">
+          <span onClick={toggleMenu}>
+            <i className="fa-solid border-red fa-bars fa-2x cursor-pointer"></i>
+          </span>
+        </div>
+
+        <div className={`${isMenuOpen ? 'flex' : 'hidden'} md:flex w-full mb-2 justify-center items-center flex-col`}>
+          <ul className="border-red w-full flex flex-col items-center ps-0">
+            <li className='border-yellow w-full text-center'>
+              <CustomNavLink
+                to="/about"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                About
+              </CustomNavLink>
+            </li>
+            <li className='border-yellow w-full text-center'>
+              <CustomNavLink to="/services">Services</CustomNavLink>
+            </li>
+            <li className='border-yellow w-full text-center'>
+              <CustomNavLink to="/contact">Contact</CustomNavLink>
+            </li>
           </ul>
         </div>
       </nav>
     </>
-  )
+  );
+};
+
+export default NavigationBar;
+
+
+
+/**
+ * 
+ * import React, { useState } from 'react'
+import './NavigationBar.css'
+import { Link } from 'react-router-dom'
+import CustomNavLink from '../customs/CustomNavLink';
+
+const NavigationBar = () => {
+  
+  return (
+    <>
+      <nav className="border-blue position-sticky top-0 flex justify-between items-center bg-[--color-blue-100]">
+        <CustomNavLink
+          to="/"
+          className="title text-decoration-none text-white text-[1.5rem] m-4 font-bold"
+        >
+          HelpMate
+        </CustomNavLink>
+        <div className="menu position-absolute md:hidden block top-[0.75rem] right-2 flex-col justify-between w-9 h-8">
+          <span>
+            <i class="fa-solid border-red fa-bars fa-2x cursor-pointer"></i>
+          </span>
+        </div>
+        <div className='hidden md:block'>
+          <ul className="border-red ps-0 flex">
+            <li>
+              <CustomNavLink
+                to="/about"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                About
+              </CustomNavLink>
+            </li>
+            <li>
+              <CustomNavLink to="/services">Services</CustomNavLink>
+            </li>
+            <li>
+              <CustomNavLink to="/contact">Contact</CustomNavLink>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </>
+  );
 }
 
 export default NavigationBar
+ * 
+ */
+
+
+/**
+ * 
+ * const NavigationBar = () => {
+  
+  return (
+    <>
+      <nav className="border-blue position-sticky top-0 flex flex-col items-start justify-between items-centerx bg-[--color-blue-100]">
+        <CustomNavLink
+          to="/"
+          className="title text-decoration-none text-white text-[1.5rem] m-4 font-bold"
+        >
+          HelpMate
+        </CustomNavLink>
+        <div className="menu  position-absolute hiddenx top-[0.75rem] right-2 flex-col justify-between w-9 h-8">
+          <span>
+            <i class="fa-solid border-red fa-bars fa-2x cursor-pointer"></i>
+          </span>
+        </div>
+        <div className='hiddenx md:blockx w-[100%] mb-2 justify-center items-center flex flex-col'>
+          <ul className="border-red w-[100%] flex flex-col items-center ps-0 ">
+            <li className='border-yellow w-[100%] text-center'>
+              <CustomNavLink
+                to="/about"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                About
+              </CustomNavLink>
+            </li>
+            <li className='border-yellow w-[100%] text-center'>
+              <CustomNavLink to="/services">Services</CustomNavLink>
+            </li>
+            <li className='border-yellow w-[100%] text-center'>
+              <CustomNavLink to="/contact">Contact</CustomNavLink>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </>
+  );
+}
+
+ * 
+ */
