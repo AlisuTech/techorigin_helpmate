@@ -12,7 +12,9 @@
   box-sizing: border-box;
 }
 
+/* VARIABLES CSS */
 :root {
+  --header-height: 3.5rem;
   /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
   font-size: 16px;
   line-height: 24px;
@@ -21,6 +23,7 @@
   color-scheme: light dark;
   color: black;
   background-color: #ede8f5;
+  text-decoration: none;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -28,8 +31,27 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  /* Font and typography */
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Montserrat", sans-serif;
+  --normal-font-size: .938rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+
+  /*========== Colors ==========*/
+
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --black-color: hsl(220, 24%, 12%);
+  --black-color-light: hsl(220, 24%, 15%);
+  --black-color-lighten: hsl(220, 20%, 18%);
+  --white-color: #fff;
+  --body-color: hsl(220, 100%, 97%);
 
   --color-gray-100: #f4f3f1;
   --color-gray-200: #dddbd8;
@@ -92,4 +114,17 @@ body {
 
 .border-yellow {
   border: 3px solid yellow;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1024px) {
+  :root {
+    --normal-font-size: 1rem;
+  }
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.nav_container {
+  max-width: 1120px !important;
+  margin-inline: 1.5rem !important;
 }
