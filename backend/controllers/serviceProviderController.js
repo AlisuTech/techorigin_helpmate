@@ -86,9 +86,25 @@ const getAllServiceProviders = asyncHandler(async (req, res) => {
   }
 
   res.json(serviceProviders);
+
+
+
+// const loginserviceprovider = asyncHandler(async(req, res)=>{
+ 
+//   const {EMAIL, PASSWORD}=req.query
+//   const serviceProvider = await serviceProviderSchema.find0ne({$and:[{"email":EMAIL},{password:PASSWORD}]})
+//   if (serviceProvider!==null){
+//     res.send(serviceProvider)
+//   } else {
+//     res.status(400)
+//   }
+// })
+
+
 });
 
 module.exports = {
   createNewServiceProvider,
   getAllServiceProviders,
+  
 };
