@@ -96,6 +96,9 @@
     border-radius: 7px;
 
 }
+.button:hover {
+    background-color: #ADBBDA ;
+}
 .client-name{
     line-height: 5px;
 }
