@@ -12,9 +12,9 @@ const NavigationBar = () => {
 
   return (
     <nav className="bg-[--color-blue-100] py-4 px-3 font-Poppins font-bold text-[17px] items-center flex justify-between border-green">
-      <Link to="/" className="logo">HelpMate</Link>
+      <Link to="/" className="logo" onClick={handleLinkClick}>HelpMate</Link>
       <ul className="md:flex hidden items-center gap-10">
-        <NavigationLinks handleLinkClick={handleLinkClick}/>
+        <NavigationLinks handleLinkClick={handleLinkClick} />
       </ul>
       {/* Mobile Nav */}
       <ul
@@ -22,7 +22,7 @@ const NavigationBar = () => {
           md:hidden flex flex-col gap-10 text-medium p-7 pt-20 duration-500
           ${open ? "right-0" : "-right-full"}`}
       >
-        <NavigationLinks handleLinkClick={handleLinkClick} className="border-yellow"/>
+        <NavigationLinks handleLinkClick={handleLinkClick} className="border-yellow" />
       </ul>
 
       <div className="text-2xl md:hidden z-50" onClick={() => setOpen(!open)}>

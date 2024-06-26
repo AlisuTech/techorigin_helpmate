@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-const NavigationLinks = ({handleLinkClick}) => {
+const NavigationLinks = ({ handleLinkClick }) => {
   const [isDepartmentsOpen, setIsDepartmentsOpen] = useState(false);
   const location = useLocation();
   
@@ -20,9 +20,9 @@ const NavigationLinks = ({handleLinkClick}) => {
       name: "Departments",
       icon: "ri-building-line",
       subItems: [
-        { name: "HR", url: "/departments/hr" },
-        { name: "Engineering", url: "/departments/engineering" },
-        { name: "Marketing", url: "/departments/marketing" },
+        { name: "Education", url: "/careerMentorship" },
+        { name: "Medical", url: "/medical" },
+        { name: "Psychological", url: "/psychological" },
       ],
     },
     {
@@ -34,6 +34,7 @@ const NavigationLinks = ({handleLinkClick}) => {
 
   const handleLinkClick1 = () => {
     setIsDepartmentsOpen(false);
+    handleLinkClick(); // Close the mobile menu
   };
 
   const getLinkClassName = (url) => (
@@ -45,7 +46,7 @@ const NavigationLinks = ({handleLinkClick}) => {
       {links.map((link, i) => (
         <li
           key={i}
-          className={`relative hover:bg-[#5a70c8] hover:rounded-md p-2 ${getLinkClassName(link.url)}`}
+          className={`relative hover:bg-[#5a70c8] hover:rounded-md p-2 ${getLinkClassName(link.url)} nav-link`}
           onMouseEnter={() => link.subItems && setIsDepartmentsOpen(true)}
           onMouseLeave={() => link.subItems && setIsDepartmentsOpen(false)}
         >
@@ -55,13 +56,13 @@ const NavigationLinks = ({handleLinkClick}) => {
               {link.name}
             </div>
           ) : (
-            <Link to={link.url} Click={handleLinkClick} className="flex items-center w-full h-full" onClick={handleLinkClick}>
+            <Link to={link.url} onClick={handleLinkClick1} className="flex items-center w-full h-full">
               <i className={`mr-2 ${link.icon}`}></i>
               {link.name}
             </Link>
           )}
           {link.subItems && isDepartmentsOpen && (
-            <ul className="absolute left-0 top-full bg-[#3d52a0] rounded-md border-green">
+            <ul className="dropdown-menu">
               {link.subItems.map((subItem, j) => (
                 <li key={j} className={`hover:bg-[#2a3a7a] p-2 w-full ${getLinkClassName(subItem.url)}`}>
                   <Link
