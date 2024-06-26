@@ -14,7 +14,7 @@ module.exports = {
         lightprimary: "#ECF3FF",
       },
       backgroundImage: {
-        Hero: "url('assets/background.png')",
+        Hero: "url('assets/img/Background.png')",
       },
     },
   },
