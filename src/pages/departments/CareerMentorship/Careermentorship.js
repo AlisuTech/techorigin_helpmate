@@ -1,9 +1,9 @@
-// import React from 'react'
+import React from 'react'
 
-// const CareerMentorship = () => {
-//   return (
-//     <div>Education</div>
-//   )
-// }
+const CareerMentorship = () => {
+  return (
+    <div>Education</div>
+  )
+}
 
-// export default CareerMentorship
+export default CareerMentorship

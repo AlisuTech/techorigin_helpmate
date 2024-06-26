@@ -19,6 +19,7 @@ import ChangePassword from './pages/auth/users/dashboard/profile_component/chang
 import CareerMentorship from './pages/departments/CareerMentorship/Careermentorship';
 import ServiceProviderList from './components/cards/serviceProvider/ServiceProviderList';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Header from './components/Header';
 
 
 function App() {
