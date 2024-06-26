@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         primary: "#3E82FC",
         lightprimary: "#ECF3FF",
+        footer_bg: "#7091e6",
       },
       backgroundImage: {
         Hero: "url('assets/img/Background.png')",

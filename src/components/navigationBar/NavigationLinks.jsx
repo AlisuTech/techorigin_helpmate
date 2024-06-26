@@ -12,11 +12,6 @@ const NavigationLinks = ({ handleLinkClick }) => {
       icon: "ri-home-7-line",
     },
     {
-      name: "About",
-      url: "/about",
-      icon: "ri-information-line",
-    },
-    {
       name: "Departments",
       icon: "ri-building-line",
       subItems: [
