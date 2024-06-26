@@ -46,7 +46,7 @@ const NavigationLinks = ({ handleLinkClick }) => {
           onMouseLeave={() => link.subItems && setIsDepartmentsOpen(false)}
         >
           {link.subItems ? (
-            <div className="flex items-center cursor-pointer">
+            <div className="flex items-center cursor-pointer border-red text-[--color-black-100]">
               <i className={`mr-2 ${link.icon}`}></i>
               {link.name}
             </div>
@@ -59,10 +59,10 @@ const NavigationLinks = ({ handleLinkClick }) => {
           {link.subItems && isDepartmentsOpen && (
             <ul className="dropdown-menu">
               {link.subItems.map((subItem, j) => (
-                <li key={j} className={`hover:bg-[#2a3a7a] p-2 w-full ${getLinkClassName(subItem.url)}`}>
+                <li key={j} className={`hover:bg-[#2a3a7a] p-2 w-full border-red ${getLinkClassName(subItem.url)}`}>
                   <Link
                     to={subItem.url}
-                    className="block w-full h-full"
+                    className="block w-full border-yellow h-full"
                     onClick={handleLinkClick1}
                   >
                     {subItem.name}
