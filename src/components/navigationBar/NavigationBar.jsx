@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./NavigationBar.css";
 import { Link } from "react-router-dom";
 import NavigationLinks from "./NavigationLinks";
+import LogoImg from '../../assets/img/7xvwc4oo-removebg-preview.png'
 
 const NavigationBar = () => {
   const [open, setOpen] = useState(false);
@@ -12,6 +13,7 @@ const NavigationBar = () => {
 
   return (
     <nav className="bg-[--color-blue-100] py-4 px-3 font-Poppins font-bold text-[17px] items-center flex justify-between border-green">
+      {/* <img src={LogoImg} alt="" className="border-green h-[50px] w-[190px] bg-green text-white" /> */}
       <Link to="/" className="logo text-[25px]" onClick={handleLinkClick}>HelpMate</Link>
       <ul className="md:flex hidden items-center gap-10">
         <NavigationLinks handleLinkClick={handleLinkClick} />
