@@ -1,0 +1,111 @@
+========== HEADER & NAV ==========
+.nav__logo
+HelpMate
+
+.nav__link
+Home
+Company
+Analytics
+Products
+Users
+Contact
+
+========== DROPDOWN MENU ==========
+.dropdown__link
+Overview
+Transactions
+Reports
+
+Profiles
+Accounts
+Messages
+
+========== DROPDOWN SUBMENU ==========
+.dropdown__sublink
+Documents
+Payments
+Refunds
+
+
+return (
+    <nav className="bg-[#3d52a0] containerx header">
+      <Link to="/" className="title">
+        HelpMate
+      </Link>
+      <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
+        {/* <span></span>
+        <span></span>
+        <span></span> */}
+        <i class="ri-menu-line text-[35px]"></i>
+        {/* <i class="ri-close-line text-[35px]"></i> */}
+      </div>
+      <div className="nav__menu" id="nav-menu">
+        <ul className="nav__list">
+          <li>
+            <Link className="nav__link">Home</Link>
+          </li>
+          <li>
+            <Link className="nav__link">Company</Link>
+          </li>
+
+          {/* DROPDOWN 1 */}
+          <li className="dropdown__item">
+            <div className="nav__link">
+              Analytics <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+          </li>
+
+          <li>
+            <Link className="nav__link">Products</Link>
+          </li>
+
+          {/* DROPDOWN 2 */}
+          <li className="dropdown__item">
+            <div className="nav__link">
+              Users <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+          </li>
+
+          <li>
+            <Link className="nav__link">Contact</Link>
+          </li>
+        </ul>
+      </div>
+      {/* <ul className={menuOpen ? "open" : ""}>
+        <li>
+          <div className="dropdown border-yellowx w-[100%]">
+            <button 
+              className="dropdown-toggle border-greenx w-[100%] btn-link"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Departments
+            </button>
+            <ul className="dropdown-menu border-yellow space-y-1">
+                <li>
+                  <NavLink to="/medical" >
+                    Medical
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/careerMentorship" >
+                    Education
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/psychological">
+                    Psychological
+                  </NavLink>
+                </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <NavLink to="/choice">Sign Up</NavLink>
+        </li>
+        <li>
+          <NavLink to="/login">Sign In</NavLink>
+        </li>
+      </ul> */}
+    </nav>
+  );

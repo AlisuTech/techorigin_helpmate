@@ -1,35 +1,35 @@
-import React from 'react'
-import './NavigationBar.css'
-import { Link } from 'react-router-dom'
+import React, { useState } from "react";
+import "./NavigationBar.css";
+import { Link } from "react-router-dom";
+import NavigationLinks from "./NavigationLinks";
 
 const NavigationBar = () => {
-  return (
-    <>
-      <nav className="grid md:grid-cols-2 grid-cols-1 bg-[#adbbda] py-4 px-4 space-y-4 md:space-y-0 border-green">
-        <div className='text-[35px] font-[600]'>HelpMate</div>
-        <div className='md:text-end'>
-          <ul className='my-auto space-x-4 custom-links'>
-              <Link to="/">Home</Link>
-              <Link >About</Link>
-              <div className="dropdown">
-                <button className="dropbtn">Departments <i className="fas fa-caret-down"></i></button>
-                <div className="dropdown-content">
-                  <Link to="/medical">Medical</Link>
-                  {/* <Link to="/careerMentorship">Career</Link> */}
-                  <Link to="/psychological">Psychological</Link>
-                </div>
-              </div>
-              <Link to="/user">user Dashboard</Link>
-              <Link to="/service_provider">service Dashboard</Link>
-              <Link to="/login">Log In</Link>
-              <Link to="/choice">Register</Link>
-              <Link to="/service_provider_profile">Profile</Link>
-              <Link to="/appointment">Book an Appointment</Link>
-          </ul>
-        </div>
-      </nav>
-    </>
-  )
-}
+  const [open, setOpen] = useState(false);
 
-export default NavigationBar
+  const handleLinkClick = () => {
+    setOpen(false); // Close the mobile menu when a link is clicked
+  };
+
+  return (
+    <nav className="bg-[--color-blue-100] py-4 px-3 font-Poppins font-bold text-[17px] items-center flex justify-between border-green">
+      <Link to="/" className="logo" onClick={handleLinkClick}>HelpMate</Link>
+      <ul className="md:flex hidden items-center gap-10">
+        <NavigationLinks handleLinkClick={handleLinkClick} />
+      </ul>
+      {/* Mobile Nav */}
+      <ul
+        className={`fixed top-0 z-50 bg-white w-2/3 h-screen shadow-2xl
+          md:hidden flex flex-col gap-10 text-medium p-7 pt-20 duration-500
+          ${open ? "right-0" : "-right-full"}`}
+      >
+        <NavigationLinks handleLinkClick={handleLinkClick} className="border-yellow" />
+      </ul>
+
+      <div className="text-2xl md:hidden z-50" onClick={() => setOpen(!open)}>
+        <ion-icon name={`${open ? "close" : "menu"}`}></ion-icon>
+      </div>
+    </nav>
+  );
+};
+
+export default NavigationBar;
