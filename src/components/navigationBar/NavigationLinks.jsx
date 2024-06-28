@@ -57,7 +57,7 @@ const NavigationLinks = ({ handleLinkClick }) => {
             </Link>
           )}
           {link.subItems && isDepartmentsOpen && (
-            <ul className="dropdown-menu">
+            <ul className="dropdown-menu absolute bg-white shadow-lg rounded-md mt-0 py-2 w-48">
               {link.subItems.map((subItem, j) => (
                 <li key={j} className={`hover:bg-[#2a3a7a] p-2 w-full border-red ${getLinkClassName(subItem.url)}`}>
                   <Link
