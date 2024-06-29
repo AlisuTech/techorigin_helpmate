@@ -1,283 +1,406 @@
 .finance-imag{
-    background-image: url('./finance.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-  }
-  .alignfinance{
-    text-align: center;
-  }
-  .alignfirsthomepage{
-    text-align: start;
-  }
-  
-  
-  .finalrel-imag{
-    background-image: url('./relatibg.jpg');
-    background-size: cover;
-    background-repeat: no repeat;
-    height: 100vh;
-  }
-  .firsthomepagebg{
-    background-image: url('./firsthomepagebg.jpg');
-    background-size: cover;
-    background-repeat: no repeat;
-    height: 100vh;
-  }
-  .div-psy{
-    width: 100%;
-    height: 700px;
-    text-align: center;
-  }
-  .div-firsthome{
-    width: 100%;
-    height: 700px;
-  }
-  .div2-firsthomepage{
-    background-color: white;
-    width: 20%;
-    margin-left: 30px;
-    margin-bottom: -150px;
-    padding: 10px;
-    border-radius: 30px;
-  
-  }
-  .div-relationship{
-    width: 100%;
-    height: 700px;
-  }
-  
-  .mainhome-imag{
-    background-image: url('./home.jpeg');
-    background-size: cover;
-    background-repeat: no repeat;
-    height: 100vh;
-  }
-  .overall-div{
-    background-color: grey;
-  }
-  .div-mainhome-opacity{
-    background-color: black;
-    opacity: 0.7;
-    width: 100%;
-    height: 100vh;
-  
-  }
-  .div-mainhome{
-    width: 100%;
-    height: 150px;
-  
-  }
-  .rell{
-    background-image: url('./relatibg.jpg');
-    background-size: cover;
-    background-repeat: no repeat;
-    height: 100vh;
-  }
-  .psy-imag{
-    background-image: url('./psycholobg.jpg');
-    background-size: cover;
-    background-repeat: no repeat;
-    height: 100vh;
-  }
-  .div-imag{
-    background-image: url('./finance.jpeg');
-    background-size: cover;
-    background-repeat: no repeat;
-    height: 100vh;
-  }
-  .div-rela{
-    width: 100%;
-    height: 700px;
-  }
-  .mainbackground{
-    background-image: url('./mainbg.jpg');
-    background-size: cover;
-    background-repeat: no repeat;
-    height: 100vh;
-  }
-  .div-med{
-    width: 100%;
-    height: 100vh;
-  }
-  .flex-divmed{
-    display: flex;
-  }
-  .medical{
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    align-content: center;
-    padding: 30px;
-  }
-  .we-offermed{
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    align-content: center;
-    padding: 30px;
-  }
-  .fitness-imag{
-    background-image: url('./fitness.jpg');
-    background-size: cover;
-    background-repeat: no repeat;
-    height: 35vh;
-    width: 100%;
-  }
-  .diet-imag{
-    background-image: url('./diet.jpg');
-    background-size: cover;
-    background-repeat: no repeat;
-    height: 100vh;
-    width: 100%;
-  }
-  .fashion-imag{
-    background-image: url('./fashion.jpg');
-    background-size: cover;
-    background-repeat: no repeat;
-    height: 35vh;
-    width: auto;
-  }
-  .carrrr-imag{
-    background-image: url('./carrrr.jpg');
-    background-size: cover;
-    background-repeat: no repeat;
-    height: 35vh;
-    width: 100%;
-  }
-  .lifestyleflex{
-    display: flex;
-    height: 100vh;
-    margin-top: -15px;
-    margin-left: 10px;
-  
-  }
-  .alignlifestyle{
-    text-align: end;
-  }
-  .alignpsychology{
-    text-align: start;
-  }
-  
-  .med-imag{
-    background-image: url('./doctrbg.jpg');
-    background-size: cover;
-    background-repeat: no repeat;
-    height: 100vh;
-    width: 100%;
-  }
-  .psychologybutton{
-    background-color: darkslateblue;
-    padding: 7px;
-    margin-left: 25%;
-    margin-bottom: 2px;
-    border-radius: 10px;
-    font-weight: bold;
-  }
-  .lifestylediv{
-    margin-top: 0px;
-    height: 200vh;
-    width: 500%;
-  
-  
-  }
-  .margin{
-    margin: -3px;
-  }
-  .div-finance{
-    display: flex;
-    justify-content: flex-end;
-  }
-  .financebutton{
-    margin-top: 30px;
-    background-color: darkslateblue;
-    padding: 7px;
-    margin-left: 0%;
-    margin-bottom: 2px;
-    border-radius: 10px;
-    font-weight: bold;
-  }
-  .medicalbutton{
-    margin-top: 2px;
-    background-color: darkslateblue;
-    margin-left: 0%;
-    border-radius: 10px;
-    font-weight: bold;
-  
-  }
-  .h1font{
-    font-weight: bolder;
-    font-size: xx-large;
-    font-style: italic;
-    font-family: Arial, Helvetica, sans-serif;
-    color: darkslateblue;
-    margin-top: 3px;
-    padding-top: 20px;
-    padding-left: 50%;
-  }
-  .alignspan{
-    margin-left: 38%;
-    padding-top: 10px;
-    padding-left: 15px;
-    font-size: larger;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic;
-    font-weight: bold;
-    color: black;
-    background-color: white;
-    margin-top: 28%;
-    width: 45%;
-    height: 200px;
-    border-radius: 50px;
-  
-  }
-  .h3font{
-    font-size: x-large;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-style: oblique;
-    font-weight: bold;
-  }
-  .spanfont{
-    font-size: medium;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: normal;
-    font-weight: 600;
-  }
-  .homepagebutton{
-    background-color: darkslateblue;
-    padding: 7px;
-    margin-left: 40%;
-    margin-bottom: 2px;
-    border-radius: 10px;
-    font-weight: bold;
-  }
-  .div-psychology{
-    background-color: white;
-    width: 20%;
-    margin-left: 30px;
-    margin-top: 10px;
-    padding: 30px;
-    border-radius: 30px;
-  }
-  .div-medical{
-    background-color: white;
-    width: 20%;
-    margin-left: 30px;
-    margin-top: 150px;
-    padding: 30px;
-    border-radius: 30px;
-  }
-  .divfinance2{
-    background-color: lightblue;
-    width: 20%;
-    margin-left: 70%;
-    margin-top: 10px;
-    padding: 30px;
-    border-radius: 30px;
-  }
-  .lifestylepadding{
-    padding: 100px;
-    height: 100%;
-    width: 50%;
-  
-  }
+  background-image: url('./finance.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.alignfinance{
+  text-align: center;
+}
+.alignfirsthomepage{
+  text-align: start;
+}
+
+
+.finalrel-imag{
+  background-image: url('./relatibg.jpg');
+  background-size: cover;
+  background-repeat: no repeat;
+  height: 100vh;
+}
+.firsthomepagebg{
+  background-image: url('./firsthomepagebg.jpg');
+  background-size: cover;
+  background-repeat: no repeat;
+  height: 100vh;
+}
+.div-psy{
+  width: 100%;
+  height: 700px;
+  text-align: center;
+}
+.div-firsthome{
+  width: 100%;
+  height: 700px;
+}
+.div2-firsthomepage{
+  background-color: white;
+  width: 20%;
+  margin-left: 30px;
+  margin-bottom: -150px;
+  padding: 10px;
+  border-radius: 30px;
+
+}
+.div-relationship{
+  width: 100%;
+  height: 700px;
+}
+
+.mainhome-imag{
+  background-image: url('./home.jpeg');
+  background-size: cover;
+  background-repeat: no repeat;
+  height: 100vh;
+}
+.overall-div{
+  background-color: rgb(76, 76, 142);
+}
+.div-mainhome-opacity{
+  background-color: black;
+  opacity: 1;
+  width: 100%;
+  height: 100vh;
+
+}
+.div-mainhome{
+  width: 100%;
+  height: 150px;
+
+}
+.rell{
+  background-image: url('./relatibg.jpg');
+  background-size: cover;
+  background-repeat: no repeat;
+  height: 100vh;
+}
+.psy-imag{
+  background-image: url('./psycholobg.jpg');
+  background-size: cover;
+  background-repeat: no repeat;
+  height: 100vh;
+}
+.div-imag{
+  background-image: url('./finance.jpeg');
+  background-size: cover;
+  background-repeat: no repeat;
+  height: 100vh;
+}
+.div-rela{
+  width: 100%;
+  height: 700px;
+}
+.mainbackground{
+  background-image: url('./mainbg.jpg');
+  background-size: cover;
+  background-repeat: no repeat;
+  height: 100vh;
+}
+.div-med{
+  width: 100%;
+  height: 100vh;
+}
+.flex-divmed{
+  display: flex;
+}
+.medical{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-content: center;
+  padding: 30px;
+}
+.we-offermed{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-content: center;
+  padding: 30px;
+}
+.fitness-imag{
+  background-image: url('./fitness.jpg');
+  background-size: cover;
+  background-repeat: no repeat;
+  height: 35vh;
+  width: 100%;
+}
+.diet-imag{
+  background-image: url('./diet.jpg');
+  background-size: cover;
+  background-repeat: no repeat;
+  height: 100vh;
+  width: 100%;
+}
+.fashion-imag{
+  background-image: url('./fashion.jpg');
+  background-size: cover;
+  background-repeat: no repeat;
+  height: 35vh;
+  width: auto;
+}
+.carrrr-imag{
+  background-image: url('./carrrr.jpg');
+  background-size: cover;
+  background-repeat: no repeat;
+  height: 35vh;
+  width: 100%;
+}
+.lifestyleflex{
+  display: flex;
+  height: 100vh;
+  margin-top: -15px;
+  margin-left: 10px;
+
+}
+.lifestylef{
+  height: 180vh;
+  width: 100%;
+  background-image: url('./lifestyleimage.jpeg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -18px;
+}
+.alignlifestyle{
+  text-align: end;
+}
+.alignpsychology{
+  text-align: start;
+}
+
+.med-imag{
+  background-image: url('./newmedical.jpg');
+  background-size: cover;
+  background-repeat: no repeat;
+  height: 100vh;
+  width: 100%;
+  background-position: center center;
+}
+.psychologybutton{
+  background-color: darkslateblue;
+  padding: 7px;
+  margin-left: 25%;
+  margin-bottom: 2px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: aliceblue;
+}
+.margin{
+  margin: -3px;
+}
+.div-finance{
+  display: flex;
+  justify-content: flex-end;
+}
+.financebutton{
+  margin-top: 30px;
+  background-color: darkslateblue;
+  padding: 7px;
+  margin-left: 0%;
+  margin-bottom: 2px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: aliceblue;
+}
+.medicalbutton{
+  margin-top: 2px;
+  background-color: darkslateblue;
+  margin-left: 10%;
+  border-radius: 10px;
+  font-weight: bold;
+  height: 35px;
+  color: aliceblue;
+
+}
+.h1font{
+  font-weight: bolder;
+  font-size: xx-large;
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+  color: darkslateblue;
+  margin-top: 3px;
+  padding-top: 20px;
+  padding-left: 50%;
+}
+.alignspan{
+  margin-left: 38%;
+  padding-top: 10px;
+  padding-left: 15px;
+  font-size: larger;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  margin-top: 28%;
+  width: 45%;
+  height: 200px;
+  border-radius: 50px;
+
+}
+.h3font{
+  font-size: x-large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: oblique;
+  font-weight: bold;
+}
+.spanfont{
+  font-size: medium;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 600;
+}
+.spanfontmedical{
+  font-size: medium;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-left: 10px;
+}
+.homepagebutton{
+  background-color: darkslateblue;
+  padding: 7px;
+  margin-left: 40%;
+  margin-bottom: 2px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: aliceblue;
+}
+.div-psychology{
+  background-color: white;
+  width: 20%;
+  margin-left: 30px;
+  margin-top: 10px;
+  padding: 30px;
+  border-radius: 30px;
+}
+.div-medical{
+  background-color: white;
+  width: 50%;
+  margin-left: 30px;
+  margin-top: 90px;
+  height: 30px;
+  border-radius: 30px;
+  transform: skewX(-25deg);
+}
+.div-medicalSystems1{
+  background-color: white;
+  width: 30%;
+  margin-left: 70px;
+  margin-top: 10px;
+  height: 30px;
+  border-radius: 30px;
+  transform: skewX(-25deg);
+}
+.div-medicalSystems2{
+  background-color: white;
+  width: 40%;
+  margin-left: 70px;
+  margin-top: 20px;
+  height: 30px;
+  border-radius: 30px;
+  transform: skewX(-25deg);
+}
+.div-medicalSystems3{
+  background-color: white;
+  width: 38%;
+  margin-left: 70px;
+  margin-top: 10px;
+  height: 30px;
+  border-radius: 30px;
+  transform: skewX(-25deg);
+}
+.div-medicalSystems4{
+  background-color: white;
+  width: 35%;
+  margin-left: 70px;
+  margin-top: 10px;
+  height: 30px;
+  border-radius: 30px;
+  transform: skewX(-25deg);
+}
+.div-medicalSystems5{
+  background-color: white;
+  width: 33%;
+  margin-left: 70px;
+  margin-top: 10px;
+  height: 30px;
+  border-radius: 30px;
+  transform: skewX(-25deg);
+}
+.div-medicalSystems6{
+  background-color: white;
+  width: 28%;
+  margin-left: 70px;
+  margin-top: 10px;
+  height: 30px;
+  border-radius: 30px;
+  transform: skewX(-25deg);
+}
+.div-medicalSystems7{
+  background-color: white;
+  width: 26%;
+  margin-left: 70px;
+  margin-top: 10px;
+  height: 30px;
+  border-radius: 30px;
+  transform: skewX(-25deg);
+}.div-medicalSystems8{
+  background-color: white;
+  width: 24%;
+  margin-left: 70px;
+  margin-top: 10px;
+  height: 30px;
+  border-radius: 30px;
+  transform: skewX(-25deg);
+}
+.div-medicalSystems9{
+  background-color: white;
+  width: 22%;
+  margin-left: 70px;
+  margin-top: 10px;
+  height: 30px;
+  border-radius: 30px;
+  transform: skewX(-25deg);
+}
+.divfinance2{
+  background-color: lightblue;
+  width: 20%;
+  margin-left: 70%;
+  margin-top: 10px;
+  padding: 30px;
+  border-radius: 30px;
+}
+.divlifestyle2{
+  background-color: lightblue;
+  width: 25%;
+  height: 40vh;
+  margin-left: 65%;
+  margin-top: 10px;
+  padding: 30px;
+  border-radius: 100%;
+}
+.lifestylepadding{
+  padding: 100px;
+  height: 100%;
+  width: 50%;
+
+}
+.lifestylebutton{
+  background-color: darkslateblue;
+  padding: 7px;
+  margin-left: 25%;
+  margin-bottom: 2px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: aliceblue;
+}
+.lifestylefont{
+  margin-left: 30%;
+}
+
+
+
+
+
