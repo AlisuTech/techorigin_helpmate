@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
     <>
 
-{/* <div className='margin overall-div'>
+<div className='margin overall-div'>
              <div className='firsthomepagebg div-mainhome-opacity'>
                 <h1 className='alignfirsthomepage h1font'>&nbsp;HELP MATE</h1>
                 <div className='div2-firsthomepage'><h1 className='h3font'>Welcome!!!<br></br> to our safe <i class="fa fa-space-shuttle" aria-hidden="true"></i></h1></div>
@@ -112,7 +112,7 @@ const HomePage = () => {
            
            
         </div>
- */}
+
 
 
         {/* <Header/> */}

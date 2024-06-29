@@ -1,5 +1,5 @@
-/* .finance-imag{
-  background-image: url('./finance.jpeg');
+.finance-imag{
+  background-image: url('../../assets/homepage/finance.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -13,13 +13,13 @@
 
 
 .finalrel-imag{
-  background-image: url('./relatibg.jpg');
+  background-image: url('../../assets/homepage/relatibg.jpg');
   background-size: cover;
   background-repeat: no repeat;
   height: 100vh;
 }
 .firsthomepagebg{
-  background-image: url('./firsthomepagebg.jpg');
+  background-image: url('../../assets/homepage/firsthomepagebg.jpg');
   background-size: cover;
   background-repeat: no repeat;
   height: 100vh;
@@ -48,7 +48,7 @@
 }
 
 .mainhome-imag{
-  background-image: url('./home.jpeg');
+  background-image: url('../../assets/homepage/home.jpeg');
   background-size: cover;
   background-repeat: no repeat;
   height: 100vh;
@@ -69,19 +69,19 @@
 
 }
 .rell{
-  background-image: url('./relatibg.jpg');
+  background-image: url('../../assets/homepage/relatibg.jpg');
   background-size: cover;
   background-repeat: no repeat;
   height: 100vh;
 }
 .psy-imag{
-  background-image: url('./psycholobg.jpg');
+  background-image: url('../../assets/homepage/psycholobg.jpg');
   background-size: cover;
   background-repeat: no repeat;
   height: 100vh;
 }
 .div-imag{
-  background-image: url('./finance.jpeg');
+  background-image: url('../../assets/homepage/finance.jpeg');
   background-size: cover;
   background-repeat: no repeat;
   height: 100vh;
@@ -91,7 +91,7 @@
   height: 700px;
 }
 .mainbackground{
-  background-image: url('./mainbg.jpg');
+  background-image: url('../../assets/homepage/mainbg.jpg');
   background-size: cover;
   background-repeat: no repeat;
   height: 100vh;
@@ -118,28 +118,28 @@
   padding: 30px;
 }
 .fitness-imag{
-  background-image: url('./fitness.jpg');
+  background-image: url('../../assets/homepage/fitness.jpg');
   background-size: cover;
   background-repeat: no repeat;
   height: 35vh;
   width: 100%;
 }
 .diet-imag{
-  background-image: url('./diet.jpg');
+  background-image: url('../../assets/homepage/diet.jpg');
   background-size: cover;
   background-repeat: no repeat;
   height: 100vh;
   width: 100%;
 }
 .fashion-imag{
-  background-image: url('./fashion.jpg');
+  background-image: url('../../assets/homepage/fashion.jpeg');
   background-size: cover;
   background-repeat: no repeat;
   height: 35vh;
   width: auto;
 }
 .carrrr-imag{
-  background-image: url('./carrrr.jpg');
+  background-image: url('../../assets/homepage/carrrr.jpg');
   background-size: cover;
   background-repeat: no repeat;
   height: 35vh;
@@ -155,7 +155,7 @@
 .lifestylef{
   height: 180vh;
   width: 100%;
-  background-image: url('./lifestyleimage.jpeg');
+  background-image: url('../../assets/homepage/lifestyleimage.jpeg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -169,7 +169,7 @@
 }
 
 .med-imag{
-  background-image: url('./newmedical.jpg');
+  background-image: url('../../assets/homepage/newmedical.jpg');
   background-size: cover;
   background-repeat: no repeat;
   height: 100vh;
@@ -403,4 +403,4 @@
 
 
 
- */
+
