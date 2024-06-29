@@ -1,15 +1,11 @@
 import React from 'react'
-<<<<<<< HEAD
 import './HomePage.css'
-=======
-import Header from '../../components/Header'
->>>>>>> 8a028eaf2963736a002a1de2e0f12a7366a1dde2
 
 const HomePage = () => {
   return (
     <>
 
-<div className='margin overall-div'>
+{/* <div className='margin overall-div'>
              <div className='firsthomepagebg div-mainhome-opacity'>
                 <h1 className='alignfirsthomepage h1font'>&nbsp;HELP MATE</h1>
                 <div className='div2-firsthomepage'><h1 className='h3font'>Welcome!!!<br></br> to our safe <i class="fa fa-space-shuttle" aria-hidden="true"></i></h1></div>
@@ -116,13 +112,10 @@ const HomePage = () => {
            
            
         </div>
-<<<<<<< HEAD
+ */}
 
 
-
-=======
         {/* <Header/> */}
->>>>>>> 8a028eaf2963736a002a1de2e0f12a7366a1dde2
     </>
   )
 }
