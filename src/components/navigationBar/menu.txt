@@ -1,0 +1,10 @@
+========== HEADER & NAV ==========
+.nav__logo
+HelpMate
+
+Home
+>>>>Dropdown>>>Departments
+>>>>>>>>Education
+>>>>>>>>Medical
+>>>>>>>>Psychology
+Login

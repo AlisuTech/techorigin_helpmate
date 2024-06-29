@@ -1,5 +1,9 @@
 import React from 'react'
+<<<<<<< HEAD
 import './HomePage.css'
+=======
+import Header from '../../components/Header'
+>>>>>>> 8a028eaf2963736a002a1de2e0f12a7366a1dde2
 
 const HomePage = () => {
   return (
@@ -112,9 +116,13 @@ const HomePage = () => {
            
            
         </div>
+<<<<<<< HEAD
 
 
 
+=======
+        {/* <Header/> */}
+>>>>>>> 8a028eaf2963736a002a1de2e0f12a7366a1dde2
     </>
   )
 }

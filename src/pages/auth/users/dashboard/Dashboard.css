@@ -1,0 +1,93 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.sidebar {
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 48px 0 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+.main-content {
+    flex: 1;
+    padding: 1rem;
+    margin-left: 240px;
+    /* Width of the sidebar */
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+
+
+
+/* Dashboard.js */
+.dashboard-app{
+    
+}
+
+.appointment-button{
+    background-color: #3d52a0;
+    color: white;
+    border: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* @media (max-width: 1280px) {
+    .dashboard-navbar {
+        position: sticky;
+        top: 0;
+    }
+} */
+
+.dashboard-container {
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
+
+
+
+
+/* user profile.js */
+.users-profile-dashboard-navbar{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.long-div{
+    height: 100vh;
+}
+
+
+
+
+/* view profile */

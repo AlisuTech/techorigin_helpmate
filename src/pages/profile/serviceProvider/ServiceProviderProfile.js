@@ -1,6 +1,6 @@
 import React from 'react'
 import './ServiceProviderProfile.css'
-import logo from '../../../assets/person_2.jpeg'
+import logo from '../../../assets/serviceProviderList/person_2.jpeg'
 
 const ServiceProviderProfile = () => {
   return (
