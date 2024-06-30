@@ -7,7 +7,6 @@ import Photo14 from "../../../assets/psychological/Photo14.jpeg";
 import Photo15 from "../../../assets/psychological/Photo15.jpeg";
 import Photo16 from "../../../assets/psychological/Photo16.jpeg";
 
-
 const Psychological = () => {
   return (
     <div>
@@ -25,8 +24,7 @@ const Psychological = () => {
           <button class="button3">Get Started</button>
         </div>
       </div>
-      <div class="backgrounddiv">
-        <div class="display ">
+      <div class="display ">
           <img src={Photo12} alt="attention" class="imageclass2" />
           <div class="maxwidth">
             <br />
@@ -69,7 +67,7 @@ const Psychological = () => {
         <br />
         <br />
         <br />
-        <div class="grid2 textcolor playfair-display-">
+      <div class="grid2 textcolor playfair-display-">
           <div class="childgrid">
             <img src={Photo13} alt="attention" class="imageclass" />
             <p class="fonts3">Pay attention to your problems</p>
@@ -99,7 +97,7 @@ const Psychological = () => {
 
             <br />
             <br />
-            
+
             <button class="button4"></button>
           </div>
           <div class="childgrid">
@@ -122,8 +120,8 @@ const Psychological = () => {
         <br />
         <br />
         <br />
-        <div class="centralize">
-          <img src={Photo16} alt="book" class="imageclass" />
+        <div class="border-green flex justify-center">
+          <img src={Photo16} alt="book" className="h-[20rem] w-[20rem]" />
         </div>
         <br />
         <br />
@@ -145,7 +143,6 @@ const Psychological = () => {
         <div class="lastbuttondiv">
           <button class="buttons2"> Home Page</button>
         </div>
-      </div>
     </div>
   );
 };

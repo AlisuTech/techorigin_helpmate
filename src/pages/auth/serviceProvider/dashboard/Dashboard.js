@@ -1,5 +1,5 @@
 import React from "react";
-import "./DashBoard.css";
+import "./Dashboard.css";
 import customer1 from "../../../../assets/serviceProviderList/clientpicture/customerpictures/customer1.png";
 import customer2 from "../../../../assets/serviceProviderList/clientpicture/customerpictures/customer2.png";
 import customer3 from "../../../../assets/serviceProviderList/clientpicture/customerpictures/customer3.png";
