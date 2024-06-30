@@ -2,7 +2,7 @@
 .backgroundImage1 {
     background-image: url("../../../assets/medicalPage/banner2.png");
     height: 480px;
-    /* background-size:contain; */
+    background-size:contain;
     background-repeat: no-repeat;
 }
 
@@ -19,11 +19,13 @@
 }
 
 .writeup_one {
-    font-weight: bold;
-    font-size: 55px;
+    font-weight: bolder;
+    font-size: 40px;
     color: black;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     ;
+    margin-top: 30px;
+    line-height: 50px;
 }
 
 .writeup_two {
@@ -40,6 +42,9 @@
     border-radius: 5px;
     border-style: hidden;
     
+}
+.book-appointment:hover {
+    background-color: #6f6185;
 }
 
 
@@ -214,7 +219,7 @@ tr td:nth-child(3) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    opacity: 0.4;
+    opacity: 0.6;
     /* z-index: -1; */
     position: relative;
     
@@ -229,15 +234,16 @@ tr td:nth-child(3) {
     opacity: 1;
     font-size: 35px;
     font-family:sans-serif;
-    position: absolute;
+    /* position: absolute;
     left: 30%;
-    top: 240%;
+    top: 240%; */
     line-height: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    /* margin-top: 100px; */
+    position: relative;
 
 
 }
@@ -261,8 +267,8 @@ tr td:nth-child(3) {
     background-color: #7e93cc;
     display: flex;
     /* position: relative; */
-    top: 50%;
-    left: 47%; 
+    /* top: 50%;
+    left: 47%;  */
     align-items: center;
     justify-content: center;
     display: flex;
