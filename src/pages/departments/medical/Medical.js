@@ -14,8 +14,8 @@ const Medical = () => {
     <div>
       <div className="backgroundImage1">
         <div className="backgroundImage1_writeup">
-          <div className="space-y-7">
-            <div className="writeup_one space-y-7">
+          <div>
+            <div className='writeup_one'>
               <p>A Safe Space</p>
               <p>for a</p>
               <p>Better Life </p>
@@ -176,12 +176,13 @@ const Medical = () => {
           <br />
           <br />
         </div>
-
-        <div class="bg-client"></div>
+        
+        <div class="bg-client">
         <div class="client-text1 space-y-5">
             <span><i class="fa fa-quote-left"></i> <br/>I was able to finally open up to <br/> someone about some very sensitive <br/> information about my body, and now <br/> I am getting all the help I need!</span>
             <div class="underline2"></div>
             <span class="client-text2">Adoa Adam</span>
+        </div>
         </div>
       </div>
 
