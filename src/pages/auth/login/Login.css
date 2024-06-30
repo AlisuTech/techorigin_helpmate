@@ -1,110 +1,161 @@
-.background-div {
-    background-color: #7091e6;
-    width: 100%;
-    height: 120vh;
+.login-page-container-fluid {
+    background-color: #3D52a0;
+    height: 110vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-}
-
-.second-bac-div {
-    height: 85vh;
-}
-
-.div-one {
-    background-color: #3d52a0;
-    position: relative;
-    display: flex;
     align-items: center;
-    justify-content: center;
+    padding-top: 40px;
 }
 
-.div-one-head {
-    align-items: center;
-    font-size: 35px;
+
+.login-welcome-back {
     color: white;
+    font-size: 40px;
     font-weight: 600;
-    margin-bottom: 20px;
 }
 
-.div-one-text {
-    font-size: 12px;
-    line-height: 15px;
+.login-container{
+    height: auto !important;
 }
 
-.div-two {
+.login-page-row {
+    background-color: £3D52a0;
+    height: auto;
+    border: 2px solid white;
+}
+
+.login-page-col-1 {
+    height: auto;
+    position: relative;
+    background-color: #3D52a0;
+}
+
+.login-page-col-1-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-page-col-2 {
     background-color: white;
-}
-
-.center-div {
-    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    /* border: 2px solid white; */
 }
 
+.login-col-2-center-div {
+    text-align: center;
+    width: 80%;
+    height: auto;
+
+}
+
+.login-input-div {
+    text-align: start;
+}
 
 .login-txt {
-    padding-bottom: 5vh;
-    color: #3d52a0;
-    font-size: 30px;
-    font-weight: 600;
-    text-align: center;
+    font-size: 40px;
+    color: #3D52a0;
+    padding-bottom: 20px;
+    font-weight: 700;
+    /* padding-top: 20px; */
 }
 
-.icon-div {
-    text-align: start;
-    text-align: center;
-    margin-bottom: 7vh;
-}
-
-.input-div {
-    border: none;
-    border-bottom: 2px solid #3d52a0;
+.login-input {
     width: 100%;
-    padding: 2vh;
-    background-color: transparent;
-    margin-bottom: 10%;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
 }
 
-.forget-pword {
+.login-forget-pword {
     display: flex;
     justify-content: space-between;
-    font-size: 15px;
-    margin-top: -7%;
-    font-size: 12px;
-}
-
-#cBox{
-    margin-right: 3px;
-}
-
-.forgot:hover{
-    color: #ADBBDA;
-    text-decoration: underline;
-    cursor: pointer;
+    /* align-items: center; */
+    padding-top: 5px;
+    font-size: 13px;
+    margin-bottom: 15px;
 }
 
 .login-button {
-    background-color: #3d52a0;
-    color: white;
-    padding: 4%;
     width: 100%;
+    background-color: #3D52a0;
+    color: white;
     border: none;
-    margin: 8vh 0 3vh 0;
+    border-radius: 5px;
+    padding: 13px;
 }
 
-.login-button:active{
-    padding-bottom: 3px;
+.login-check-box {
+    margin-right: 4px;
+    width: 11px;
+    height: 11px;
 }
 
-.create-account{
-    font-size: 10px;
+.c-box-div {}
+
+.login-question-text {
+    font-size: 13px;
 }
 
-.create-account:hover{
-    color: #ADBBDA;
-    text-decoration: underline;
-    cursor: pointer;
+.create-account {
+    font-size: 13px;
+}
+
+.login-question-div {
+    padding-top: 15px;
+}
+
+.create-account {
+    color: #3D52a0;
+    text-decoration: none;
+}
+
+.create-account:hover {
+    color: gray;
+}
+
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .login-conect-text {
+        display: none;
+    }
+
+    .login-page-container-fluid {
+        height: auto;
+        padding: 35px 15px 35px 15px;
+    }
+
+    .login-txt {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .login-page-row {
+        border-radius: 30px;
+        border-bottom: none;
+    }
+
+    .login-page-col-2 {
+        border-radius: 20px;
+    }
+
+        .login-container {
+            height: auto !important;
+            border-radius: 30px;
+            background-color: white
+            ;
+        }
+}
+
+.login-conect-text {
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0px;
 }

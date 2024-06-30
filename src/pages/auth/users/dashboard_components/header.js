@@ -2,16 +2,16 @@ import React from "react";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import '../dashboard/Dashboard.css'
 
-const Header = () => {
+const UserDashboardNavbar = () => {
     return (
       <Container fluid className="dashboard-container">
         <Navbar bg="light" expand="lg" className="dashboard-navbar">
-          <Navbar.Brand >Profile</Navbar.Brand>
+          <Navbar.Brand >My Profile</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto div">
               <NavDropdown
-                title="HelpMate Dashboard"
+                title="Helpmate Dashboard"
                 id="basic-nav-dropdown"
                 className="dashboard-nav-dropdown"
               >
@@ -37,4 +37,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default UserDashboardNavbar;
