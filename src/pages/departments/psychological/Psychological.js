@@ -70,7 +70,9 @@ const Psychological = () => {
       <div class="grid2 textcolor playfair-display-">
           <div class="childgrid">
             <img src={Photo13} alt="attention" class="imageclass" />
-            <p class="fonts3">Pay attention to your problems</p>
+            
+            
+            <br /><p class="fonts3">Pay attention to your problems</p>
             <span>
               <strong>
                 Listening to all you've got to say with <br />

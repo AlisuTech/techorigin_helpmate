@@ -44,7 +44,7 @@ function App() {
           />
           <Route path="/medical" element={<Medical />} />
           <Route path="/serv" element={<ServiceProviderList />} />
-          <Route path="/careerMentorship" element={<CareerMentorship />} />
+          {/* <Route path="/careerMentorship" element={<CareerMentorship />} /> */}
           <Route path="/psychological" element={<Psychological />} />
           <Route path="/appointment" element={<Appointment />} />
           <Route
