@@ -13,8 +13,8 @@ export async function createserviceProvider(body) {
   
 }
 
-export async function loginserviceprovider(email, password) {
-  const buildQuery = rootApi + "./login";
-}
+// export async function loginserviceprovider(email, password) {
+//   const buildQuery = rootApi + "./login";
+// }
 
-export async function updateserviceprovider(email) {}
+// export async function updateserviceprovider(email) {}

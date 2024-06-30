@@ -1,32 +1,53 @@
 
-@media(min-width:200px) and (max-width:3881px) {
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@media(min-width:200px) and (max-width:1281px) {
 
     .backgrounddiv {
-        background-color: #EDE8F5;
-        /* height: 100vh; */
+        /* background-color: #EDE8F5; */
+        background-color: white;
+        height: 1000px;
         width: 100%;
-        border: 5px solid whitesmoke;
+        border: 1px solid whitesmoke;
         padding-left: 10px;
-        /* cursor: pointer; */
+        cursor: pointer;
+        font-family: "Playfair Display", serif;
     }
 
+    .display {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: wrap;
+        padding: 3%;
+    }
+.paycolor{color: #3D52A0;}
+    .img1 {
+        width: 600px;
+         /* padding: 15%;   */
+        height: 800px; 
+        flex-wrap: wrap;
+        padding-top: 2%;
+        border-radius: 20%;
+    }
+   
+
     .bookappointment {
-        background-color: #3D52A0;
-        /* width: 50%; */
-        /* height: 30px; */
+        /* background-color: #3D52A0; */
+        width: 50%;
+        height: 30px;
         border-radius: 30px;
         border-color: white;
-        text-align: center;
+        /* text-align: center; */
         color: #EDE8F5;
         padding-top: 8px;
         justify-content: center;
         display: flex;
     }
-    .bookappointment2{
-        /* display: flex;
-        flex-direction: column;
-        justify-content: center; */
+
+    .bookappointment2 {
+        display: flex;
+        justify-content: center;
         margin-top: 20px;
+        
     }
 
     .contact {
@@ -34,15 +55,20 @@
     }
 
     .paymentdetails {
-        background-color: #3D52A0;
-        width: 20%;
-        height: 30px;
+        background-color: #EDE8F5;
+        width: 270px;
+        height: 40px;
         border-radius: 20px;
         border-color: white;
         padding-left: 20px;
-        color: #EDE8F5;
+        color: #292929;
         cursor: pointer;
         padding-top: 5px;
+    
+    }
+
+    .textpadding {
+        padding: 20px;
     }
 
     .icons {
@@ -50,6 +76,7 @@
         color: #3D52A0;
 
     }
+   
 
     .userdiv {
         align-items: center;
@@ -58,17 +85,26 @@
         cursor: pointer;
     }
 
-
     .fonts {
         font-weight: 700;
-        font-size: x-large;
-        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+       
+        color: #373839;
+        letter-spacing: 1px;
+        padding-left: 2px;
     }
+    .fontsa{ font-weight: 900;
+        font-size: 40px;
+        
+        color: #3D52A0;
+    letter-spacing: 1px;
+    padding-left: 80px;
+}
 
     .fonts2 {
         font-weight: 700;
         font-size: larger;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        
     }
 
     .buttons {
@@ -76,16 +112,25 @@
         color: aliceblue;
         padding: 5px;
         border-radius: 30px;
-        width: 100px;
+        width: 150px;
         height: 40px;
         cursor: pointer;
         border: 2px solid white;
     }
-
+      .cancelbutton{ background-color: white;
+        color: #3D52A0;
+        padding: 5px;
+        border-radius: 30px;
+        width: 150px;
+        height: 40px;
+        cursor: pointer;
+        border: 2px solid #3D52A0;}
     .buttons:hover {
         background-color: #ADBBDA;
     }
-
+    .cancelbutton:hover {
+        background-color: #ADBBDA;
+    }
     input {
         cursor: pointer;
     }
@@ -95,8 +140,24 @@
     }
 
     .inputdesign {
-        border: 2px solid white;
-        width: 28%;
+        border: 2px solid #3D52A0;
+        width: 200px;
         height: 30px;
+        border-radius: 5%;
+    }
+}
+
+.maxwidth {
+    width: 45%;
+}
+
+@media(min-width:200px) and (max-width:600px) {
+
+    .maxwidth {
+        width: 100%;
+    }
+
+    .img1 {
+        width: 100%;
     }
 }

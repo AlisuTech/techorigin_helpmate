@@ -1,102 +1,77 @@
-import React from 'react'
-import "./Psychological.css"
-import photo_2 from '../../../assets/psychological/photo_2.jpeg'
-import photo_3 from '../../../assets/psychological/photo_3.jpeg'
-import photo_4 from '../../../assets/psychological/photo_4.jpeg'
-import photo_5 from '../../../assets/psychological/photo_5.jpeg'
-import photo_6 from '../../../assets/psychological/photo_6.jpeg'
-import photo_7 from '../../../assets/psychological/photo_7.jpeg'
+import React from "react";
+import "./Psychological.css";
+
+import Photo12 from "../../../assets/psychological/Photo12.jpeg";
+import Photo13 from "../../../assets/psychological/Photo13.jpeg";
+import Photo14 from "../../../assets/psychological/Photo14.jpeg";
+import Photo15 from "../../../assets/psychological/Photo15.jpeg";
+import Photo16 from "../../../assets/psychological/Photo16.jpeg";
 
 
 const Psychological = () => {
   return (
     <div>
-      <div className="background border-green">
+      <div class="background">
         <div class=" font1 playfair-display-">
+          <br />
+          <br />
+          <br />
+          <br />
           PSYCHOLOGICAL CARE
-          <br></br>
-          <br></br>
-          <br></br>
-
-          <p class="fonts2 playfair-display- textcolor">
+          <br />
+          <p class="fonts2 playfair-display- ">
             Helpmate: Doing Hard Things Can Build Character
           </p>
-          <br></br>
-          <br></br>
-
-          <div class="fonts2 playfair-display-">
-            The best years of your life are the ones in <br></br>
-            <br></br>
-            <br></br>
-            which you decide your problems are your own. <br />
-            <br></br>
-            <br></br>
-            You do not blame them on your mother, the ecology,
-            <br></br>
-            <br></br>
-            <br /> or the president. You realize that you control your own
-            destiny.
-            <br></br>
-            <br></br>
-            <br /> — ALBERT ELLIS
-            <br></br>
-            <br></br>
-            <br></br>
-
-          </div>
           <button class="button3">Get Started</button>
         </div>
       </div>
-      <div class="backgrounddiv border-blue">
+      <div class="backgrounddiv">
         <div class="display ">
-          <img
-            src={photo_2}
-            alt=''
-            class="img1class"
-          />
+          <img src={Photo12} alt="attention" class="imageclass2" />
           <div class="maxwidth">
             <br />
-            <p class="fonts2 playfair-display- "> “How should we live?”</p>
+            <p class="fonts2 playfair-display- textdecor">
+              {" "}
+              “How should we live?”
+            </p>
             <p class="fonts3 textcolor playfair-display-">
               <br />
               <br />
-              That is the question The Deep Sphere
+              That is the question The Deep Sphere tries to answer.
               <br />
               <br />
-              tries to answer. To that aim,
+              &nbsp; &nbsp; To that aim, we enter the place of culture
+              <br />
+              <br /> &nbsp; &nbsp; and roam through its room: psychology,
+              <br />
+              <br /> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;philosophy,
+              art,and science.
+              <br />
+              <br /> &nbsp;Helpmate hopes to contribute to your calm,growth,
               <br />
               <br />
-              we enter the place of culture and roam
-              <br />
-              <br />
-              through its room: psychology, philosophy,
-              <br />
-              <br />
-              <br />
-              art, and science. Helpmate hopes to contribute to your calm,
-              <br />
-              <br />
-              growth, healing, and self-understanding.
+              &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;healing, and
+              self-understanding.
             </p>
             <br />
             <br />
             <br />
-            <p class="fonts3 textcolor playfair-display-">
+            <p class="fonts2 textcolor playfair-display-">
               {" "}
-              We've got you covered!!!
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;We've got you covered!!!
             </p>
           </div>
         </div>
         <br />
-        <div class="Whatwedo font4 playfair-display-">Services We Offer</div>
         <br />
-        <div class="grid textcolor playfair-display-">
+        <br />
+        <div class="Whatwedo  playfair-display- centralize">Our Programs</div>
+        <br />
+        <br />
+        <br />
+        <div class="grid2 textcolor playfair-display-">
           <div class="childgrid">
-            <img
-              src={photo_3}
-              alt=''
-              class="imageclass"
-            />
+            <img src={Photo13} alt="attention" class="imageclass" />
             <p class="fonts3">Pay attention to your problems</p>
             <span>
               <strong>
@@ -104,85 +79,59 @@ const Psychological = () => {
                 rapt attention and without judgement
               </strong>
             </span>
+            <br />
+            <br />
+            <br />
+            <br />
+            <button class="button4"></button>
           </div>
           <div class="childgrid">
-            <img
-              src={photo_4}
-              alt=''
-              class="imageclass"
-            />
+            <img src={Photo14} alt="assesment" class="imageclass" />
             <p class="fonts3">Proper assesment and diagnosis</p>
-            <span>
-              <strong>
-                Through Interviews, observation and
-                <br />
-                psychological tests, our professsionals can  <br />properly
-                and accurately diagnose the issue  <br />at hand
-              </strong>
-            </span>
+            <br />
+            <strong>
+              Through Interviews, observation and
+              <br />
+              psychological tests, our professsionals can
+              <br /> properly and accurately diagnose the issue
+              <br /> at hand
+            </strong>
+
+            <br />
+            <br />
+            
+            <button class="button4"></button>
           </div>
           <div class="childgrid">
-            <img
-              src={photo_5}
-              alt=''
-              class="imageclass"
-            />
+            <img src={Photo15} alt="Therapy" class="imageclass" />
             <p class="fonts3">Therapy and Councelling</p>
-            <span>
-              <strong>
-                Providing councelling using evidence based
-                <br /> techniques to help clients overcome emotional, <br />
-                behavioural and psychological issues
-              </strong>
-            </span>
+            <strong>
+              Providing councelling using evidence based
+              <br /> techniques to help clients overcome emotional, <br />
+              behavioural and psychological issues
+            </strong>
+            <br />
+            <br />
+            <br />
+            <br />
+            <button class="button4"></button>
           </div>
-          <div class="childgrid">
-            <img
-              src={photo_6}
-              alt=''
-              class="imageclass"
-            />
-            <p class="fonts3">Follow-Up and Supervision</p>
-            <span>
-              <strong>
-                Supervising the client in order to
-                <br />
-                monitor their progress
-              </strong>
-            </span>
-          </div>
-          <div class="childgrid">
-            <img
-              src={photo_7}
-              alt=''
-              class="imageclass"
-            />
-            <p class="fonts3">Ethical and Legal Responsibilities</p>
-            <span>
-              <strong>
-                {" "}
-                Our Professionals are adequately trained <br />
-                to ensure that everything
-                <br />
-                being discussed is kept safe and discreet.
-                <br /> Additionally, our Clients can choose to be completely
-                <br />
-                anonymous
-              </strong>
-            </span>
-          </div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="centralize">
+          <img src={Photo16} alt="book" class="imageclass" />
         </div>
         <br />
         <br />
         <br />
-        <br />
-        <br />
+
         <div>
           <button class="buttons ">
-            <strong>
-              {" "}
-              Click Here
-            </strong>
+            <strong> Click Here </strong>
           </button>
           <span class="fonts3 textcolor playfair-display-">
             {" "}
@@ -199,6 +148,6 @@ const Psychological = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Psychological
+export default Psychological;

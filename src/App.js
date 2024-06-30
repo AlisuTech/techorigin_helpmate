@@ -21,6 +21,7 @@ import ServiceProviderList from "./components/cards/serviceProvider/ServiceProvi
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./pages/auth/users/dashboard_components/header";
 import UserDashboard from "./pages/auth/users/dashboard/userDashboard";
+import DashBoard from "./pages/auth/serviceProvider/dashboard/Dashboard";
 
 function App() {
   return (
@@ -29,7 +30,6 @@ function App() {
       <div className="pt-[84px]">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          {/* <Route path="/user-dashboard" element={<Dashboard />} /> */}
           <Route path='/user-dashboard' element={<UserDashboard></UserDashboard>}></Route>
           <Route
             path="/service_provider"
@@ -44,7 +44,7 @@ function App() {
           />
           <Route path="/medical" element={<Medical />} />
           <Route path="/serv" element={<ServiceProviderList />} />
-          {/* <Route path="/careerMentorship" element={<CareerMentorship />} /> */}
+          <Route path="/careerMentorship" element={<CareerMentorship />} />
           <Route path="/psychological" element={<Psychological />} />
           <Route path="/appointment" element={<Appointment />} />
           <Route
@@ -66,6 +66,16 @@ function App() {
           <Route
             path="/service_provider_profile"
             element={<ServiceProviderProfile />}
+          />
+
+          <Route
+            path="/service_provider_profile"
+            element={<ServiceProviderProfile />}
+          />
+
+          <Route
+            path="/dashboard"
+            element={<DashBoard />}
           />
         </Routes>
         <Footer />

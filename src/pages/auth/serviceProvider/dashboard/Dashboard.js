@@ -1,5 +1,5 @@
 import React from "react";
-import "./Dashboard.css";
+import "./DashBoard.css";
 import customer1 from "../../../../assets/serviceProviderList/clientpicture/customerpictures/customer1.png";
 import customer2 from "../../../../assets/serviceProviderList/clientpicture/customerpictures/customer2.png";
 import customer3 from "../../../../assets/serviceProviderList/clientpicture/customerpictures/customer3.png";
@@ -17,7 +17,7 @@ import {
 } from "cdbreact";
 import { NavLink } from "react-router-dom";
 
-const ServiceProviderDashboard = () => {
+const DashBoard = () => {
   //const now = 60;
 
   return (
@@ -31,7 +31,7 @@ const ServiceProviderDashboard = () => {
               overflow: "scroll initial",
             }}
           >
-            <CDBSidebar textColor="#fff" backgroundColor="#333">
+            <CDBSidebar textColor="#00000" backgroundColor=" #3d52a0;">
               <CDBSidebarHeader
                 prefix={<i className="fa fa-bars fa-large"></i>}
               >
@@ -56,14 +56,14 @@ const ServiceProviderDashboard = () => {
                       Setting
                     </CDBSidebarMenuItem>
                   </NavLink>
-                  <NavLink exact to="/profile" activeClassName="activeClicked">
+                  <NavLink exact to="/ServiceProviderProfile" activeClassName="activeClicked">
                     <CDBSidebarMenuItem icon="user">
-                      Profile page
+                     Profile page 
                     </CDBSidebarMenuItem>
                   </NavLink>
                   <NavLink
                     exact
-                    to="/analytics"
+                    to="/ServiceProviderProfile"
                     activeClassName="activeClicked"
                   >
                     <CDBSidebarMenuItem icon="chart-line">
@@ -109,8 +109,12 @@ const ServiceProviderDashboard = () => {
             <ProgressBar variant="warning" now={20} key={2} />
             <ProgressBar striped variant="danger" now={40} key={3} />
           </ProgressBar>
-          <div className="Clientele">
-            <p className="clientword">Clientele</p>
+        <div className="all-client">
+        <div className="Clientele">
+            <p className="clientwor">
+              <CDBSidebarMenuItem icon="user">
+              Clientele
+              </CDBSidebarMenuItem></p>
 
             <div className="clientimageflex">
               <div className="imageflex">
@@ -177,10 +181,99 @@ const ServiceProviderDashboard = () => {
               </div>
             </div>
           </div>
+
+          
+          
+          <div className="Message">
+            <p className="clientwor">
+              
+              <CDBSidebarMenuItem icon="message">
+              Messages    
+              </CDBSidebarMenuItem>
+              </p>
+
+            <div className="clientimageflex">
+              <div className="imageflex">
+                <img src={customer1} alt="" className="customerpics" />
+                <div className="client-name">
+                <p>ONYEKA EZOUGO </p>
+                <p>How are you today</p>
+                
+                </div>
+                <ul>
+                  <li>ONLINE</li>
+                </ul>
+              </div>
+
+              <div className="imageflex">
+                <img src={customer2} alt="" className="customerpics" />
+                <div className="client-name">
+                <p>ONYEKA EZOUGO </p>
+                <p>I have made all the call you</p>
+                
+                </div>
+                <ul>
+                  <li>ONLINE</li>
+                </ul>
+              </div>
+
+              <div className="imageflex">
+                <img src={customer3} alt="" className="customerpics" />
+                <div className="client-name">
+                <p>ONYEKA EZOUGO </p>
+                <p>Thank you</p>
+                
+                </div>
+                
+                <ul>
+                  <li>ONLINE</li>
+                </ul>
+              </div>
+
+              <div className="imageflex">
+                <img src={customer4} alt="" className="customerpics" />
+                <div className="client-name">
+                <p>ONYEKA EZOUGO </p>
+                <p>its done Sir</p>
+            
+                </div>
+                <ul>
+                  <li>ONLINE</li>
+                </ul>
+              </div>
+
+              <div className="imageflex">
+                <img src={customer5} alt="" className="customerpics" />
+                <div className="client-name">
+                <p>ONYEKA EZOUGO </p>
+                <p>Sir, its been sent</p>
+                
+                </div>
+                <ul>
+                  <li>ONLINE</li>
+                </ul>
+              </div>
+
+              <div className="imageflex">
+                <img src={customer6} alt="" className="customerpics" />
+                <div className="client-name">
+                <p>ONYEKA EZOUGO </p>
+                <p>okay</p>
+                
+                </div>
+                
+                <ul>
+                  <li>ONLINE</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
+        </div>        
       </div>
+    
     </>
   );
 };
 
-export default ServiceProviderDashboard;
+export default DashBoard;
