@@ -48,10 +48,10 @@
 
     }
 
-    /* .centralize {
+     .centralize {
         display: block;
         text-align: center;
-    } */
+    } 
 
     .Whatwedo {
         color: #3D52A0;
@@ -115,14 +115,14 @@
         border: 2px solid white;
     }
 
-    /* .imageclass {
+     .imageclass {
 
         width: 350px;
         height: 300px;
         border-radius: 150px;
 
 
-    } */
+    } 
     .imageclass2 {
 
         width: 440px;
