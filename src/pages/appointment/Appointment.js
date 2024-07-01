@@ -8,6 +8,7 @@ import { signupServiceProvider } from "../../app/serviceProvider/serviceProvider
 import { getDepartmentsAndServiceProvider } from "../../services/categoryService";
 import "./Appointment.css";
 import Photo2 from "../../assets/psychological/Photo2.jpeg";
+import MakePayment from "./MakePayment";
 
 const Appointment = () => {
   const navigate = useNavigate();
@@ -159,7 +160,8 @@ const Appointment = () => {
               <br />
               <br />
               <div>
-                <button type='button' className='buttons' onClick={handleSubmit(onServiceProviderSubmit)}>Book Now</button>
+                {/* <button type='button' className='buttons' onClick={handleSubmit(onServiceProviderSubmit)}>Book Now</button> */}
+                <button type='button' className='buttons' data-bs-toggle='modal' data-bs-target='#exampleModal'>Book Now</button>
                 <button type='button' className='buttons' onClick={Cancel}>Cancel</button>
               </div>
             </div>
@@ -169,6 +171,9 @@ const Appointment = () => {
           </div>
         </div>
       </div>
+
+      {/* Include the modal for payment */}
+      <MakePayment id='exampleModal' title='Proceed'/>
     </>
   );
 };
