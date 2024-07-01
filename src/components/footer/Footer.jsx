@@ -9,7 +9,7 @@ const Footer = () => {
     { title: "Legals", links: ["Privacy", "Disclaimer", "Terms", "Company"] },
   ];
   return (
-    <footer className="pt-2 md:px-24 px-4 bg-footer_bg">
+    <footer className="pt-2 md:px-24 px-4 bg-footer_bg border-red">
       {/* <NewsLetter /> */}
       <div className="flex md:flex-row flex-col gap-20">
         <div className="flex-1">

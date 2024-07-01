@@ -4,7 +4,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Playwrite+US+Modern:wght@100..400&display=swap');
 
 *{
     padding: 0;
@@ -19,28 +20,38 @@
   }
   
   :root {
-    /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-  
-    color-scheme: light dark;
-    color: rgb(177, 21, 21);
-    background-color: #ede8f5;
+    /* FONT----FAMILY */
+    --font-family-inter: Inter, Avenir, Helvetica, Arial, sans-serif;
+    --font-family-jost: "Jost", sans-serif !important;
+    --font-family-Playwrite: "Playwrite US Modern", cursive;
 
-    /* --FONT WEIGHT-- */
+    /* LINE--HEIGHT */
+    --line-height-16: 16px;
+    --line-height-100: 30px;
 
+
+    /* FONT----SIZE */
+    --font-size-100: 18px;
+
+    /* FONT---WEIGHT */
+    --font-weight-400: 400;
+
+
+    /* TEXT__COLOR */
     --color-black-100: #000000;
-    /* --color-black-100: #000000; */
-  
+    --color-blue-101: #00AEFF;
     --color-blue-100: #3d52a0;
     --color-blue-200: #7091e6;
     --color-blue-300: #8697c4;
     --color-blue-400: #adbbda;
     --color-blue-500: #ede8f5;
+    --color-blue-600: #f5eee8;
   }
   
   body {
+    font-family: var(--font-family-jost);
+    line-height: var(--line-height-100);
+    background-color:  var(--color-blue-600);
     margin: 0;
   }
   

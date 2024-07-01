@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 const NavigationLinks = ({ handleLinkClick }) => {
   const [isDepartmentsOpen, setIsDepartmentsOpen] = useState(false);
   const location = useLocation();
-  
+
   const links = [
     {
       name: "Home",
@@ -41,35 +41,38 @@ const NavigationLinks = ({ handleLinkClick }) => {
       {links.map((link, i) => (
         <li
           key={i}
-          className={`relative hover:bg-[#5a70c8] hover:rounded-md p-2 ${getLinkClassName(link.url)} nav-link`}
+          className={`relative w-fit p-2 nav-link ${link.name === 'Login' ? 'login' : ''} ${getLinkClassName(link.url)}`}
           onMouseEnter={() => link.subItems && setIsDepartmentsOpen(true)}
           onMouseLeave={() => link.subItems && setIsDepartmentsOpen(false)}
         >
           {link.subItems ? (
-            <div className="flex items-center cursor-pointer border-red text-[--color-black-100]">
-              <i className={`mr-2 ${link.icon}`}></i>
+            <div className={`flex border-blue items-center cursor-pointer relative after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-red-500 after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100 ${getLinkClassName('')}`}>
               {link.name}
+              {isDepartmentsOpen && (
+                <ul className="dropdown-menu  mt-2 py-2 w-2x">
+                  {link.subItems.map((subItem, j) => (
+                    <li key={j} className="p-1 border-[green] w-full">
+                      <Link
+                        to={subItem.url}
+                        className={`block w-fit border-[yellow] h-full ${getLinkClassName(subItem.url)}`}
+                        onClick={handleLinkClick1}
+                      >
+                        {subItem.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           ) : (
-            <Link to={link.url} onClick={handleLinkClick1} className="flex items-center w-full h-full">
-              <i className={`mr-2 ${link.icon}`}></i>
+            // Links without dropdown
+            <Link
+              to={link.url}
+              onClick={handleLinkClick1}
+              className={`flex items-center w-full h-full relative after:absolutex after:left-0 after:bottom-0 after:w-full after:h-[2px] after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100 ${getLinkClassName(link.url)}`}
+            >
               {link.name}
             </Link>
-          )}
-          {link.subItems && isDepartmentsOpen && (
-            <ul className="dropdown-menu absolute bg-white shadow-lg rounded-md mt-0 py-2 w-48">
-              {link.subItems.map((subItem, j) => (
-                <li key={j} className={`hover:bg-[#2a3a7a] p-2 w-full border-red ${getLinkClassName(subItem.url)}`}>
-                  <Link
-                    to={subItem.url}
-                    className="block w-full border-yellow h-full"
-                    onClick={handleLinkClick1}
-                  >
-                    {subItem.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           )}
         </li>
       ))}
