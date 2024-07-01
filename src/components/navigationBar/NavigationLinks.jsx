@@ -46,15 +46,16 @@ const NavigationLinks = ({ handleLinkClick }) => {
           onMouseLeave={() => link.subItems && setIsDepartmentsOpen(false)}
         >
           {link.subItems ? (
-            <div className={`flex border-blue items-center cursor-pointer relative after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-red-500 after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100 ${getLinkClassName('')}`}>
+            //dropdown style
+            <div className={`cursor-pointer ${getLinkClassName('')}`}>
               {link.name}
               {isDepartmentsOpen && (
                 <ul className="dropdown-menu  mt-2 py-2 w-2x">
                   {link.subItems.map((subItem, j) => (
-                    <li key={j} className="p-1 border-[green] w-full">
+                    <li key={j} className="p-1">
                       <Link
                         to={subItem.url}
-                        className={`block w-fit border-[yellow] h-full ${getLinkClassName(subItem.url)}`}
+                        className={`${getLinkClassName(subItem.url)}`}
                         onClick={handleLinkClick1}
                       >
                         {subItem.name}
@@ -65,11 +66,11 @@ const NavigationLinks = ({ handleLinkClick }) => {
               )}
             </div>
           ) : (
-            // Links without dropdown
+            // Links without dropdown and active
             <Link
               to={link.url}
               onClick={handleLinkClick1}
-              className={`flex items-center w-full h-full relative after:absolutex after:left-0 after:bottom-0 after:w-full after:h-[2px] after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100 ${getLinkClassName(link.url)}`}
+              className={`${getLinkClassName(link.url)}`}
             >
               {link.name}
             </Link>

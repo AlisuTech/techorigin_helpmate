@@ -22,7 +22,7 @@
   :root {
     /* FONT----FAMILY */
     --font-family-inter: Inter, Avenir, Helvetica, Arial, sans-serif;
-    --font-family-jost: "Jost", sans-serif !important;
+    --font-family-jost: "Jost", sans-serif ;
     --font-family-Playwrite: "Playwrite US Modern", cursive;
 
     /* LINE--HEIGHT */
@@ -46,10 +46,11 @@
     --color-blue-400: #adbbda;
     --color-blue-500: #ede8f5;
     --color-blue-600: #f5eee8;
+    --color-blue-700: #004274;
   }
   
   body {
-    font-family: var(--font-family-jost);
+    font-family: var(--font-family-jost) !important;
     line-height: var(--line-height-100);
     background-color:  var(--color-blue-600);
     margin: 0;
