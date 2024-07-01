@@ -55,7 +55,7 @@
     font-family: var(--font-family-jost) !important;
     line-height: var(--line-height-100);
     background-color:  var(--color-blue-600);
-    color: var(--color-blue-600) !important;
+    color: var(--color-black-100) !important;
     margin: 0;
   }
   
