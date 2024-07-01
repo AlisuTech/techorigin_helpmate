@@ -17,7 +17,7 @@ import {
 } from "cdbreact";
 import { NavLink } from "react-router-dom";
 
-const DashBoard = () => {
+const Dashboard = () => {
   //const now = 60;
 
   return (
@@ -27,11 +27,11 @@ const DashBoard = () => {
           <div
             style={{
               display: "flex",
-              height: "150vh",
+              height: "155vh",
               overflow: "scroll initial",
             }}
           >
-            <CDBSidebar textColor="#00000" backgroundColor=" #3d52a0;">
+            <CDBSidebar textColor="white" backgroundColor=" #3d52a0;">
               <CDBSidebarHeader
                 prefix={<i className="fa fa-bars fa-large"></i>}
               >
@@ -276,4 +276,4 @@ const DashBoard = () => {
   );
 };
 
-export default DashBoard;
+export default Dashboard;

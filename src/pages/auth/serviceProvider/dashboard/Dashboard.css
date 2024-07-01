@@ -50,7 +50,7 @@
     box-shadow: 1px 1px 2px 2px;
 }
 .progress-Bar{
-    margin-top: 10px;
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
     column-gap: 20px;
@@ -62,7 +62,10 @@
     width: 70%;
     height: 700px;
     background-color: white;
+    color: black;
     margin: 10px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 2px 2px;
 }
 .clientword{
     font-size: larger;
@@ -109,13 +112,16 @@
     width: 70%;
     height: 700px;
     background-color: white;
+    color: black;
     margin: 10px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 2px 2px;
 }
 .all-client{
     display: flex;
     flex-direction: row;
 
 }
-.text-decoration-none{
+/* .text-decoration-none{
     font-weight: bold;
-}
+} */
