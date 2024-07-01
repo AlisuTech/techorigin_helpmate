@@ -19,7 +19,7 @@ const Psychological = () => {
           PSYCHOLOGICAL CARE
           <br />
           <p class="fonts2 playfair-display- ">
-            Helpmate: Doing Hard Things Can Build Character
+            Helpmate: Doing Hard Things 
           </p>
           <button class="button3">Get Started</button>
         </div>
@@ -28,7 +28,7 @@ const Psychological = () => {
           <img src={Photo12} alt="attention" class="imageclass2" />
           <div class="maxwidth">
             <br />
-            <p class="fonts2 playfair-display- textdecor">
+            <p class="fonts6 playfair-display- textdecor">
               {" "}
               “How should we live?”
             </p>
@@ -54,7 +54,7 @@ const Psychological = () => {
             <br />
             <br />
             <br />
-            <p class="fonts2 textcolor playfair-display-">
+            <p class="fonts6 textcolor playfair-display-">
               {" "}
               &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;We've got you covered!!!
             </p>
@@ -63,7 +63,7 @@ const Psychological = () => {
         <br />
         <br />
         <br />
-        <div class="Whatwedo  playfair-display- centralize">Our Programs</div>
+        <div class="Whatwedo  playfair-display- centralize "><strong>Our Programs</strong></div>
         <br />
         <br />
         <br />
