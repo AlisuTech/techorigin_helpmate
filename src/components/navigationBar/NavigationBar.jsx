@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./NavigationBar.css";
 import { Link } from "react-router-dom";
 import NavigationLinks from "./NavigationLinks";
@@ -12,16 +12,16 @@ const NavigationBar = () => {
     setOpen(false); // Close the mobile menu when a link is clicked
   };
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const currentScrollPos = window.scrollY;
     setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
     setPrevScrollPos(currentScrollPos);
-  };
+  }, [prevScrollPos]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos, visible]);
+  }, [handleScroll]);
 
   return (
     <nav
@@ -45,10 +45,11 @@ const NavigationBar = () => {
       </ul>
 
       <div className="text-2xl md:hidden z-50 cursor-pointer" onClick={() => setOpen(!open)}>
-        <ion-icon name={`${open ? "close" : "menu"}`}></ion-icon>
+        <ion-icon className={`nav-icon ${open ? "open" : "closed"}`}
+         name={`${open ? "close" : "menu"}`}></ion-icon>
       </div>
     </nav>
   );
 };
-
+ 
 export default NavigationBar;

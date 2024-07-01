@@ -13,7 +13,7 @@ const NavigationLinks = ({ handleLinkClick }) => {
     },
     {
       name: "Departments",
-      icon: "ri-building-line",
+      icon: "fa-solid fa-angle-down",
       subItems: [
         { name: "Education", url: "/careerMentorship" },
         { name: "Medical", url: "/medical" },
@@ -49,6 +49,7 @@ const NavigationLinks = ({ handleLinkClick }) => {
             //dropdown style
             <div className={`cursor-pointer ${getLinkClassName('')}`}>
               {link.name}
+              {<i className={`ms-2 ${link.icon}`}></i>}
               {isDepartmentsOpen && (
                 <ul className="dropdown-menu  mt-2 py-2 w-2x">
                   {link.subItems.map((subItem, j) => (

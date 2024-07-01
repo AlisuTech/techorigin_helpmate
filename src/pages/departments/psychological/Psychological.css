@@ -147,14 +147,14 @@
   
 
 
-    .grid {
+    /* .grid {
         display: grid;
         grid-template-columns: auto auto;
 
 
         column-gap: 8px;
 
-    }
+    } */
 
     .grid2 {
         display: grid;

@@ -1,40 +1,24 @@
 import React from "react";
-import SocialMedia from "./SocialMedia";
+import ItemsContainer from "./ItemsContainer";
+import SocialIcons from "./SocialIcons";
+import { Icons } from "./Menus";
 
 
 const Footer = () => {
-  const Links = [
-    { title: "Location", links: ["America", "Asia", "Eurpoe", "Africa"] },
-    { title: "Contact", links: ["About Me", "Teams", "Profile", "FAQ"] },
-    { title: "Legals", links: ["Privacy", "Disclaimer", "Terms", "Company"] },
-  ];
+
   return (
-    <footer className="pt-2 md:px-24 px-4 bg-footer_bg border-red">
-      {/* <NewsLetter /> */}
-      <div className="flex md:flex-row flex-col gap-20">
-        <div className="flex-1">
-          <div className="h-12 font-bold text-[40px]" >HelpMate</div>
-          <p className="md:w-1/2 leading-relaxed text-sm text-gray-600 pt-7">
-            We care about your physical wellbeing and that's why we are here.
-          </p>
-          <SocialMedia />
-        </div>
-        <div className="flex-1 flex flex-wrap gap-20">
-          {Links.map((link, i) => (
-            <ul key={i}>
-              <h1 className="font-semibold pb-3">{link.title}</h1>
-              {link.links.map((lk, idx) => (
-                <li key={idx} className="py-1 text-sm text-gray-600">
-                  {lk}
-                </li>
-              ))}
-            </ul>
-          ))}
-        </div>
+    <footer className="bg-[--color-blue-100]">
+      <div className="md:flex md:justify-between md:items-center sm:px-12 px-4 py-7">
+        <ItemsContainer/>
       </div>
-      <p className="text-center py-0 mt-6 text-sm text-gray-600">
-        Copyright © 2024. All Right Reserved.
-      </p>
+      <div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10
+      text-center pt-2 text-gray-400 text-sm pb-8"
+      >
+        <span>© 2024 Appy. All rights reserved.</span>
+        <span>Terms · Privacy Policy</span>
+        <SocialIcons Icons={Icons} />
+      </div>
     </footer>
   );
 };

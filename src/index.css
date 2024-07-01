@@ -29,6 +29,8 @@
     --line-height-16: 16px;
     --line-height-100: 30px;
 
+    
+
 
     /* FONT----SIZE */
     --font-size-100: 18px;
@@ -53,6 +55,7 @@
     font-family: var(--font-family-jost) !important;
     line-height: var(--line-height-100);
     background-color:  var(--color-blue-600);
+    color: var(--color-blue-600) !important;
     margin: 0;
   }
   
