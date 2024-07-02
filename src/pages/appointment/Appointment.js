@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { appointmentSchema } from "../../validations/appointmentValidation";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
@@ -9,6 +9,7 @@ import { getDepartmentsAndServiceProvider } from "../../services/categoryService
 import "./Appointment.css";
 import Photo2 from "../../assets/psychological/Photo2.jpeg";
 import MakePayment from "./MakePayment";
+import PayButton from "../../components/button/PayButton";
 
 const Appointment = () => {
   const navigate = useNavigate();
@@ -161,8 +162,19 @@ const Appointment = () => {
               <br />
               <div>
                 {/* <button type='button' className='buttons' onClick={handleSubmit(onServiceProviderSubmit)}>Book Now</button> */}
-                <button type='button' className='buttons' data-bs-toggle='modal' data-bs-target='#exampleModal'>Book Now</button>
-                <button type='button' className='buttons' onClick={Cancel}>Cancel</button>
+                {/* <button type='button' className='buttons' data-bs-toggle='modal' data-bs-target='#exampleModal'>Book Now</button> */}
+                {/* <Link to='/payment'>
+                    <div className="buttons text-center">
+                      Book Now
+                    </div>
+                </Link> */}
+                {/* <form action="/create-checkout-session" method="POST">
+                  <button type="submit">Book Now</button>
+                </form> */}
+                <PayButton cartItems = '100'/>
+                <button type="button" className="buttons" onClick={Cancel}>
+                  Cancel
+                </button>
               </div>
             </div>
             <div>
@@ -173,7 +185,7 @@ const Appointment = () => {
       </div>
 
       {/* Include the modal for payment */}
-      <MakePayment id='exampleModal' title='Proceed'/>
+      {/* <MakePayment id='exampleModal' title='Proceed'/> */}
     </>
   );
 };

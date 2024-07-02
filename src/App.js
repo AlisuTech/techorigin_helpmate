@@ -22,6 +22,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./pages/auth/users/dashboard_components/header";
 import UserDashboard from "./pages/auth/users/dashboard/userDashboard";
 import DashBoard from "./pages/auth/serviceProvider/dashboard/Dashboard";
+import Final from "./pages/appointment/Final";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
             element={<ServiceProvider />}
           />
           <Route path="/medical" element={<Medical />} />
+          <Route path="/create-checkout-session" element={<Final />} />
           <Route path="/serv" element={<ServiceProviderList />} />
           <Route path="/careerMentorship" element={<CareerMentorship />} />
           <Route path="/psychological" element={<Psychological />} />
