@@ -15,7 +15,7 @@ router.post('/create-checkout-session', async (req, res) => {
                     price_data: {
                         currency: 'usd',
                         product_data: {
-                            name: 'Service',
+                            name: 'Service Provider Fee',
                         },
                         unit_amount: amount * 100, // amount in cents
                     },
