@@ -1,5 +1,5 @@
 import React from "react";
-import "./careermentorship.css";
+import "./CareerMentorship.css";
 import logocoach from "../../../assets/mentorshipcareer/logocoach.png";
 import academics from "../../../assets/mentorshipcareer/academics.png";
 import disciplineremote from "../../../assets/mentorshipcareer/disciplineremote.png";

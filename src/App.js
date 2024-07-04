@@ -23,6 +23,7 @@ import UserDashboard from "./pages/auth/users/dashboard/userDashboard";
 import DashBoard from "./pages/auth/serviceProvider/dashboard/Dashboard";
 import CheckoutSuccess from "./components/payment/CheckoutSuccess";
 import NotFound from "./pages/errors/NotFound";
+import CareerMentorship from "./pages/departments/CareerMentorship/CareerMentorship";
 
 function App() {
   return (
@@ -46,7 +47,7 @@ function App() {
           <Route path="/medical" element={<Medical />} />
           <Route path="/checkout-success" element={<CheckoutSuccess />} />
           <Route path="/serv" element={<ServiceProviderList />} />
-          {/* <Route path="/careerMentorship" element={<CareerMentorship />} /> */}
+          <Route path="/careerMentorship" element={<CareerMentorship />} />
           <Route path="/psychological" element={<Psychological />} />
           <Route path="/appointment" element={<Appointment />} />
           <Route
