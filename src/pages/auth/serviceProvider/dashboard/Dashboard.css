@@ -1,3 +1,18 @@
+@media only screen and (min-width: 480px) {
+    /* styles for devices with a minimum screen width of 480px */
+    .whole-flex{
+            background-color: whitesmoke;
+    }
+    }
+    
+@media only screen and (max-width: 600px) {
+    /* styles for devices with a maximum screen width of 480px */
+    .whole-flex{
+        background-color: whitesmoke;
+    }
+    }
+
+
 .whole-flex{
     display: flex;
     flex-direction: row;

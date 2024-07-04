@@ -27,7 +27,7 @@ const Dashboard = () => {
           <div
             style={{
               display: "flex",
-              height: "155vh",
+              height: "165vh",
               overflow: "scroll initial",
             }}
           >

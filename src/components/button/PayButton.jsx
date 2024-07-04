@@ -1,14 +1,20 @@
-import React from 'react'
+import axios from 'axios';
+import React from 'react';
 
-const PayButton = ({cartItems}) => {
+const PayButton = ({ amount }) => {
     const handleCheckout = () => {
-        console.log(cartItems)
-    }
-  return (
-    <>
-      <button onClick={() => handleCheckout()}>Book Now</button>  
-    </>
-  )
-}
+        axios.post('http://localhost:5024/stripe/create-checkout-session', { amount })
+            .then((res) => {
+                if (res.data.url) {
+                    window.location.href = res.data.url;
+                }
+            })
+            .catch((err) => console.log(err.message));
+    };
 
-export default PayButton
+    return (
+        <button onClick={handleCheckout}>Book Now</button>
+    );
+};
+
+export default PayButton;
