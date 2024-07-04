@@ -23,7 +23,7 @@ import UserDashboard from "./pages/auth/users/dashboard/userDashboard";
 import DashBoard from "./pages/auth/serviceProvider/dashboard/Dashboard";
 import CheckoutSuccess from "./components/payment/CheckoutSuccess";
 import NotFound from "./pages/errors/NotFound";
-import CareerMentorship from "./pages/departments/CareerMentorship/CareerMentorship";
+import CareerMentorship from "./pages/departments/careerMentorship/CareerMentorship";
 
 function App() {
   return (
