@@ -16,7 +16,6 @@ import ServiceProviderDashboard from "./pages/auth/serviceProvider/dashboard/Das
 import ViewProfile from "./pages/auth/users/dashboard/profile_component/view_profile";
 import EditProfil from "./pages/auth/users/dashboard/profile_component/edit_profil";
 import ChangePassword from "./pages/auth/users/dashboard/profile_component/change_password";
-import CareerMentorship from "./pages/departments/CareerMentorship/Careermentorship";
 import ServiceProviderList from "./components/cards/serviceProvider/ServiceProviderList";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./pages/auth/users/dashboard_components/header";
@@ -46,7 +45,7 @@ function App() {
           <Route path="/medical" element={<Medical />} />
           <Route path="/create-checkout-session" element={<Final />} />
           <Route path="/serv" element={<ServiceProviderList />} />
-          <Route path="/careerMentorship" element={<CareerMentorship />} />
+          {/* <Route path="/careerMentorship" element={<CareerMentorship />} /> */}
           <Route path="/psychological" element={<Psychological />} />
           <Route path="/appointment" element={<Appointment />} />
           <Route

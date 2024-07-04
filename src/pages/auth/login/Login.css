@@ -1,6 +1,6 @@
 .login-page-container-fluid {
-    /* background-color: #3D52a0; */
-    height: 110vh;
+    background-color: white;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,18 +16,21 @@
 
 .login-container{
     height: auto !important;
+    border: 2px solid #3D52a0;
+    margin-bottom: 30px;
+    background-color: white;
 }
 
 .login-page-row {
-    background-color: £3D52a0;
+    background-color: #3D52a0;
     height: auto;
-    border: 2px solid white;
+    border: 10px solid white;
 }
 
 .login-page-col-1 {
     height: auto;
     position: relative;
-    background-color: #3D52a0;
+    /* background-color: #3D52a0; */
 }
 
 .login-page-col-1-div {
@@ -44,7 +47,6 @@
     height: auto;
     padding-top: 40px;
     padding-bottom: 40px;
-    /* border: 2px solid white; */
 }
 
 .login-col-2-center-div {
@@ -104,7 +106,7 @@
 }
 
 .create-account {
-    font-size: 13px;
+    font-size: 13px !important;
 }
 
 .login-question-div {
@@ -122,13 +124,13 @@
 
 
 @media (min-width: 320px) and (max-width: 768px) {
-    .login-conect-text {
-        display: none;
-    }
-
     .login-page-container-fluid {
         height: auto;
         padding: 35px 15px 35px 15px;
+    }
+
+    .login-page-col-1{
+        padding: 30px 0;
     }
 
     .login-txt {
@@ -153,9 +155,3 @@
         }
 }
 
-.login-conect-text {
-    color: white;
-    font-size: 12px;
-    position: absolute;
-    bottom: 0px;
-}

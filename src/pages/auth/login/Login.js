@@ -10,15 +10,11 @@ const Login = () => {
   return (
     <div>
       <Container fluid className="login-page-container-fluid">
-        <Container className='login-container'>
+        <Container className="login-container">
           <Row className="login-page-row">
             <Col sm={12} md={5} lg={6} xl={6} className="login-page-col-1">
-              <div className="login-page-col-1-div">
-                <p className="login-welcome-back">Welcome Back</p>
-              </div>
-              <p className="login-conect-text ">
-                Helpmate connects you to profesionals
-              </p>
+              <p className="login-welcome-back">Welcome Back</p>
+              
             </Col>
             <Col
               xs={12}
@@ -30,7 +26,6 @@ const Login = () => {
             >
               <div className="login-col-2-center-div">
                 <h1 className="login-txt">Login</h1>
-                <div className="icon-div"></div>
 
                 <div className="login-input-div">
                   <label className="login-email-label">Email</label>
@@ -82,8 +77,6 @@ const Login = () => {
         </Container>
       </Container>
     </div>
-
-    
   );
 }
 
