@@ -24,12 +24,14 @@ import DashBoard from "./pages/auth/serviceProvider/dashboard/Dashboard";
 import CheckoutSuccess from "./components/payment/CheckoutSuccess";
 import NotFound from "./pages/errors/NotFound";
 import CareerMentorship from "./pages/departments/careerMentorship/CareerMentorship";
+import UserFlow from "./pages/auth/signup/UserFlow";
+import Test from "./tests/Test";
 
 function App() {
   return (
     <Router>
       <NavigationBar />
-      <div className="pt-[84px]">
+      <div className="pt-[100px]">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path='/user-dashboard' element={<UserDashboard></UserDashboard>}></Route>
@@ -40,6 +42,7 @@ function App() {
           <Route path="/choice" element={<Choice />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/user-flow" element={<UserFlow />} />
           <Route
             path="/signup-service_provider"
             element={<ServiceProvider />}
@@ -50,6 +53,7 @@ function App() {
           <Route path="/careerMentorship" element={<CareerMentorship />} />
           <Route path="/psychological" element={<Psychological />} />
           <Route path="/appointment" element={<Appointment />} />
+          <Route path="/test" element={<Test />} />
           <Route
             path="/view-profile"
             element={<ViewProfile></ViewProfile>}
