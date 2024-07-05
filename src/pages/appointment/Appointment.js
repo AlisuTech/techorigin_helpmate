@@ -10,167 +10,137 @@ import "./Appointment.css";
 import Photo2 from "../../assets/psychological/Photo2.jpeg";
 import PayButton from "../../components/button/PayButton";
 
-
 const Appointment = () => {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const [departments, setDepartments] = useState([]);
-  const [serviceProviders, setServiceProviders] = useState([]);
+  // const navigate = useNavigate();
+  // const dispatch = useDispatch();
+  // const [departments, setDepartments] = useState([]);
+  // const [serviceProviders, setServiceProviders] = useState([]);
 
-  const { register, handleSubmit, watch } = useForm({
-    resolver: yupResolver(appointmentSchema),
-  });
-  const selectedDepartment = watch("department");
+  // const { register, handleSubmit, watch } = useForm({
+  //   resolver: yupResolver(appointmentSchema),
+  // });
+  // const selectedDepartment = watch("department");
 
-  const onServiceProviderSubmit = (data) => {
-    console.log(data);
-    dispatch(signupServiceProvider(data));
-    navigate("/login");
-  };
+  // const onServiceProviderSubmit = (data) => {
+  //   console.log(data);
+  //   dispatch(signupServiceProvider(data));
+  //   navigate("/login");
+  // };
 
-  const Cancel = (data) => {
-    console.log(data);
-    navigate("/login");
-  };
+  // const Cancel = (data) => {
+  //   console.log(data);
+  //   navigate("/login");
+  // };
 
-  useEffect(() => {
-    const fetchDepartmentsAndServiceProviders = () => {
-      const data = getDepartmentsAndServiceProvider;
-      const uniqueDepartments = [
-        ...new Set(data.map((item) => item.department)),
-      ];
-      setDepartments(uniqueDepartments);
-      setServiceProviders(data);
-    };
+  // useEffect(() => {
+  //   const fetchDepartmentsAndServiceProviders = () => {
+  //     const data = getDepartmentsAndServiceProvider;
+  //     const uniqueDepartments = [
+  //       ...new Set(data.map((item) => item.department)),
+  //     ];
+  //     setDepartments(uniqueDepartments);
+  //     setServiceProviders(data);
+  //   };
 
-    fetchDepartmentsAndServiceProviders();
-  }, []);
+  //   fetchDepartmentsAndServiceProviders();
+  // }, []);
 
-  const filteredServiceProviders = serviceProviders.filter(
-    (item) => item.department === selectedDepartment
-  );
+  // const filteredServiceProviders = serviceProviders.filter(
+  //   (item) => item.department === selectedDepartment
+  // );
 
   return (
     <>
-      <div>
-        <div></div>
-
-        <div class="backgrounddiv text-black">
-          <div class="display">
-            <div class="textpadding ">
-              <div class="bookappointment2">
-                <div class="bookappointment fonts "> APPOINTMENT</div>
-                <br />
-              </div>
-
-              <div class="fontsa bookappointment ">BOOKING</div>
-
-              <div class="userdiv">
-                {/* <i class="fas fa-user fa-7x icon icons"></i> */}
-                <br />
-                <b></b>
-                <br />
-              </div>
-
-              <div>
-                <br />
-
-                <p>
-                  Preferred Date of appointment: &nbsp;
+      <div class="grid md:grid-cols-2 grid-cols-1 gap-4 p-5 border-yellow">
+        <div className="border-green ">
+          <div className="border-green">
+            <h2 className="text-3xl font-bold mb-4">Appointment Booking</h2>
+            <form className="space-y-4">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-lg">
+                    Preferred Date of appointment:
+                  </label>
                   <input
-                    className="inputdesign"
                     type="date"
-                    id="date"
-                    name="date"
-                    required
-                    {...register("date")}
+                    className="mt-1 w-full border rounded px-3 py-2 border-blue"
                   />
-                </p>
-                <br />
-                <p>
-                  <label className=" font-bold" for="service_provider">
-                    Service Provider: &nbsp;
-                  </label>
-                  <select
-                    id="service_provider"
-                    {...register("serviceProvider")}
-                  >
-                    <option value="">Select Service Provider</option>
-                    {filteredServiceProviders.map((serviceProvider, index) => (
-                      <option
-                        key={index}
-                        value={serviceProvider.serviceProvider}
-                      >
-                        {serviceProvider.serviceProvider}
-                      </option>
-                    ))}
-                  </select>
-                </p>
-                <br />
-                <p>
-                  <label className=" font-bold" for="time">
-                    Time of appointment: &nbsp;
-                  </label>
+                </div>
+                <div>
+                  <label className="block text-lg">Time of appointment:</label>
                   <input
-                    className="inputdesign"
                     type="time"
-                    id="time"
-                    name="time"
-                    required
-                    {...register("time")}
+                    className="mt-1 w-full border rounded px-3 py-2"
                   />
-                  <label className=" font-bold" for="department">
-                    Department:
-                  </label>
-                  <select id="department" {...register("department")}>
-                    <option value="">Select Department</option>
-                    {departments.map((department, index) => (
-                      <option key={index} value={department}>
-                        {department}
-                      </option>
-                    ))}
-                  </select>
-                </p>
+                </div>
               </div>
-              <br />
-              <br />
-              <br />
-              <div class="paymentdetails fonts2"> Payment Details</div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-lg">Department:</label>
+                  <select className="mt-1 w-full border rounded px-3 py-2">
+                    <option>Select Department</option>
+                    {/* Add options here */}
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-lg">Service Provider:</label>
+                  <select className="mt-1 w-full border rounded px-3 py-2">
+                    <option>Select Service Provider</option>
+                  </select>
+                </div>
+              </div>
+
               <div>
-                <br />
-                <p>
-                  <strong class="paycolor">Payment Method</strong>
-                  <span>
-                    {" "}
-                    <input type="checkbox" id="creditcard" />
-                    <label for="creditcard">Credit/Debit Card</label>
-                  </span>
-                </p>
-                <br />
-                <p> Do you want a free three session trial?</p>
-                <p>
-                  {" "}
-                  <input type="radio" name="choose" id="yes" />
-                  <label for="yes" className="pe-3">
+                <h3 className="text-lg font-semibold">Payment Details</h3>
+                <label className="block mt-2">
+                  <input type="checkbox" className="mr-2" />
+                  Credit/Debit Card
+                </label>
+              </div>
+              <div>
+                <label className="block text-lg">
+                  Do you want a free three session trial?
+                </label>
+                <div className="flex space-x-4 mt-1">
+                  <label>
+                    <input
+                      type="radio"
+                      name="trial"
+                      value="yes"
+                      className="mr-2"
+                    />
                     Yes
                   </label>
-                  <input type="radio" name="choose" id="no" />
-                  <label for="no">No</label>
-                </p>
+                  <label>
+                    <input
+                      type="radio"
+                      name="trial"
+                      value="no"
+                      className="mr-2"
+                    />
+                    No
+                  </label>
+                </div>
               </div>
-              <br />
-              <br />
-              <div>
-                <PayButton amount={70} />
-                <button type="button" className="buttons" onClick={Cancel}>
+              <div className="flex space-x-4 mt-4">
+                <button
+                  type="submit"
+                  className="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition"
+                >
+                  Book Now
+                </button>
+                <button
+                  type="reset"
+                  className="bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400 transition"
+                >
                   Cancel
                 </button>
               </div>
-            </div>
-            <div>
-              <img src={Photo2} alt="book" class="img1" />
-            </div>
+            </form>
           </div>
+        </div>
+        <div className="border-red md:w-[30rem] md:block hidden w-[20rem]">
+          <img src={Photo2} alt="" />
         </div>
       </div>
     </>
