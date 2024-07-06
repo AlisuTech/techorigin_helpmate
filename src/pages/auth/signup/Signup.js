@@ -178,7 +178,7 @@ function Signup() {
                             <img src={image} alt='' className ="form-img" />
                         </div>
                     </div>
-                    <DevTool control={control} />
+                    {/* <DevTool control={control} /> */}
                 </div>
             </div>
         </>
