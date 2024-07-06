@@ -14,6 +14,7 @@
     /* padding-top: 50px; */
     padding-left: 100px;
     padding-right: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     
 
 }
@@ -22,10 +23,9 @@
     font-weight: bolder;
     font-size: 40px;
     color: black;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    ;
     margin-top: 30px;
     line-height: 50px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .writeup_two {
@@ -36,15 +36,17 @@
 }
 
 .book-appointment {
-    background-color: #7091e6;
-    padding: 25px;
+    background-color: #3D52A0;
+    width: 200px;
+    height: 60px;
     color: white;
     border-radius: 5px;
     border-style: hidden;
     
+    
 }
 .book-appointment:hover {
-    background-color: #6f6185;
+    background-color:  #7091e6;
 }
 
 
