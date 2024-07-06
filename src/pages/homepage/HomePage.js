@@ -73,7 +73,7 @@ const HomePage = () => {
                   We emphasize preventive care to maintain your
                   <br />
                   health and provide convenient, accessible services with flexible
-                  hours.
+                  hours. <br/> <br/> <button class="bg-fontstyle3">Learn more</button>
                 </span>
               </div>
               <div>
@@ -81,6 +81,7 @@ const HomePage = () => {
                 <span class="department1-text2">
                   We focus on preventive care, health education, and personalized
                   support to promote the well-being of mothers and their children.
+                  <br/> <br/> <button class="bg-fontstyle3">Learn more</button>
                 </span>
               </div>
               <div>
@@ -88,7 +89,7 @@ const HomePage = () => {
                 <span class="department1-text2">
                   We provide preventive care and personalized plans, supporting
                   women's health through every stage of life with compassionate
-                  care.
+                  care. <br/> <br/> <button class="bg-fontstyle3">Learn more</button>
                 </span>
               </div>
             </div>
