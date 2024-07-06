@@ -1,7 +1,7 @@
 import React from "react";
 import ItemsContainer from "./ItemsContainer";
 import SocialIcons from "./SocialIcons";
-import { Icons } from "./Menus";
+import { SOCIAL_MEDIA } from "./Menus";
 
 
 const Footer = () => {
@@ -17,7 +17,7 @@ const Footer = () => {
       >
         <span>© 2024 Appy. All rights reserved.</span>
         <span>Terms · Privacy Policy</span>
-        <SocialIcons Icons={Icons} />
+        <SocialIcons SOCIAL_MEDIA={SOCIAL_MEDIA} />
       </div>
     </footer>
   );

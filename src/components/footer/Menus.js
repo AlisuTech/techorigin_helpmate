@@ -1,33 +1,37 @@
-export const PRODUCTS = [
-    { name: "Drag And Drop", link: "#" },
-    { name: "Visual Studio X", link: "#" },
-    { name: "Easy Content", link: "#" },
-  ];
-  export const RESOURCES = [
-    { name: "Industries and tools", link: "#" },
-    { name: "Use cases", link: "#" },
-    { name: "Blog", link: "#" },
-    { name: "Online evenet", link: "#" },
-    { name: "Nostrud exercitation", link: "#" },
-  ];
-  export const COMPANY = [
-    { name: "Diversity & inclusion", link: "#" },
-    { name: "About us", link: "#" },
-    { name: "Press", link: "#" },
-    { name: "Customer Stories", link: "#" },
-    { name: "Online communities", link: "#" },
-  ];
-  export const SUPPORT = [
-    { name: "Documentation", link: "#" },
-    { name: "Tutorials & guides", link: "#" },
-    { name: "Webinars", link: "#" },
-    { name: "Open-source", link: "#" },
-  ];
+export const SERVICES = [
+  { name: "Medical Appointments", link: "#" },
+  { name: "Wellness Sessions", link: "#" },
+  { name: "Educational Tutoring", link: "#" },
+  { name: "Therapy and Counseling", link: "#" },
+];
+
+export const RESOURCES = [
+  { name: "User Guides", link: "#" },
+  { name: "Service Provider FAQs", link: "#" },
+  { name: "Blog", link: "#" },
+  { name: "Success Stories", link: "#" },
+  { name: "Community Events", link: "#" },
+];
+
+export const COMPANY = [
+  { name: "About Us", link: "#" },
+  { name: "Our Team", link: "#" },
+  { name: "Press", link: "#" },
+  { name: "Careers", link: "#" },
+  { name: "Contact Us", link: "#" },
+];
+
+export const SUPPORT = [
+  { name: "Help Center", link: "#" },
+  { name: "Tutorials & Guides", link: "#" },
+  { name: "Webinars", link: "#" },
+  { name: "Privacy Policy", link: "#" },
+];
   
-  export const Icons = [
-    { name: "logo-facebook", link: "#" },
-    { name: "logo-twitter", link: "#" },
-    { name: "logo-github", link: "#" },
-    { name: "logo-linkedin", link: "#" },
-    { name: "logo-instagram", link: "#" },
-  ];
+export const SOCIAL_MEDIA = [
+  { name: "logo-facebook", link: "#" },
+  { name: "logo-twitter", link: "#" },
+  { name: "logo-github", link: "#" },
+  { name: "logo-linkedin", link: "#" },
+  { name: "logo-instagram", link: "#" },
+];
