@@ -1,13 +1,14 @@
 import React from 'react';
+import './Test.css'
+import Pic from '../assets/homepage/doctrbg.jpg'
 
 
 function Test() {
 
   return (
-    <div className='bg-[red]'>
-      <div>Test</div>
-      <div>Test</div>
-
+    <div className=''>
+      <img src={Pic} alt='' className=''/>
+      <img src={Pic} alt='' className=''/>
     </div>
   );
 }

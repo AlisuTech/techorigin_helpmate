@@ -1,0 +1,22 @@
+.div-1 {
+    background-color: azure;
+    font-size: large;
+    color: blue;
+}
+
+.bg-azure {
+    background-color: azure;
+}
+
+.fs-233 {
+    font-size: large;
+}
+
+.text-col {
+    color: blue;
+}
+
+.text-7xl {
+    font-size: 4.5rem /* 72px */;
+    line-height: 1;
+}
