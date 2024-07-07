@@ -1,7 +1,21 @@
+@media only screen and (min-width: 200px) and (max-width: 2981px) {
+  button {
+      width: fit-content !important;
+  }
+}
+
+.test {
+  border-radius: 100px !important;
+  background-color: red !important;
+}
+
+
+
+
 /* Add this to your CSS file */
 
-.nav-link a,
-.nav-link div {
+a,
+div {
   position: relative;
   display: inline-block;
   color: white;
@@ -9,8 +23,8 @@
   transition: color 0.3s;
 }
 
-.nav-link a::after,
-.nav-link div::after {
+a::after,
+a::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -23,20 +37,20 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.nav-link a:hover::after,
-.nav-link div:hover::after {
+a:hover::after,
+div:hover::after {
   visibility: visible;
   transform: scaleX(1);
 }
 
-.nav-link a:hover,
-.nav-link div:hover {
+a:hover,
+div:hover {
   color: #B9E8F8;
   transition: color 0.3s ease-in-out;
 }
 
-.nav-link a.active,
-.nav-link div.active {
+a.active,
+div.active {
   color: #00AEFF;
 }
 
@@ -81,7 +95,7 @@
   background-color: #B9E8F8;
   color: black;
   border: none;
-  text-decoration: none important;
+  /* text-decoration: none important; */
 
 }
 
@@ -96,42 +110,3 @@ dl, ol, ul {
     margin-top: 0;
     margin-bottom: 0rem !important;
 }
-
-/* Add this CSS to your existing styles */
-
-/* Ensure the dropdown is hidden by default and properly positioned */
-li.relative > ul {
-    display: none;
-  }
-  
-  li.relative:hover > ul {
-    display: block;
-  }
-  
-  ul.absolute {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    /* background-color: #3d52a0; */
-    /* border-radius: 0.375rem;  */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Dropdown shadow */
-  }
-  
-  /* Style dropdown links */
-  ul.absolute li {
-    padding: 0.5rem 1rem; /* Tailwind p-2 */
-  }
-  
-  ul.absolute li a {
-    color: #000000; /* Black text */
-  }
-  
-  /* Style for main links with icons */
-  li.flex {
-    display: flex;
-    align-items: center;
-  }
-  
-  li .mr-2 {
-    margin-right: 0.5rem;
-  }
