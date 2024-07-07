@@ -23,7 +23,7 @@ import CheckoutSuccess from "./components/payment/CheckoutSuccess";
 import NotFound from "./pages/errors/NotFound";
 import UserFlow from "./pages/auth/signup/UserFlow";
 import Test from "./tests/Test";
-import Career from "./pages/departments/careerMentorship/Career";
+import Career from "./pages/departments/career/Career";
 
 function App() {
   return (
@@ -32,7 +32,10 @@ function App() {
       <div className="pt-[100px]">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path='/user-dashboard' element={<UserDashboard></UserDashboard>}></Route>
+          <Route
+            path="/user-dashboard"
+            element={<UserDashboard></UserDashboard>}
+          ></Route>
           <Route
             path="/service_provider"
             element={<ServiceProviderDashboard />}
@@ -59,10 +62,7 @@ function App() {
             path="/edit-profile"
             element={<EditProfil></EditProfil>}
           ></Route>
-          <Route
-            path="/userss-dashboard"
-            element={<Header></Header>}
-          ></Route>
+          <Route path="/userss-dashboard" element={<Header></Header>}></Route>
           <Route
             path="/change-password"
             element={<ChangePassword></ChangePassword>}
@@ -77,10 +77,7 @@ function App() {
             element={<ServiceProviderProfile />}
           />
 
-          <Route
-            path="/dashboard"
-            element={<DashBoard />}
-          />
+          <Route path="/dashboard" element={<DashBoard />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
