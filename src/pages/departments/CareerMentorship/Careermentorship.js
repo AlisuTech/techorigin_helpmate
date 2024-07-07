@@ -1,5 +1,5 @@
 import React from "react";
-import "./CareerMentorship.css";
+import "./careermentorship.css";
 import logocoach from "../../../assets/mentorshipcareer/logocoach.png";
 import academics from "../../../assets/mentorshipcareer/academics.png";
 import disciplineremote from "../../../assets/mentorshipcareer/disciplineremote.png";
@@ -11,12 +11,13 @@ import excitement from "../../../assets/mentorshipcareer/excitement.png";
 import wisdom from "../../../assets/mentorshipcareer/wisdom.png";
 import courage from "../../../assets/mentorshipcareer/courage.png";
 import councel from "../../../assets/mentorshipcareer/councel.png";
+import ControlledCarousel from './ControlledCarousel';
 
-const CareerMentorship = () => {
+const Careermentorship = () => {
   return (
     <div className="Resizer">
       <div className="main-container">
-        {/* <img src={Coach} alt="" className="coachpics" /> */}
+        
         <div className="text-inmain">
           <p className="first-phrase">Prefessional Life Coaching</p>
           <button>Get Started</button>
@@ -59,67 +60,67 @@ const CareerMentorship = () => {
         <div className="Training-session">
           <div className="first-secttion-flex">
             <div className="image-text">
-              <div>
+              
                 {" "}
                 <img src={academics} alt="" className="coachpics" />
-              </div>
-              <div>
-                How to stay progressive in knowledge SOCIAL LIFE Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit. Pariatur dolores .
-              </div>
+
+                <p>How to stay progressive in knowledge SOCIAL LIFE Lorem ipsum
+                dolor sit amet, consectetur adipisicing elit. Pariatur dolores .</p>
+            
+                
             </div>
 
             <div className="image-text">
-              <div>
+              
                 {" "}
                 <img src={investment} alt="" className="coachpics" />
-              </div>
-              <div>
+              
+              <p>
                 How to stay progressive in knowledge SOCIAL LIFE Lorem ipsum
                 dolor sit amet, consectetur adipisicing elit. Pariatur dolores .
-              </div>
+              </p>
             </div>
 
             <div className="image-text">
-              <div>
+              
                 {" "}
                 <img src={business} alt="" className="coachpics" />
-              </div>
-              <div>
+              
+              <p>
                 How to stay progressive in knowledge SOCIAL LIFE Lorem ipsum
                 dolor sit amet, consectetur adipisicing elit. Pariatur dolores .
-              </div>
+              </p>
             </div>
           </div>
 
-          <div className="second-section-flex">
+          <div className="second-section-flex" >
             <div className="image-text">
-              <div>
+              
                 {" "}
                 <img src={Family} alt="" className="coachpics" />
-              </div>
-              <div className="text-margin">
+              
+              <p className="text-margin">
                 How to stay progressive in knowledge SOCIAL LIFE Lorem ipsum
                 dolor sit amet, consectetur adipisicing elit. Pariatur dolores .
-              </div>
+              </p>
             </div>
 
             <div className="image-text">
-              <div>
+              
                 {" "}
                 <img src={disciplineremote} alt="" className="coachpics" />
-              </div>
-              <div>
+              
+              <p>
                 How to stay progressive in knowledge SOCIAL LIFE Lorem ipsum
                 dolor sit amet, consectetur adipisicing elit. Pariatur dolores .
-              </div>
+              </p>
             </div>
 
             <div className="image-text">
-              <div>
+              
                 {" "}
                 <img src={relationship} alt="" className="coachpics" />
-              </div>
+              
               <div>
                 How to stay progressive in knowledge SOCIAL LIFE Lorem ipsum
                 dolor sit amet, consectetur adipisicing elit. Pariatur dolores .
@@ -127,6 +128,7 @@ const CareerMentorship = () => {
             </div>
           </div>
         </div>
+        
       </div>
 
       <div className="Team-section">
@@ -173,8 +175,11 @@ const CareerMentorship = () => {
           </div>
         </div>
       </div>
+      <div className="caousel-div">
+        <ControlledCarousel></ControlledCarousel>
+      </div>
     </div>
   );
 };
 
-export default CareerMentorship;
+export default Careermentorship;
