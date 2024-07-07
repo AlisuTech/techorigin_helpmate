@@ -9,7 +9,6 @@ import Footer from "./components/footer/Footer";
 import Psychological from "./pages/departments/psychological/Psychological";
 import Appointment from "./pages/appointment/Appointment";
 import Medical from "./pages/departments/medical/Medical";
-import Choice from "./pages/auth/Choice";
 import ServiceProvider from "./pages/auth/signup/ServiceProvider";
 import ServiceProviderProfile from "./pages/profile/serviceProvider/ServiceProviderProfile";
 import ServiceProviderDashboard from "./pages/auth/serviceProvider/dashboard/Dashboard";
@@ -39,7 +38,6 @@ function App() {
             path="/service_provider"
             element={<ServiceProviderDashboard />}
           />
-          <Route path="/choice" element={<Choice />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/user-flow" element={<UserFlow />} />
