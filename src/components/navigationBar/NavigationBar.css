@@ -78,7 +78,7 @@
 
 .nav-link.login a:hover {
   /* background-color: transparent; */
-  background-color: white;
+  background-color: #B9E8F8;
   color: black;
   border: none;
   text-decoration: none important;
@@ -135,4 +135,3 @@ li.relative > ul {
   li .mr-2 {
     margin-right: 0.5rem;
   }
-  
