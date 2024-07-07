@@ -4,12 +4,10 @@ import Login from "./pages/auth/login/Login";
 import Signup from "./pages/auth/signup/Signup";
 import HomePage from "./pages/homepage/HomePage";
 import NavigationBar from "./components/navigationBar/NavigationBar";
-import Dashboard from "./pages/auth/users/dashboard/Dashboard";
 import Footer from "./components/footer/Footer";
 import Psychological from "./pages/departments/psychological/Psychological";
 import Appointment from "./pages/appointment/Appointment";
 import Medical from "./pages/departments/medical/Medical";
-import Choice from "./pages/auth/Choice";
 import ServiceProvider from "./pages/auth/signup/ServiceProvider";
 import ServiceProviderProfile from "./pages/profile/serviceProvider/ServiceProviderProfile";
 import ServiceProviderDashboard from "./pages/auth/serviceProvider/dashboard/Dashboard";
@@ -24,6 +22,7 @@ import NotFound from "./pages/errors/NotFound";
 import UserFlow from "./pages/auth/signup/UserFlow";
 import Test from "./tests/Test";
 import AppointmentRecords from "./pages/appointment_records/appointment_records";
+import Career from "./pages/departments/career/Career";
 
 function App() {
   return (
@@ -40,7 +39,6 @@ function App() {
             path="/service_provider"
             element={<ServiceProviderDashboard />}
           />
-          <Route path="/choice" element={<Choice />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/user-flow" element={<UserFlow />} />
@@ -51,6 +49,9 @@ function App() {
           <Route path="/medical" element={<Medical />} />
           <Route path="/checkout-success" element={<CheckoutSuccess />} />
           <Route path="/serv" element={<ServiceProviderList />} />
+
+
+          <Route path="/career" element={<Career />} />
           <Route path="/psychological" element={<Psychological />} />
           <Route path="/appointment" element={<Appointment />} />
           <Route path="/test" element={<Test />} />
@@ -58,8 +59,18 @@ function App() {
             path="/view-profile"
             element={<ViewProfile></ViewProfile>}
           ></Route>
+
           <Route path="/userss-dashboard" element={<Header></Header>}></Route>
           <Route path="/appointment-records" element={<AppointmentRecords></AppointmentRecords>}></Route>
+          <Route
+            path="/edit-profile"
+            element={<EditProfil></EditProfil>}
+          ></Route>
+          <Route path="/userss-dashboard" element={<Header></Header>}></Route>
+          <Route
+            path="/change-password"
+            element={<ChangePassword></ChangePassword>}
+          ></Route>
           <Route
             path="/service_provider_profile"
             element={<ServiceProviderProfile />}
