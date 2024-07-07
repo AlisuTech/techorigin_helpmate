@@ -15,7 +15,7 @@ const NavigationLinks = ({ handleLinkClick }) => {
       name: "Departments",
       icon: "fa-solid fa-angle-down",
       subItems: [
-        { name: "Career", url: "/careerMentorship" },
+        { name: "Career", url: "/career" },
         { name: "Medical", url: "/medical" },
         { name: "Psychological", url: "/psychological" },
       ],
