@@ -62,15 +62,7 @@ function App() {
 
           <Route path="/userss-dashboard" element={<Header></Header>}></Route>
           <Route path="/appointment-records" element={<AppointmentRecords></AppointmentRecords>}></Route>
-          <Route
-            path="/edit-profile"
-            element={<EditProfil></EditProfil>}
-          ></Route>
           <Route path="/userss-dashboard" element={<Header></Header>}></Route>
-          <Route
-            path="/change-password"
-            element={<ChangePassword></ChangePassword>}
-          ></Route>
           <Route
             path="/service_provider_profile"
             element={<ServiceProviderProfile />}
