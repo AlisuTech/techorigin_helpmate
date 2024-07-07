@@ -23,13 +23,10 @@ import UserDashboard from "./pages/auth/users/dashboard/userDashboard";
 import DashBoard from "./pages/auth/serviceProvider/dashboard/Dashboard";
 import CheckoutSuccess from "./components/payment/CheckoutSuccess";
 import NotFound from "./pages/errors/NotFound";
-<<<<<<< HEAD
-import Careermentorship from "./pages/departments/CareerMentorship/Careermentorship";
-=======
-import CareerMentorship from "./pages/departments/careerMentorship/CareerMentorship";
+import CareerMentorship from "./pages/departments/CareerMentorship/Careermentorship";
 import UserFlow from "./pages/auth/signup/UserFlow";
 import Test from "./tests/Test";
->>>>>>> e84c94b4a9d8d767bc8cd96f23396f96994c256f
+import Careermentorship from "./pages/departments/CareerMentorship/Careermentorship";
 
 function App() {
   return (
