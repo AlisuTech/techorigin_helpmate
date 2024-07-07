@@ -66,7 +66,7 @@ const Login = () => {
                 <div className="login-question-div">
                   <p className="login-question-text">
                     Dont have an account?{" "}
-                    <Link className="create-account" to="/signup">
+                    <Link className="create-account" to="/user-flow">
                       Signup
                     </Link>
                   </p>

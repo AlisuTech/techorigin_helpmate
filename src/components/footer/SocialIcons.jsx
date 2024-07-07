@@ -1,9 +1,9 @@
 import React from "react";
 
-const SocialIcons = ({ Icons }) => {
+const SocialIcons = ({ SOCIAL_MEDIA }) => {
   return (
     <div className="text-blackx">
-      {Icons.map((icon) => (
+      {SOCIAL_MEDIA.map((icon) => (
         <span
           key={icon.name}
           className="p-2 cursor-pointer hover:scale-110 inline-flex items-center

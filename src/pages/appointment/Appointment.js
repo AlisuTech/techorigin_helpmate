@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { appointmentSchema } from "../../validations/appointmentValidation";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-import { signupServiceProvider } from "../../app/serviceProvider/serviceProviderSlice";
 import { getDepartmentsAndServiceProvider } from "../../services/categoryService";
 import "./Appointment.css";
 import Photo2 from "../../assets/psychological/Photo2.jpeg";
 import PayButton from "../../components/button/PayButton";
-
 
 const Appointment = () => {
   const navigate = useNavigate();
@@ -22,16 +20,11 @@ const Appointment = () => {
   });
   const selectedDepartment = watch("department");
 
-  const onServiceProviderSubmit = (data) => {
-    console.log(data);
-    dispatch(signupServiceProvider(data));
-    navigate("/login");
-  };
-
-  const Cancel = (data) => {
-    console.log(data);
-    navigate("/login");
-  };
+  // const onServiceProviderSubmit = (data) => {
+  //   console.log(data);
+  //   dispatch(signupServiceProvider(data));
+  //   navigate("/login");
+  // };
 
   useEffect(() => {
     const fetchDepartmentsAndServiceProviders = () => {
@@ -52,46 +45,59 @@ const Appointment = () => {
 
   return (
     <>
-      <div>
-        <div></div>
-
-        <div class="backgrounddiv text-black">
-          <div class="display">
-            <div class="textpadding ">
-              <div class="bookappointment2">
-                <div class="bookappointment fonts "> APPOINTMENT</div>
-                <br />
-              </div>
-
-              <div class="fontsa bookappointment ">BOOKING</div>
-
-              <div class="userdiv">
-                {/* <i class="fas fa-user fa-7x icon icons"></i> */}
-                <br />
-                <b></b>
-                <br />
-              </div>
-
-              <div>
-                <br />
-
-                <p>
-                  Preferred Date of appointment: &nbsp;
+      <div class="grid md:grid-cols-2 grid-cols-1 gap-4 p-5 border-yellow">
+        <div className="border-green ">
+          <div className="border-green">
+            <h2 className="text-3xl font-bold mb-4">Appointment Booking</h2>
+            <form className="space-y-4">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-lg">
+                    Preferred Date of appointment:
+                  </label>
                   <input
-                    className="inputdesign"
                     type="date"
-                    id="date"
                     name="date"
                     required
                     {...register("date")}
+                    className="mt-1 w-full border rounded px-3 py-2 border-blue"
                   />
-                </p>
-                <br />
-                <p>
-                  <label className=" font-bold" for="service_provider">
-                    Service Provider: &nbsp;
+                </div>
+                <div>
+                  <label className="block text-lg">Time of appointment:</label>
+                  <input
+                    type="time"
+                    name="time"
+                    required
+                    {...register("time")}
+                    className="mt-1 w-full border rounded px-3 py-2"
+                  />
+                </div>
+              </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-lg" htmlFor="department">
+                    Department:
                   </label>
                   <select
+                    className="mt-1 w-full border rounded px-3 py-2"
+                    id="department"
+                    {...register("department")}
+                  >
+                    <option value="">Select Department</option>
+                    {departments.map((department, index) => (
+                      <option key={index} value={department}>
+                        {department}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-lg" htmlFor="service_provider">
+                    Service Provider:
+                  </label>
+                  <select
+                    className="mt-1 w-full border rounded px-3 py-2"
                     id="service_provider"
                     {...register("serviceProvider")}
                   >
@@ -105,72 +111,61 @@ const Appointment = () => {
                       </option>
                     ))}
                   </select>
-                </p>
-                <br />
-                <p>
-                  <label className=" font-bold" for="time">
-                    Time of appointment: &nbsp;
-                  </label>
-                  <input
-                    className="inputdesign"
-                    type="time"
-                    id="time"
-                    name="time"
-                    required
-                    {...register("time")}
-                  />
-                  <label className=" font-bold" for="department">
-                    Department:
-                  </label>
-                  <select id="department" {...register("department")}>
-                    <option value="">Select Department</option>
-                    {departments.map((department, index) => (
-                      <option key={index} value={department}>
-                        {department}
-                      </option>
-                    ))}
-                  </select>
-                </p>
+                </div>
               </div>
-              <br />
-              <br />
-              <br />
-              <div class="paymentdetails fonts2"> Payment Details</div>
+
               <div>
-                <br />
-                <p>
-                  <strong class="paycolor">Payment Method</strong>
-                  <span>
-                    {" "}
-                    <input type="checkbox" id="creditcard" />
-                    <label for="creditcard">Credit/Debit Card</label>
-                  </span>
-                </p>
-                <br />
-                <p> Do you want a free three session trial?</p>
-                <p>
-                  {" "}
-                  <input type="radio" name="choose" id="yes" />
-                  <label for="yes" className="pe-3">
+                <h3 className="text-lg font-semibold">Payment Details</h3>
+                <label className="block mt-2">
+                  <input type="checkbox" className="mr-2" />
+                  Credit/Debit Card
+                </label>
+              </div>
+              <div>
+                <label className="block text-lg">
+                  Do you want a free three session trial?
+                </label>
+                <div className="flex space-x-4 mt-1">
+                  <label>
+                    <input
+                      type="radio"
+                      name="trial"
+                      value="yes"
+                      className="mr-2"
+                    />
                     Yes
                   </label>
-                  <input type="radio" name="choose" id="no" />
-                  <label for="no">No</label>
-                </p>
+                  <label>
+                    <input
+                      type="radio"
+                      name="trial"
+                      value="no"
+                      className="mr-2"
+                    />
+                    No
+                  </label>
+                </div>
               </div>
-              <br />
-              <br />
-              <div>
+              <div className="flex space-x-4 mt-4">
                 <PayButton amount={70} />
-                <button type="button" className="buttons" onClick={Cancel}>
+                <button
+                  type="reset"
+                  className="bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400 transition"
+                >
+                  Reset
+                </button>
+                <button
+                  onClick={() => navigate("/")}
+                  className="bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400 transition"
+                >
                   Cancel
                 </button>
               </div>
-            </div>
-            <div>
-              <img src={Photo2} alt="book" class="img1" />
-            </div>
+            </form>
           </div>
+        </div>
+        <div className="border-red md:w-[30rem] md:block hidden w-[20rem]">
+          <img src={Photo2} alt="" />
         </div>
       </div>
     </>

@@ -24,9 +24,9 @@ const Medical = () => {
               <span>A problem shared is a problem</span> <br />
               <span>half solved</span>
             </p>
-            <div className="">
+            <p>
               <button class="book-appointment">Book an Appointment</button>
-            </div>
+            </p>
           </div>
         </div>
       </div>
