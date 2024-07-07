@@ -1,5 +1,5 @@
 import React from "react";
-import "./CareerMentorship.css";
+import "./careermentorship.css";
 import logocoach from "../../../assets/mentorshipcareer/logocoach.png";
 import academics from "../../../assets/mentorshipcareer/academics.png";
 import disciplineremote from "../../../assets/mentorshipcareer/disciplineremote.png";
@@ -11,12 +11,13 @@ import excitement from "../../../assets/mentorshipcareer/excitement.png";
 import wisdom from "../../../assets/mentorshipcareer/wisdom.png";
 import courage from "../../../assets/mentorshipcareer/courage.png";
 import councel from "../../../assets/mentorshipcareer/councel.png";
+import ControlledCarousel from './ControlledCarousel';
 
-const CareerMentorship = () => {
+const Careermentorship = () => {
   return (
     <div className="Resizer">
       <div className="main-container">
-        {/* <img src={Coach} alt="" className="coachpics" /> */}
+        
         <div className="text-inmain">
           <p className="first-phrase">Prefessional Life Coaching</p>
           <button>Get Started</button>
@@ -40,13 +41,14 @@ const CareerMentorship = () => {
 
       <div className="welcome-section">
         <div className="text">
-          <p className="welcome">Welcome to LifeCoach</p>
-          Harum quaerat nostrum voluptatibus aspernatur eligendi accusantium
-          cum, impedit blanditiis voluptate commodi doloribus, nemo. Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit. Odio necessitatibus
-          deserunt itaque dignissimos adipisci, tenetur. Ipsum dolorum ab magnam
-          facere alias ducimus nulla consequuntur blanditiis, maxime explicabo
-          rerum maiores, odio. Image
+          <p className="welcome">Welcome to Help Mate </p>
+          Welcome to Help Mate,Our career department is commited to your personal guide in achieving a balanced and fulfilling life. At Help Mate, 
+          we understand that navigating life's challenges can be overwhelming, and we're here to help you find 
+          clarity, purpose, and joy in every aspect of your journey.Our platform offers personalized coaching sessions,
+          practical tools, and expert advice tailored to your unique needs and goals. Whether you're looking to improve your career, 
+          relationships, health, or overall well-being, Help Mate provides the support and resources you need to thrive.
+          Join us today and take the first step towards a brighter, more empowered future. With LifeCoach, you are never 
+          alone on your path to success and happiness.
         </div>
         <div className="image">
           <img src={logocoach} alt="" className="coachpic" />
@@ -59,74 +61,75 @@ const CareerMentorship = () => {
         <div className="Training-session">
           <div className="first-secttion-flex">
             <div className="image-text">
-              <div>
+              
+                <div>
                 {" "}
                 <img src={academics} alt="" className="coachpics" />
-              </div>
-              <div>
-                How to stay progressive in knowledge SOCIAL LIFE Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit. Pariatur dolores .
-              </div>
+                  </div>
+
+                <div><h1>How to stay progressive </h1> 
+                <p>in knowledge and SOCIAL LIFE while attaining good grades through your academics</p>
+                </div>
+                   
+            
+                
             </div>
 
             <div className="image-text">
-              <div>
-                {" "}
+              
+                <div>{" "}
                 <img src={investment} alt="" className="coachpics" />
               </div>
-              <div>
-                How to stay progressive in knowledge SOCIAL LIFE Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit. Pariatur dolores .
-              </div>
+                <div><h1>How to stay progressive </h1> 
+                <p>in knowledge and SOCIAL LIFE while attaining good grades through your academics</p>
+                </div>
+               
             </div>
 
             <div className="image-text">
-              <div>
-                {" "}
-                <img src={business} alt="" className="coachpics" />
-              </div>
-              <div>
-                How to stay progressive in knowledge SOCIAL LIFE Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit. Pariatur dolores .
-              </div>
+              
+                <div>{" "}
+                <img src={business} alt="" className="coachpics" /></div>
+              
+                <div><h1>How to stay progressive </h1> 
+                <p>in knowledge and SOCIAL LIFE while attaining good grades through your academics</p>
+                </div>
             </div>
           </div>
 
-          <div className="second-section-flex">
+          <div className="second-section-flex" >
             <div className="image-text">
-              <div>
-                {" "}
+              
+                <div>{" "}
                 <img src={Family} alt="" className="coachpics" />
               </div>
-              <div className="text-margin">
-                How to stay progressive in knowledge SOCIAL LIFE Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit. Pariatur dolores .
-              </div>
+                <div><h1>How to stay progressive </h1> 
+                <p>in knowledge and SOCIAL LIFE while attaining good grades through your academics</p>
+                </div>
             </div>
 
             <div className="image-text">
-              <div>
-                {" "}
-                <img src={disciplineremote} alt="" className="coachpics" />
-              </div>
-              <div>
-                How to stay progressive in knowledge SOCIAL LIFE Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit. Pariatur dolores .
-              </div>
+              
+                <div>{" "}
+                <img src={disciplineremote} alt="" className="coachpics" /></div>
+              
+                <div><h1>How to stay progressive </h1> 
+                <p>in knowledge and SOCIAL LIFE while attaining good grades through your academics</p>
+                </div>
             </div>
 
             <div className="image-text">
-              <div>
-                {" "}
+              
+                <div>{" "}
                 <img src={relationship} alt="" className="coachpics" />
-              </div>
-              <div>
-                How to stay progressive in knowledge SOCIAL LIFE Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit. Pariatur dolores .
-              </div>
+               </div>
+                <div><h1>How to stay progressive </h1> 
+                <p>in knowledge and SOCIAL LIFE while attaining good grades through your academics</p>
+                </div>
             </div>
           </div>
         </div>
+        
       </div>
 
       <div className="Team-section">
@@ -173,8 +176,11 @@ const CareerMentorship = () => {
           </div>
         </div>
       </div>
+      <div className="caousel-div">
+        <ControlledCarousel></ControlledCarousel>
+      </div>
     </div>
   );
 };
 
-export default CareerMentorship;
+export default Careermentorship;

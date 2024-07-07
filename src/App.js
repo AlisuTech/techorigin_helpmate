@@ -22,9 +22,10 @@ import UserDashboard from "./pages/auth/users/dashboard/userDashboard";
 import DashBoard from "./pages/auth/serviceProvider/dashboard/Dashboard";
 import CheckoutSuccess from "./components/payment/CheckoutSuccess";
 import NotFound from "./pages/errors/NotFound";
-import CareerMentorship from "./pages/departments/careerMentorship/CareerMentorship";
+import CareerMentorship from "./pages/departments/CareerMentorship/Careermentorship";
 import UserFlow from "./pages/auth/signup/UserFlow";
 import Test from "./tests/Test";
+import Careermentorship from "./pages/departments/CareerMentorship/Careermentorship";
 
 function App() {
   return (
@@ -48,7 +49,7 @@ function App() {
           <Route path="/medical" element={<Medical />} />
           <Route path="/checkout-success" element={<CheckoutSuccess />} />
           <Route path="/serv" element={<ServiceProviderList />} />
-          <Route path="/careerMentorship" element={<CareerMentorship />} />
+          <Route path="/Careermentorship" element={<Careermentorship />} />
           <Route path="/psychological" element={<Psychological />} />
           <Route path="/appointment" element={<Appointment />} />
           <Route path="/test" element={<Test />} />

@@ -1,10 +1,12 @@
 @media only screen and (min-width: 200px) and (max-width: 2981px) {
     .main-container{
         background-image: url("../../../assets/mentorshipcareer/Coach.png");
-        width: 100%;
+        max-width: 100%;
         height: 100vh;
         background-size:cover;
         background-repeat: no-repeat;
+        display: flex;
+        flex-wrap: wrap;
         
     }
     .text-inmain{
@@ -37,33 +39,36 @@
         width: 100%;
         height: 60vh;
         column-gap: 40px;
-        padding-top: 60px;
+        padding-top: 95px;
         color: white;
+        
         
     }
     .welcome-section{
         display: flex;
         flex-direction: row; 
         width: 100%;
-        height: 120vh;
+        height: auto;
         background-color: whitesmoke;
+        padding-bottom: 20px;
     }
     .text{
         flex-basis: 100%;
         margin: 50px;
-        padding-top: 80px;
+        padding-top: 100px;
         line-height: 40px;
     }
     .image{
         flex-basis: 100%;
         margin: 10px;
-        padding: 50px;
+        padding-bottom: 170px;
         
     }
 
     .coachpic{
         width: 500px;
-        height: 100vh;
+        height: 150vh;
+        padding-bottom: 170px;
         object-fit: contain;
     }
     .welcome{
@@ -75,12 +80,13 @@
     .coachpics{
         width: 350px;
         height: 40vh;
+        object-fit: fill;
         border-radius: 5px;
     }
 
     .Main-Training-session{
         background-color: white;
-        margin: 70px;
+        padding-top: 90px;
     }
     .Our-training{
         font-size: xx-large;
@@ -90,15 +96,16 @@
     }
     
     .Training-session{
-        display: flex;
-        column-gap: 10px;
-        margin: 50px;
+         display: flex;
+         flex-grow: inherit;
+         justify-content: space-around;
+         margin: 30px;
         
     }
     .image-text{
         display: flex;
         flex-direction: row;
-        column-gap: 15px;
+        column-gap: 10px;
         margin-top: 40px;
     }
     .text-margin{
@@ -108,17 +115,20 @@
     .first-secttion-flex{
         display: flex;
         flex-direction: column;
-        column-gap: 30px;
+        flex-basis: 100%;
+        
     }
     .second-section-flex{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        flex-basis: 100%;
+        
     }
     .Team-section{
         width: 100%;
-        height: 100vh;
-        background-color: #FCF8F3;
+        height: auto;
+        background-color: white;
+        
     }
     .writeup{
          padding-top: 50px;
@@ -136,6 +146,16 @@
         width: 350px;
         height: 200px;
         border-radius: 4px;
+    }
+
+    /* .Carousel{
+        width: 100%;
+        height: 120vh;
+        background-color: #FCF8F3;
+    } */
+    .caousel-div{
+        margin-bottom: 130px;
+        margin-left: 70px;
     }
     
     }
