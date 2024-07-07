@@ -11,7 +11,7 @@ import excitement from "../../../assets/mentorshipcareer/excitement.png";
 import wisdom from "../../../assets/mentorshipcareer/wisdom.png";
 import courage from "../../../assets/mentorshipcareer/courage.png";
 import councel from "../../../assets/mentorshipcareer/councel.png";
-import ControlledCarousel from './ControlledCarousel';
+import ControlledCarousel from '../../../components/carousel/ControlledCarousel';
 
 const Career = () => {
   return (
