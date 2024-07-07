@@ -4,7 +4,6 @@ import Login from "./pages/auth/login/Login";
 import Signup from "./pages/auth/signup/Signup";
 import HomePage from "./pages/homepage/HomePage";
 import NavigationBar from "./components/navigationBar/NavigationBar";
-import Dashboard from "./pages/auth/users/dashboard/Dashboard";
 import Footer from "./components/footer/Footer";
 import Psychological from "./pages/departments/psychological/Psychological";
 import Appointment from "./pages/appointment/Appointment";
@@ -22,10 +21,9 @@ import UserDashboard from "./pages/auth/users/dashboard/userDashboard";
 import DashBoard from "./pages/auth/serviceProvider/dashboard/Dashboard";
 import CheckoutSuccess from "./components/payment/CheckoutSuccess";
 import NotFound from "./pages/errors/NotFound";
-import CareerMentorship from "./pages/departments/CareerMentorship/Careermentorship";
 import UserFlow from "./pages/auth/signup/UserFlow";
 import Test from "./tests/Test";
-import Careermentorship from "./pages/departments/CareerMentorship/Careermentorship";
+import Career from "./pages/departments/careerMentorship/Career";
 
 function App() {
   return (
@@ -49,7 +47,7 @@ function App() {
           <Route path="/medical" element={<Medical />} />
           <Route path="/checkout-success" element={<CheckoutSuccess />} />
           <Route path="/serv" element={<ServiceProviderList />} />
-          <Route path="/Careermentorship" element={<Careermentorship />} />
+          <Route path="/career" element={<Career />} />
           <Route path="/psychological" element={<Psychological />} />
           <Route path="/appointment" element={<Appointment />} />
           <Route path="/test" element={<Test />} />

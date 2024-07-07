@@ -1,5 +1,5 @@
 import React from "react";
-import "./careermentorship.css";
+import "./Career.css";
 import logocoach from "../../../assets/mentorshipcareer/logocoach.png";
 import academics from "../../../assets/mentorshipcareer/academics.png";
 import disciplineremote from "../../../assets/mentorshipcareer/disciplineremote.png";
@@ -13,7 +13,7 @@ import courage from "../../../assets/mentorshipcareer/courage.png";
 import councel from "../../../assets/mentorshipcareer/councel.png";
 import ControlledCarousel from './ControlledCarousel';
 
-const Careermentorship = () => {
+const Career = () => {
   return (
     <div className="Resizer">
       <div className="main-container">
@@ -183,4 +183,4 @@ const Careermentorship = () => {
   );
 };
 
-export default Careermentorship;
+export default Career;
