@@ -14,8 +14,6 @@ import ServiceProvider from "./pages/auth/signup/ServiceProvider";
 import ServiceProviderProfile from "./pages/profile/serviceProvider/ServiceProviderProfile";
 import ServiceProviderDashboard from "./pages/auth/serviceProvider/dashboard/Dashboard";
 import ViewProfile from "./pages/auth/users/dashboard/profile_component/view_profile";
-import EditProfil from "./pages/auth/users/dashboard/profile_component/edit_profil";
-import ChangePassword from "./pages/auth/users/dashboard/profile_component/change_password";
 import ServiceProviderList from "./components/cards/serviceProvider/ServiceProviderList";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./pages/auth/users/dashboard_components/header";
@@ -23,10 +21,9 @@ import UserDashboard from "./pages/auth/users/dashboard/userDashboard";
 import DashBoard from "./pages/auth/serviceProvider/dashboard/Dashboard";
 import CheckoutSuccess from "./components/payment/CheckoutSuccess";
 import NotFound from "./pages/errors/NotFound";
-import CareerMentorship from "./pages/departments/CareerMentorship/Careermentorship";
 import UserFlow from "./pages/auth/signup/UserFlow";
 import Test from "./tests/Test";
-import Careermentorship from "./pages/departments/CareerMentorship/Careermentorship";
+import AppointmentRecords from "./pages/appointment_records/appointment_records";
 
 function App() {
   return (
@@ -35,7 +32,10 @@ function App() {
       <div className="pt-[100px]">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path='/user-dashboard' element={<UserDashboard></UserDashboard>}></Route>
+          <Route
+            path="/user-dashboard"
+            element={<UserDashboard></UserDashboard>}
+          ></Route>
           <Route
             path="/service_provider"
             element={<ServiceProviderDashboard />}
@@ -51,7 +51,6 @@ function App() {
           <Route path="/medical" element={<Medical />} />
           <Route path="/checkout-success" element={<CheckoutSuccess />} />
           <Route path="/serv" element={<ServiceProviderList />} />
-          <Route path="/Careermentorship" element={<Careermentorship />} />
           <Route path="/psychological" element={<Psychological />} />
           <Route path="/appointment" element={<Appointment />} />
           <Route path="/test" element={<Test />} />
@@ -59,18 +58,8 @@ function App() {
             path="/view-profile"
             element={<ViewProfile></ViewProfile>}
           ></Route>
-          <Route
-            path="/edit-profile"
-            element={<EditProfil></EditProfil>}
-          ></Route>
-          <Route
-            path="/userss-dashboard"
-            element={<Header></Header>}
-          ></Route>
-          <Route
-            path="/change-password"
-            element={<ChangePassword></ChangePassword>}
-          ></Route>
+          <Route path="/userss-dashboard" element={<Header></Header>}></Route>
+          <Route path="/appointment-records" element={<AppointmentRecords></AppointmentRecords>}></Route>
           <Route
             path="/service_provider_profile"
             element={<ServiceProviderProfile />}
@@ -81,10 +70,7 @@ function App() {
             element={<ServiceProviderProfile />}
           />
 
-          <Route
-            path="/dashboard"
-            element={<DashBoard />}
-          />
+          <Route path="/dashboard" element={<DashBoard />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

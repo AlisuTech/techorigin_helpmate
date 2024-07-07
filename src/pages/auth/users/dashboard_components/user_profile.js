@@ -18,9 +18,6 @@ const UserProfile = () => {
               <li>
                 <Link to="/change-password">Change Password</Link>
               </li>
-            {/* <li>
-              <button onClick={()=> NavigatePage()}>Change Icon</button>
-              </li> */}
             </ul>
         </nav>
         

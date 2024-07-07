@@ -1,6 +1,5 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
-import '../dashboard/Dashboard.css'
 
 const UserDashboardNavbar = () => {
     return (
@@ -38,3 +37,8 @@ const UserDashboardNavbar = () => {
 };
 
 export default UserDashboardNavbar;
+
+// profile
+// apointment
+// logout
+// realtime

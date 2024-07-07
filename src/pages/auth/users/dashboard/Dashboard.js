@@ -1,9 +1,4 @@
 import React from 'react'
-import Header from '../dashboard_components/header';
-// import Sidebar from '../dashboard_components/sidebar';
-import './Dashboard.css'
-import Dashboardbutton from '../dashboard_components/appointmentBtn';
-import UserProfile from '../dashboard_components/user_profile';
 import UserDashboardNavbar from '../dashboard_components/header';
 // import MainContent from '../dashboard_components/maincontent';
 
@@ -11,8 +6,6 @@ const Dashboard = () => {
   return (
     <div className="dashboard-app">
       <UserDashboardNavbar></UserDashboardNavbar>
-      {/* <Dashboardbutton></Dashboardbutton> */}
-      <UserProfile></UserProfile>
       <div className="long-div"></div>
     </div>
   );

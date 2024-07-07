@@ -1,0 +1,113 @@
+.appointment-container-fluid {
+    height: auto;
+    background-color: white;
+}
+
+.appointment-row {
+    display: flex;
+}
+
+.appointment-history {
+    border: 1px solid rgb(177, 177, 177);
+    height: auto;
+    overflow: scroll;
+}
+
+.appointment-chat {
+    background-color:white;
+    height: 100vh;
+}
+
+.appointment-details {
+    background-color: white;
+    height: 120vh;
+}
+
+
+@media (max-width: 600px) {
+
+    /* sm */
+    .appointment-history {
+        background-color: #edf2ff;
+    }
+
+    .appointment-chat {
+        display: none;
+    }
+
+    .appointment-details {
+        height: auto;
+        width: 100% !important;
+        display: none;
+    }
+
+        .appointment-container-fluid {
+            height: auto;
+        }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+    /* md */
+    .appointment-details {
+        display: none;
+    }
+
+    .appointment-chat {
+        display: none;
+    }
+
+    .appointment-history {
+        /* display: none;  */
+    }
+
+        .appointment-container-fluid {
+            height: auto;
+        }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+
+    /* lg */
+    .appointment-history {
+        height: 150vh;
+        overflow: scroll;
+    }
+
+    .appointment-details {
+        height: 150vh;
+        overflow: scroll;
+    }
+
+    .appointment-chat {
+        height: 150vh;
+        overflow: scroll;
+    }
+
+    .appointment-container-fluid {
+        height: 150vh;
+    }
+}
+
+@media (min-width: 1201px) {
+
+    /* xl */
+    .appointment-history {
+        height: 150vh;
+        overflow: scroll;
+    }
+
+    .appointment-details {
+        height: 150vh;
+        overflow: scroll;
+    }
+
+    .appointment-chat {
+        height: 150vh;
+        overflow: scroll;
+    }
+
+    .appointment-container-fluid {
+        height: 150vh;
+    }
+}

@@ -1,0 +1,61 @@
+.appointment-history-card-background {
+    border: 1px solid gainsboro;
+    background-color: white;
+    margin: 7px 0 7px 0;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.appointment-top-div {
+    display: flex;
+    font-size: 11px;
+    justify-content: space-between;
+    height: 25px;
+    /* border: 1px solid black; */
+}
+
+
+.appointment-state {
+    color: #3d52a0;
+    border-radius: 10px;
+    display: flex;
+    padding: 3px;
+    text-align: center;
+    height: 27px;
+}
+
+.appointment-history-card {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.appointment-history-div {
+    width: 100px;
+}
+
+.appointment-history-circle {
+    background-color: #3d52a0;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.appointment-history-docor {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.appointment-history-card-div {
+    padding-left: 10px;
+    font-size: 13px;
+}
