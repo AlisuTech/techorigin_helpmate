@@ -14,7 +14,7 @@ const baseUserSchema = new Schema({
     },
     phoneNumber: {
         type: String,
-        required: [true, "Your phone Number is not correct"]
+        // required: [true, "Your phone Number is not correct"]
     },
     email: {
         type: String,
@@ -25,15 +25,15 @@ const baseUserSchema = new Schema({
     },
     dateOfBirth: {
         type: Date,
-        required: [true, "Your age must be 16 and above"]
+        // required: [true, "Your age must be 16 and above"]
     },
     country: {
         type: String,
-        required: [true, "Your country is required"]
+        // required: [true, "Your country is required"]
     },
     stateOfOrigin: {
         type: String,
-        required: [true, "Your State is required"]
+        // required: [true, "Your State is required"]
     },
     password: {
         type: String,

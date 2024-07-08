@@ -7,29 +7,16 @@ const createNewServiceProvider = asyncHandler(async (req, res) => {
     firstName,
     lastName,
     department,
-    phoneNumber,
     email,
-    dateOfBirth,
-    country,
-    stateOfOrigin,
-    password,
-    officeAddress,
-    price
-    
+    password
   } = req.body;
 
   const requiredFields = [
     "firstName",
     "lastName",
     "department",
-    "phoneNumber",
     "email",
-    "dateOfBirth",
-    "country",
-    "stateOfOrigin",
     "password",
-    "officeAddress",
-    "price"
   ];
 
   const missingField = requiredFields.find((field) => !req.body[field]);
@@ -52,12 +39,6 @@ const createNewServiceProvider = asyncHandler(async (req, res) => {
       password: hashedPwd,
       lastName,
       department,
-      phoneNumber,
-      dateOfBirth,
-      country,
-      stateOfOrigin,
-      officeAddress,
-      price
     };
 
     const serviceProvider = await ServiceProvider.create(userObject);
