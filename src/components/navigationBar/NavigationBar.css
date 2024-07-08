@@ -4,105 +4,81 @@
   }
 }
 
-.test {
-  border-radius: 100px !important;
-  background-color: red !important;
+.logo:hover {
+  color: white !important;
 }
 
-
-
-
-/* Add this to your CSS file */
-
-a,
-div {
-  position: relative;
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s;
+.dropdown-menu-1 {
+  background-color: transparent;
 }
 
-a::after,
-a::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #B9E8F8;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: transform 0.3s ease-in-out;
+.dropdown-menu-1 .toggle {
+  background-color: transparent;
+  border: none;
 }
 
-a:hover::after,
-div:hover::after {
-  visibility: visible;
-  transform: scaleX(1);
+.dropdown-menu-1 .toggle:hover {
+  background-color: var(--color-blue-100) !important;
+  color: var(--color-blue-800);
+
 }
 
-a:hover,
-div:hover {
-  color: #B9E8F8;
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+  background-color: var(--color-blue-100) !important;
+}
+
+.dropdown-menu-1 .toggle:active {
+  background-color: yellow;
+}
+
+a {
+  color: white !important;
+}
+
+a:hover {
+  color: #B9E8F8 !important;
   transition: color 0.3s ease-in-out;
 }
 
-a.active,
+.dropdown-menu-1.active,
 div.active {
   color: #00AEFF;
 }
 
+.menu .item:hover {
+  background-color: var(--color-blue-100);
+}
+
+.menu .item {
+  width: fit-content;
+  padding-left: 5px;
+}
+
+/* Example styles for the active link */
+.active {
+  font-weight: bold;
+  color: var(--color-blue-800) !important; /* Change to your desired color */
+}
+
+/* Other styles */
+.nav-icon {
+  transition: transform 0.3s ease;
+}
+
+.nav-icon.open {
+  transform: rotate(90deg);
+}
+
+
 .dropdown-menu {
-  /* left: 0 !important;
-  top: 100% !important; */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   background-color: var(--color-blue-100) !important;
-  /* z-index: 1000; */
-  /* transform: translateY(1px); */
-  /* transition: transform 0.3s ease, opacity 0.3s ease; */
-}
-
-.nav-link:hover .dropdown-menu {
-  display: block;
-  /* opacity: 1; */
-  /* transform: translateY(0) !important; */
-
 }
 
 .dropdown-menu a {
   color: white;
   transition: background-color 0.3s;
-}
-
-/* Specific styles for Login link */
-.nav-link.login a {
-  color: white;
-  background-color: #00AEFF;
-  border: 1px solid #00AEFF;
-  padding: 10px 20px;
-  border-radius: 4px;
-  line-height: var(--line-height-16);
-  transition: background-color 0.3s, color 0.3s !important;
-  text-decoration: none !important;
-
-}
-
-.nav-link.login a:hover {
-  /* background-color: transparent; */
-  background-color: #B9E8F8;
-  color: black;
-  border: none;
-  /* text-decoration: none important; */
-
-}
-
-.nav-link.login a.active {
-  background-color: #B9E8F8;
-  color: black;
-
 }
 
 
