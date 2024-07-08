@@ -17,13 +17,13 @@ app.use(express.json())
 app.use(cors(corsOptions))
 
 
-app.use('/stripe', cors(), stripe_2)
+app.use('/stripe', stripe_2)
 
 app.use('/users', require('./routes/userRoutes'))
 app.use('/serviceProviders', require('./routes/serviceProviderRoutes'))
 
 app.use('/auth', require('./routes/authRoutes'));
-app.use('/appointments', verifyJWT, require('./routes/appointmentRoutes'))
+app.use('/appointments', require('./routes/appointmentRoutes'))
 
 mongoose.connection.once('open', () => {
     console.log('Connected to MongoDB')

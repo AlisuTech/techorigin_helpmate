@@ -1,10 +1,10 @@
 export const getDepartmentsAndServiceProvider = [
     {
-      serviceProvider: "Richard",
+      serviceProvider: "Timothy Edoghotu",
       department: "Medical",
     },
     {
-      serviceProvider: "Durrës",
+      serviceProvider: "Caroline dd",
       department: "Medical",
     },
     {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { appointmentSchema } from "../../validations/appointmentValidation";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -8,40 +8,72 @@ import { getDepartmentsAndServiceProvider } from "../../services/categoryService
 import "./Appointment.css";
 import Photo2 from "../../assets/psychological/Photo2.jpeg";
 import PayButton from "../../components/button/PayButton";
+import { createAppointment } from "../../app/appointment/appointmentSlice";
+import { fetchDepartmentsAndServiceProviders } from "../../app/serviceProvider/serviceProviderSlice";
 
 const Appointment = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [departments, setDepartments] = useState([]);
-  const [serviceProviders, setServiceProviders] = useState([]);
+  // const [departments, setDepartments] = useState([]);
+  // const [serviceProviders, setServiceProviders] = useState([]);
+  const { serviceProviders, departments, status, error } = useSelector((state) => state.serviceProvider);
+  // const userId = useSelector((state) => state.user.user._id);
+  const userId = "j";
+
 
   const { register, handleSubmit, watch } = useForm({
     resolver: yupResolver(appointmentSchema),
   });
   const selectedDepartment = watch("department");
 
-  // const onServiceProviderSubmit = (data) => {
-  //   console.log(data);
-  //   dispatch(signupServiceProvider(data));
-  //   navigate("/login");
-  // };
+  // useEffect(() => {
+  //   const fetchDepartmentsAndServiceProviders = () => {
+  //     const data = getDepartmentsAndServiceProvider;
+  //     const uniqueDepartments = [
+  //       ...new Set(data.map((item) => item.department)),
+  //     ];
+  //     setDepartments(uniqueDepartments);
+  //     setServiceProviders(data);
+  //   };
+
+  //   fetchDepartmentsAndServiceProviders();
+  // }, []);
+  useEffect(() => {
+    dispatch(fetchDepartmentsAndServiceProviders());
+  }, [dispatch]);
 
   useEffect(() => {
-    const fetchDepartmentsAndServiceProviders = () => {
-      const data = getDepartmentsAndServiceProvider;
-      const uniqueDepartments = [
-        ...new Set(data.map((item) => item.department)),
-      ];
-      setDepartments(uniqueDepartments);
-      setServiceProviders(data);
-    };
+    dispatch(fetchDepartmentsAndServiceProviders());
+  }, [dispatch]);
 
-    fetchDepartmentsAndServiceProviders();
-  }, []);
+  useEffect(() => {
+    console.log("Service Providers:", serviceProviders);
+    console.log("Departments:", departments);
+  }, [serviceProviders, departments]);
 
-  const filteredServiceProviders = serviceProviders.filter(
+  const filteredServiceProviders = serviceProviders ? serviceProviders.filter(
     (item) => item.department === selectedDepartment
-  );
+  ) : [];
+
+
+  const onSubmit = (data) => {
+    if (!userId) {
+      alert("User is not logged in. Please log in to book an appointment.");
+      return;
+    }
+    const appointmentData = { ...data, userId };
+    console.log('Appointment Data:', appointmentData);  // Log the appointment data
+    dispatch(createAppointment(appointmentData));
+    navigate("/appointment");
+  };
+
+  if (status === 'loading') {
+    return <div>Loading...</div>;
+  }
+
+  if (status === 'failed') {
+    return <div>Error: {error}</div>;
+  }
 
   return (
     <>
@@ -49,7 +81,7 @@ const Appointment = () => {
         <div className="border-green ">
           <div className="border-green">
             <h2 className="text-3xl font-bold mb-4">Appointment Booking</h2>
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-lg">
@@ -105,7 +137,7 @@ const Appointment = () => {
                     {filteredServiceProviders.map((serviceProvider, index) => (
                       <option
                         key={index}
-                        value={serviceProvider.serviceProvider}
+                        value={serviceProvider.serviceProvider._id}
                       >
                         {serviceProvider.serviceProvider}
                       </option>
@@ -147,7 +179,13 @@ const Appointment = () => {
                 </div>
               </div>
               <div className="flex space-x-4 mt-4">
-                <PayButton amount={70} />
+                {/* <PayButton amount={70} /> */}
+                <button
+                  type="submit"
+                  className="bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400 transition"
+                >
+                  Book
+                </button>
                 <button
                   type="reset"
                   className="bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400 transition"
