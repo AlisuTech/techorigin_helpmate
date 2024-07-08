@@ -91,16 +91,6 @@ function Signup() {
                                         placeholder="Last Name..."
                                         {...register("lastName")}
                                     />
-                                    <p>{errors.lastName?.message}</p>
-                                    <label htmlFor="number">Phone Number: </label>{" "}
-                                    <input
-                                        className="place-holder"
-                                        type="Number"
-                                        id="number"
-                                        placeholder="Phone Number..."
-                                        {...register("phoneNumber")}
-                                    />
-                                    <p>{errors.phoneNumber?.message}</p>
                                     <label htmlFor="email">Email: </label>{" "}
                                     <input
                                         className="place-holder"
@@ -110,19 +100,10 @@ function Signup() {
                                         {...register("email")}
                                     />
                                     <p>{errors.email?.message}</p>
-                                    <label htmlFor="dob">Date Of Birth: </label>
-                                    <input
-                                        className="place-holder"
-                                        type="date"
-                                        id="dob"
-                                        placeholder="Date of Birth..."
-                                        {...register("dateOfBirth")}
-                                    />
-                                    <p>{errors.dateOfBirth?.message}</p>
                                 </div>
 
                                 <div>
-                                    <label>Country: </label>{" "}
+                                    {/* <label>Country: </label>{" "}
                                     <select className="place-holder" {...register("country")}>
                                         <option value="">Select Country</option>
                                         {countries.map((country, index) => (
@@ -131,8 +112,8 @@ function Signup() {
                                             </option>
                                         ))}
                                     </select>
-                                    <br></br> <br />
-                                    <label>State Of Origin: </label>{" "}
+                                    <br></br> <br /> */}
+                                    {/* <label>State Of Origin: </label>{" "}
                                     <select className="place-holder" {...register("stateOfOrigin")}>
                                         <option value="">Select City</option>
                                         {filteredCities.map((city, index) => (
@@ -141,7 +122,7 @@ function Signup() {
                                             </option>
                                         ))}
                                     </select>
-                                    <br></br> <br />
+                                    <br></br> <br /> */}
                                     <label htmlFor="pwd">Password: </label>{" "}
                                     <input
                                         className="place-holder"

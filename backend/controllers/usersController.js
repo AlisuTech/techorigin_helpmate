@@ -1,6 +1,6 @@
 const User = require('../models/User')
 const Appointment = require('../models/Appointment');
-const ServiceProvider = require("../models/ServiceProviderr");
+const ServiceProvider = require("../models/ServiceProvider");
 const asyncHandler = require('express-async-handler')
 const bcrypt = require('bcrypt')
 

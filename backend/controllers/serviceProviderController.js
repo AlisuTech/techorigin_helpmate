@@ -1,4 +1,4 @@
-const ServiceProvider = require("../models/ServiceProviderr");
+const ServiceProvider = require("../models/ServiceProvider");
 const asyncHandler = require("express-async-handler");
 const bcrypt = require("bcrypt");
 
