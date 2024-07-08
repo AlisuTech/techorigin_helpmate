@@ -14,7 +14,7 @@
     font-weight: 600;
 }
 
-.login-container{
+.login-container {
     height: auto !important;
     border: 2px solid #3D52a0;
     margin-bottom: 30px;
@@ -93,10 +93,21 @@
     padding: 13px;
 }
 
+.login-button:hover {
+    color: #B9E8F8;
+    transition: color 0.3s ease-in-out;
+    background-color: #3D52a0;
+}
+
 .login-check-box {
     margin-right: 4px;
     width: 11px;
     height: 11px;
+}
+
+.forgot:hover, .create-account:hover, .c-box:hover{
+    color: #B9E8F8;
+    cursor: pointer;
 }
 
 .c-box-div {}
@@ -118,9 +129,9 @@
     text-decoration: none;
 }
 
-.create-account:hover {
-    color: gray;
-}
+/* :hover {
+    color: #B9E8F8;;
+} */
 
 
 @media (min-width: 320px) and (max-width: 768px) {
@@ -128,7 +139,7 @@
         height: auto;
     }
 
-    .login-page-col-1{
+    .login-page-col-1 {
         padding: 30px 0;
     }
 
@@ -146,11 +157,9 @@
         border-radius: 20px;
     }
 
-        .login-container {
-            height: auto !important;
-            border-radius: 30px;
-            background-color: white
-            ;
-        }
+    .login-container {
+        height: auto !important;
+        border-radius: 30px;
+        background-color: white;
+    }
 }
-

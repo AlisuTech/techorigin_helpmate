@@ -19,9 +19,14 @@ const AppointmentDetails = () => {
           </div>
         </div>
 
-        <button className="appointment-details-new-appointment">
-          <i class="fas fa-plus"></i> New
-        </button>
+        <div className="appointment-details-new-appointment">
+          <p className="appointment-details-new-appointment">
+            <i class="fas fa-plus "></i> New Appointment
+          </p>
+          <p className="appointment-details-cancel-appointment">
+            Cancel Appointment
+          </p>
+        </div>
       </div>
 
       <Accordion defaultActiveKey="0" className="accordion-div">
