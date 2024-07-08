@@ -14,10 +14,24 @@ export const signupServiceProvider = createAsyncThunk(
   }
 );
 
+export const fetchDepartmentsAndServiceProviders = createAsyncThunk(
+  'serviceProvider/fetchAll',
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await axios.get(`${ROOT_API}/serviceProviders`);
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
+
 const serviceProviderSlice = createSlice({
   name: 'serviceProvider',
   initialState: {
-    serviceProvider: null,
+    serviceProvider: [],
+    departments: [],
     status: 'idle',
     error: null,
   },
@@ -32,6 +46,18 @@ const serviceProviderSlice = createSlice({
         state.serviceProvider = action.payload;
       })
       .addCase(signupServiceProvider.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.payload;
+      })
+      .addCase(fetchDepartmentsAndServiceProviders.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(fetchDepartmentsAndServiceProviders.fulfilled, (state, action) => {
+        state.status = 'succeeded';
+        state.serviceProviders = action.payload;
+        state.departments = [...new Set(action.payload.map((item) => item.department))];
+      })
+      .addCase(fetchDepartmentsAndServiceProviders.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.payload;
       });

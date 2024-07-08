@@ -15,6 +15,10 @@ const serviceProviderSchema = new Schema({
         type: Number,
         required: true
     },
+    department: {
+        type: String,
+        required: [true, "Your department is required"]
+    },
     rating: {
         type: Number,
         // required: true,

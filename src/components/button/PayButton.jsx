@@ -13,7 +13,7 @@ const PayButton = ({ amount }) => {
     };
 
     return (
-        <button onClick={handleCheckout}>Book Now</button>
+        <button className='p-3 hover:bg-[--color-blue-800] text-white' onClick={handleCheckout}>Book Now</button>
     );
 };
 
