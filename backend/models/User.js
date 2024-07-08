@@ -6,7 +6,7 @@ const userSchema = new Schema({
     appointments: [{
         type: Schema.Types.ObjectId,
         ref: 'Appointment'
-    }]
+    }] 
 });
 
 module.exports = BaseUser.discriminator('User', userSchema);
