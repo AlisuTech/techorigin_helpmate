@@ -14,8 +14,6 @@ import { fetchDepartmentsAndServiceProviders } from "../../app/serviceProvider/s
 const Appointment = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  // const [departments, setDepartments] = useState([]);
-  // const [serviceProviders, setServiceProviders] = useState([]);
   const { serviceProviders, departments, status, error } = useSelector((state) => state.serviceProvider);
   // const userId = useSelector((state) => state.user.user._id);
   const userId = "j";
@@ -26,18 +24,6 @@ const Appointment = () => {
   });
   const selectedDepartment = watch("department");
 
-  // useEffect(() => {
-  //   const fetchDepartmentsAndServiceProviders = () => {
-  //     const data = getDepartmentsAndServiceProvider;
-  //     const uniqueDepartments = [
-  //       ...new Set(data.map((item) => item.department)),
-  //     ];
-  //     setDepartments(uniqueDepartments);
-  //     setServiceProviders(data);
-  //   };
-
-  //   fetchDepartmentsAndServiceProviders();
-  // }, []);
   useEffect(() => {
     dispatch(fetchDepartmentsAndServiceProviders());
   }, [dispatch]);
@@ -47,8 +33,6 @@ const Appointment = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    console.log("Service Providers:", serviceProviders);
-    console.log("Departments:", departments);
   }, [serviceProviders, departments]);
 
   const filteredServiceProviders = serviceProviders ? serviceProviders.filter(
@@ -117,7 +101,7 @@ const Appointment = () => {
                     {...register("department")}
                   >
                     <option value="">Select Department</option>
-                    {departments.map((department, index) => (
+                    {departments.filter(department => department).map((department, index) => (
                       <option key={index} value={department}>
                         {department}
                       </option>
@@ -135,11 +119,8 @@ const Appointment = () => {
                   >
                     <option value="">Select Service Provider</option>
                     {filteredServiceProviders.map((serviceProvider, index) => (
-                      <option
-                        key={index}
-                        value={serviceProvider.serviceProvider}
-                      >
-                        {serviceProvider.serviceProvider}
+                      <option key={index} value={serviceProvider._id}>
+                        {serviceProvider.firstName} {serviceProvider.lastName}
                       </option>
                     ))}
                   </select>
