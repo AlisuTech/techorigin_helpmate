@@ -91,14 +91,15 @@ const NavigationBar = () => {
         </Dropdown>
         <div className="relative inline-block text-left">
           <div
-            className="flex items-center bg-[--color-blue-800] p-2 rounded-full border shadow-sm cursor-pointer"
+            className="flex items-center p-2 rounded-full border shadow-sm cursor-pointer"
             onClick={toggleProfileDropdown}
           >
-            <img
+            {/* <img
               src={profileImage}
               alt="Profile"
               className="w-8 h-8 rounded-full object-cover"
-            />
+            /> */}
+            <div className="font-bold text-white ">Menu</div>
             <i class="fa-solid fa-angle-down px-2 text-white"></i>
           </div>
           {profileDropdownOpen && (
@@ -188,14 +189,15 @@ const NavigationBar = () => {
         </Dropdown>
         <div className="relative inline-block text-left">
           <div
-            className="flex items-center bg-[--color-blue-800] w-fit p-2 rounded-full border shadow-sm cursor-pointer"
+            className="flex items-center w-fit p-2 rounded-full border shadow-sm cursor-pointer"
             onClick={toggleProfileDropdown}
           >
-            <img
+            {/* <img
               src={profileImage}
               alt="Profile"
               className="w-8 h-8 rounded-full object-cover"
-            />
+            /> */}
+            <div className="font-bold text-white ">Menu</div>
             <i class="fa-solid fa-angle-down px-2 text-white"></i>
           </div>
           {profileDropdownOpen && (
