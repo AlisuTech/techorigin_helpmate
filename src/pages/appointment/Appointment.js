@@ -15,8 +15,8 @@ const Appointment = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { serviceProviders, departments, status, error } = useSelector((state) => state.serviceProvider);
-  // const userId = useSelector((state) => state.user.user._id);
-  const userId = "j";
+  const userId = useSelector((state) => state.user.user?._id) || "j";
+  // const userId = "j";
 
 
   const { register, handleSubmit, watch } = useForm({
@@ -27,13 +27,12 @@ const Appointment = () => {
   useEffect(() => {
     dispatch(fetchDepartmentsAndServiceProviders());
   }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchDepartmentsAndServiceProviders());
+  // }, [dispatch]);
 
-  useEffect(() => {
-    dispatch(fetchDepartmentsAndServiceProviders());
-  }, [dispatch]);
-
-  useEffect(() => {
-  }, [serviceProviders, departments]);
+  // useEffect(() => {
+  // }, [serviceProviders, departments]);
 
   const filteredServiceProviders = serviceProviders ? serviceProviders.filter(
     (item) => item.department === selectedDepartment
