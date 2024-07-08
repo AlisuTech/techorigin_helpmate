@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { appointmentSchema } from "../../validations/appointmentValidation";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-import { getDepartmentsAndServiceProvider } from "../../services/categoryService";
+import { getDepartments } from "../../services/categoryService";
 import "./Appointment.css";
 import Photo2 from "../../assets/psychological/Photo2.jpeg";
 import PayButton from "../../components/button/PayButton";
@@ -137,7 +137,7 @@ const Appointment = () => {
                     {filteredServiceProviders.map((serviceProvider, index) => (
                       <option
                         key={index}
-                        value={serviceProvider.serviceProvider._id}
+                        value={serviceProvider.serviceProvider}
                       >
                         {serviceProvider.serviceProvider}
                       </option>
