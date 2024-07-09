@@ -11,7 +11,7 @@ const Psychological = () => {
   return (
     <div>
       <div class="background">
-        <div class=" font1 playfair-display-">
+        <div class=" font1 playfair-display- ps-5">
           <br />
           <br />
           <br />
@@ -21,7 +21,7 @@ const Psychological = () => {
           <p class="fonts2 playfair-display- ">
             Helpmate: Doing Hard Things 
           </p>
-          <button class="button3">Get Started</button>
+          <button class="button3 px-5 py-0">Get Started</button>
         </div>
       </div>
       <div class="display ">
@@ -67,7 +67,7 @@ const Psychological = () => {
         <br />
         <br />
         <br />
-      <div class="grid3 textcolor playfair-display-">
+      <div class="grid3 textcolor playfair-display- border-yellow p-[3rem]">
           <div class="childgrid">
             <img src={Photo13} alt="attention" class="imageclass" />
             
