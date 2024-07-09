@@ -19,14 +19,17 @@
 
     .background {
         background-image: url("../../../assets/psychological/Photo11.jpeg");
-        /* height: 600px; */
+         height: 100vh;
         background-repeat: no-repeat;
         max-width: 100%;
         color: rgb(52, 49, 49);
         background-size: cover;
         background-position: center;
         opacity: 1;
-        padding: 190px;
+        /* padding: 190px;
+        margin-left: -40px;
+        margin-right: 430px;
+        margin: 0px 106px; */
     }
     .underline1{
         width: 50px;
@@ -126,6 +129,7 @@
         cursor: pointer;
         border: 2px solid white;
     }
+    .buttons2:hover{background-color:#b9e8f8 ; color: black ;}
 
      .imageclass {
 
@@ -160,19 +164,31 @@
         display: grid;
         grid-template-columns: auto auto auto;
         text-wrap: nowrap;
-     background-color: whitesmoke;
+     /* background-color: whitesmoke; */
+     background-color: red;
         column-gap: 8px;
+        /* height: 800px;  */
+
+    }
+    .grid3 {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        text-wrap: nowrap;
+     /* background-color: whitesmoke; */
+     background-color: red;
+        column-gap: 8px;
+        /* height: 800px;  */
 
     }
 
     .childgrid {
         background-color: white;
-        /* height: 535px; */
+         /* height: 405px;  */
         width: 350px;
         transition: transform 2s;
         text-align: center;
         border: 2px solid #3D52A0;
-        border-radius: 150px;
+        border-radius: 150px; 
     }
 
     .childgrid:hover {
@@ -209,7 +225,7 @@
     .button3 {
         background-color: white;
         color: #3D52A0;
-        padding: 5px;
+        /* padding: 1px; */
         border-radius: 20px;
         width: 300px;
         /* height: 50px; */
@@ -237,4 +253,5 @@
     .img1class {
         width: 100%;
     }
+    
 }

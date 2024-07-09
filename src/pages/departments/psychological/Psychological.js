@@ -38,17 +38,17 @@ const Psychological = () => {
               That is the question The Deep Sphere tries to answer.
               <br />
               <br />
-              &nbsp; &nbsp; To that aim, we enter the place of culture
+               To that aim, we enter the place of culture
               <br />
-              <br /> &nbsp; &nbsp; and roam through its room: psychology,
+              <br /> and roam through its room: psychology,
               <br />
-              <br /> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;philosophy,
+              <br />philosophy,
               art,and science.
               <br />
               <br /> &nbsp;Helpmate hopes to contribute to your calm,growth,
               <br />
               <br />
-              &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;healing, and
+              healing, and
               self-understanding.
             </p>
             <br />
@@ -56,7 +56,7 @@ const Psychological = () => {
             <br />
             <p class="fonts6 textcolor playfair-display-">
               {" "}
-              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;We've got you covered!!!
+              We've got you covered!!!
             </p>
           </div>
         </div>
@@ -67,7 +67,7 @@ const Psychological = () => {
         <br />
         <br />
         <br />
-      <div class="grid2 textcolor playfair-display-">
+      <div class="grid3 textcolor playfair-display-">
           <div class="childgrid">
             <img src={Photo13} alt="attention" class="imageclass" />
             
