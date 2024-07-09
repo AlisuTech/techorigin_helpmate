@@ -11,7 +11,11 @@ const Psychological = () => {
   return (
     <div>
       <div class="background">
-        <div class=" font1 playfair-display- ps-5">
+        <div class=" font1 playfair-display- ps-9">
+          <br />
+          <br />
+          <br />
+          <br />
           <br />
           <br />
           <br />
@@ -67,7 +71,7 @@ const Psychological = () => {
         <br />
         <br />
         <br />
-      <div class="grid3 textcolor playfair-display- border-yellow p-[3rem]">
+      <div class="grid3 textcolor playfair-display- border-white p-[3rem]">
           <div class="childgrid">
             <img src={Photo13} alt="attention" class="imageclass" />
             
@@ -129,7 +133,7 @@ const Psychological = () => {
         <br />
         <br />
 
-        <div>
+        <div className="lastdiv">
           <button class="buttons ">
             <strong> Click Here </strong>
           </button>
@@ -138,10 +142,7 @@ const Psychological = () => {
             To book an appointment with one of our Profesionals
           </span>
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
+        
         <div class="lastbuttondiv">
           <button class="buttons2"> Home Page</button>
         </div>
