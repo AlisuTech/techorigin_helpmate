@@ -1,5 +1,6 @@
 .medical-container-fluid {
     height: auto;
+    padding: 0 !important;
 }
 
 .backgroundImage1 {
@@ -10,19 +11,12 @@
     background-size: cover;
     background-position: center;
     height: auto;
+    padding: 30px 0 120px 0;
 }
 
 .backgroundImage1_writeup {
     display: flex;
-    /* flex-direction: row; */
-    /* justify-content: space-between; */
-    /* align-items: center; */
-    /* padding-top: 50px; */
-    /* padding-left: 100px; */
-    /* padding-right: 100px; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-
 }
 
 .writeup_one {
@@ -46,8 +40,6 @@
     color: white;
     border-radius: 5px;
     border-style: hidden;
-
-
 }
 
 .book-appointment:hover {
@@ -77,25 +69,43 @@ td {
 tr td:nth-child(1) {
     background-color: #8697c4;
     /* padding-left: 120px; */
-
-
-
 }
 
 tr td:nth-child(2) {
     background-color: #7e93cc;
-
 }
 
 tr td:nth-child(3) {
     background-color: #8697c4;
 }
 
+.div-col1-bg {
+    background-color: #8697c4;
+    /* padding-left: 120px; */
+}
+
+.green-row-div {
+    margin-top: -70px;
+    background-color: transparent;
+}
+
+.div-col2-bg {
+    background-color: #7e93cc;
+}
+
+.div-col3-bg {
+    background-color: #8697c4;
+}
+
+.table-row-flex {
+    display: flex;
+    align-items: center;
+}
+
 .div1 {
     color: white;
-
-
 }
+
 
 .div1_icons {
     font-size: 65px;
@@ -115,29 +125,25 @@ tr td:nth-child(3) {
     font-size: 19px;
 }
 
-.table_row1 {
+/* .table_row1 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     column-gap: 10px;
+} */
 
-
-
-}
-
-.table_row2_3 {
-
+/* .table_row2_3 {
     display: grid;
     grid-template-columns: auto auto;
     column-gap: 10px;
     justify-content: space-evenly;
     padding-left: 20px;
-}
+} */
 
 .our-department-main-div {
     background-color: #f4f4f4;
-    padding: 0;
     height: auto;
+    padding-bottom: 70px;
 }
 
 .department {
@@ -156,7 +162,16 @@ tr td:nth-child(3) {
     font-weight: bolder;
 }
 
-.underline{
+.department-div-row {
+    row-gap: 40px;
+}
+
+.department-image {
+    display: flex;
+    justify-content: center;
+}
+
+.underline {
     width: 50px;
     height: 5px;
     background-color: #7e93cc;
@@ -200,9 +215,11 @@ tr td:nth-child(3) {
     justify-content: space-between;
     text-align: center;
     margin-top: 20px;
+}
 
-
-
+.department-image-div {
+    display: flex;
+    justify-content: center;
 }
 
 .department-image {
@@ -216,14 +233,14 @@ tr td:nth-child(3) {
     font-weight: bold;
     text-align: center;
     color: black;
+    margin: 0%;
+    padding-top: 10px;
 }
 
 .department-text2 {
     color: rgb(135, 135, 135);
     font-size: 18px;
     text-align: center;
-
-
 }
 
 .doctor-text {
@@ -239,21 +256,15 @@ tr td:nth-child(3) {
 
 .bg-client {
     background-image: url("../../../assets/medicalPage/happy_client.png");
-    /* width: 100%; */
-    /* min-width: 100%; */
-    /* height:500px; */
     min-height: 500px;
     background-size: cover;
-    /* background-repeat: no-repeat; */
     display: flex;
-    object-fit: cover;
-    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
     opacity: 0.6;
-    /* z-index: -1; */
-    /* position: relative; */
-
+    background-size: cover;
+    background-position: left;
+    margin-top: 70px;
 }
 
 
@@ -307,16 +318,31 @@ tr td:nth-child(3) {
     display: flex;
 }
 
+.medical-carousel-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.medical-carousel {}
+
+.medical-carousel-item {
+    height: 300px;
+    min-width: 100%;
+}
+
+.medical-carousel-image {
+    /* display: block; */
+    height: 300px;
+    min-width: 100%;
+}
+
 @media (max-width: 600px) {
 
     /* sm */
-    .backgroundImage1 {
-        /* min-width: 10px;
-        min-height: auto; */
-    }
-
-    .department-column {
-        box-shadow: 1px 1px #5a617d;
+    .green-row-div {
+        margin-top: 0px;
     }
 
     .backgroundImage1_writeup {
