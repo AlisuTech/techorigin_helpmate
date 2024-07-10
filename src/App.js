@@ -12,8 +12,6 @@ import ServiceProvider from "./pages/auth/signup/ServiceProvider";
 import ServiceProviderProfile from "./pages/profile/serviceProvider/ServiceProviderProfile";
 import ServiceProviderDashboard from "./pages/auth/serviceProvider/dashboard/Dashboard";
 import ViewProfile from "./pages/auth/users/dashboard/profile_component/view_profile";
-import EditProfil from "./pages/auth/users/dashboard/profile_component/edit_profil";
-import ChangePassword from "./pages/auth/users/dashboard/profile_component/change_password";
 import ServiceProviderList from "./components/cards/serviceProvider/ServiceProviderList";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./pages/auth/users/dashboard_components/header";
@@ -23,6 +21,7 @@ import CheckoutSuccess from "./components/payment/CheckoutSuccess";
 import NotFound from "./pages/errors/NotFound";
 import UserFlow from "./pages/auth/signup/UserFlow";
 import Test from "./tests/Test";
+import AppointmentRecords from "./pages/appointment_records/appointment_records";
 import Career from "./pages/departments/career/Career";
 
 function App() {
@@ -50,6 +49,8 @@ function App() {
           <Route path="/medical" element={<Medical />} />
           <Route path="/checkout-success" element={<CheckoutSuccess />} />
           <Route path="/serv" element={<ServiceProviderList />} />
+
+
           <Route path="/career" element={<Career />} />
           <Route path="/psychological" element={<Psychological />} />
           <Route path="/appointment" element={<Appointment />} />
@@ -58,15 +59,10 @@ function App() {
             path="/view-profile"
             element={<ViewProfile></ViewProfile>}
           ></Route>
-          <Route
-            path="/edit-profile"
-            element={<EditProfil></EditProfil>}
-          ></Route>
+
           <Route path="/userss-dashboard" element={<Header></Header>}></Route>
-          <Route
-            path="/change-password"
-            element={<ChangePassword></ChangePassword>}
-          ></Route>
+          <Route path="/appointment-records" element={<AppointmentRecords></AppointmentRecords>}></Route>
+          <Route path="/userss-dashboard" element={<Header></Header>}></Route>
           <Route
             path="/service_provider_profile"
             element={<ServiceProviderProfile />}

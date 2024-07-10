@@ -49,6 +49,7 @@
     --color-blue-500: #ede8f5;
     --color-blue-600: #f5eee8;
     --color-blue-700: #004274;
+    --color-blue-800: #B9E8F8;
   }
   
   body {
@@ -63,7 +64,7 @@
   /* Border format */
   
   
-  /* .bg-lightgray {
+  .bg-lightgray {
     background-color: lightgray;
   }
   
@@ -89,4 +90,4 @@
   
   .border-yellow {
     border: 3px solid yellow;
-  } */
+  }

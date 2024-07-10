@@ -11,7 +11,11 @@ const Psychological = () => {
   return (
     <div>
       <div class="background">
-        <div class=" font1 playfair-display-">
+        <div class=" font1 playfair-display- ps-9">
+          <br />
+          <br />
+          <br />
+          <br />
           <br />
           <br />
           <br />
@@ -21,7 +25,7 @@ const Psychological = () => {
           <p class="fonts2 playfair-display- ">
             Helpmate: Doing Hard Things 
           </p>
-          <button class="button3">Get Started</button>
+          <button class="button3 px-5 py-0">Get Started</button>
         </div>
       </div>
       <div class="display ">
@@ -38,17 +42,17 @@ const Psychological = () => {
               That is the question The Deep Sphere tries to answer.
               <br />
               <br />
-              &nbsp; &nbsp; To that aim, we enter the place of culture
+               To that aim, we enter the place of culture
               <br />
-              <br /> &nbsp; &nbsp; and roam through its room: psychology,
+              <br /> and roam through its room: psychology,
               <br />
-              <br /> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;philosophy,
+              <br />philosophy,
               art,and science.
               <br />
               <br /> &nbsp;Helpmate hopes to contribute to your calm,growth,
               <br />
               <br />
-              &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;healing, and
+              healing, and
               self-understanding.
             </p>
             <br />
@@ -56,7 +60,7 @@ const Psychological = () => {
             <br />
             <p class="fonts6 textcolor playfair-display-">
               {" "}
-              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;We've got you covered!!!
+              We've got you covered!!!
             </p>
           </div>
         </div>
@@ -67,7 +71,7 @@ const Psychological = () => {
         <br />
         <br />
         <br />
-      <div class="grid2 textcolor playfair-display-">
+      <div class="grid3 textcolor playfair-display- border-white p-[3rem]">
           <div class="childgrid">
             <img src={Photo13} alt="attention" class="imageclass" />
             
@@ -129,7 +133,7 @@ const Psychological = () => {
         <br />
         <br />
 
-        <div>
+        <div className="lastdiv">
           <button class="buttons ">
             <strong> Click Here </strong>
           </button>
@@ -138,10 +142,7 @@ const Psychological = () => {
             To book an appointment with one of our Profesionals
           </span>
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
+        
         <div class="lastbuttondiv">
           <button class="buttons2"> Home Page</button>
         </div>

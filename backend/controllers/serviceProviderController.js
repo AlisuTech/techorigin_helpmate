@@ -6,28 +6,17 @@ const createNewServiceProvider = asyncHandler(async (req, res) => {
   const {
     firstName,
     lastName,
-    phoneNumber,
+    department,
     email,
-    dateOfBirth,
-    country,
-    stateOfOrigin,
-    password,
-    officeAddress,
-    price
-    
+    password
   } = req.body;
 
   const requiredFields = [
     "firstName",
     "lastName",
-    "phoneNumber",
+    "department",
     "email",
-    "dateOfBirth",
-    "country",
-    "stateOfOrigin",
     "password",
-    "officeAddress",
-    "price"
   ];
 
   const missingField = requiredFields.find((field) => !req.body[field]);
@@ -49,12 +38,7 @@ const createNewServiceProvider = asyncHandler(async (req, res) => {
       email,
       password: hashedPwd,
       lastName,
-      phoneNumber,
-      dateOfBirth,
-      country,
-      stateOfOrigin,
-      officeAddress,
-      price
+      department,
     };
 
     const serviceProvider = await ServiceProvider.create(userObject);
@@ -78,29 +62,14 @@ const createNewServiceProvider = asyncHandler(async (req, res) => {
 // @access Private
 const getAllServiceProviders = asyncHandler(async (req, res) => {
   const serviceProviders = await ServiceProvider.find()
-    .select("-password -confirmPassword")
+    .select("-password")
     .lean();
 
   if (!serviceProviders?.length) {
-    return res.status(400).json({ message: "No serviceProviders found" });
+    return res.status(200).json([]);
   }
 
-  res.json(serviceProviders);
-
-
-
-// const loginserviceprovider = asyncHandler(async(req, res)=>{
- 
-//   const {EMAIL, PASSWORD}=req.query
-//   const serviceProvider = await serviceProviderSchema.find0ne({$and:[{"email":EMAIL},{password:PASSWORD}]})
-//   if (serviceProvider!==null){
-//     res.send(serviceProvider)
-//   } else {
-//     res.status(400)
-//   }
-// })
-
-
+  res.status(200).json(serviceProviders);
 });
 
 module.exports = {

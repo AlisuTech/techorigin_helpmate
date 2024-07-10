@@ -9,11 +9,15 @@ const serviceProviderSchema = new Schema({
     },
     officeAddress: {
         type: String,
-        required: [true, "Your office address is required"]
+        // required: [true, "Your office address is required"]
     },
     price: {
         type: Number,
-        required: true
+        // required: true
+    },
+    department: {
+        type: String,
+        required: [true, "Your department is required"]
     },
     rating: {
         type: Number,

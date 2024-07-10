@@ -50,7 +50,7 @@ const Login = () => {
                     // value={password}
                     // onChange={(e) => passwordChanged(e.target.value)}
                   ></input>
-                </div>
+                </div> 
                 <div className="login-forget-pword">
                   <div className="c-box-div">
                     <input
@@ -58,7 +58,7 @@ const Login = () => {
                       id="cBox"
                       className="login-check-box"
                     ></input>
-                    <label for="cBox">Remember Me</label>
+                    <label className='c-box' for="cBox">Remember Me</label>
                   </div>
                   <p className="forgot">Forgot Password?</p>
                 </div>

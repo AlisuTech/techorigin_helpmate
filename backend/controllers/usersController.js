@@ -1,5 +1,5 @@
 const User = require('../models/User')
-const Appointment = require('../models/appointment');
+const Appointment = require('../models/Appointment');
 const ServiceProvider = require("../models/ServiceProvider");
 const asyncHandler = require('express-async-handler')
 const bcrypt = require('bcrypt')
@@ -35,9 +35,9 @@ const bcrypt = require('bcrypt')
 // });
 
 const createNewUser = asyncHandler(async (req, res) => {
-    const { firstName, lastName, phoneNumber, email, dateOfBirth, country, stateOfOrigin, password } = req.body;
+    const { firstName, lastName, email, password } = req.body;
 
-    const requiredFields = ['firstName', 'lastName', 'phoneNumber', 'email', 'dateOfBirth', 'country', 'stateOfOrigin', 'password'];
+    const requiredFields = ['firstName', 'lastName', 'email', 'password'];
 
     const missingField = requiredFields.find(field => !req.body[field]);
     if (missingField) {
@@ -57,11 +57,7 @@ const createNewUser = asyncHandler(async (req, res) => {
             firstName, 
             email, 
             "password": hashedPwd,
-            lastName, 
-            phoneNumber, 
-            dateOfBirth, 
-            country, 
-            stateOfOrigin 
+            lastName
         };
 
         const user = await User.create(userObject);

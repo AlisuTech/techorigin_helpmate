@@ -1,0 +1,39 @@
+.appointment-details-bg {
+    background-color: white;
+    width: 100% !important;
+    border: 1px solid #3d52a0;
+}
+
+.appointment-top-divs {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.appointment-details-new-appointment{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+    font-size: 13px;
+}
+
+.appointment-details-cancel-appointment {
+    color: red;
+}
+
+.appointment-details-cancel-appointment:hover, .appointment-details-new-appointment:hover{
+    cursor: pointer;
+}
+
+.appointment-details-img-div {
+    /* background-color: #274150; */
+    background-color: #3d52a0;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+
+.appointment-details-top-text {
+    margin-top: 15px;
+}
