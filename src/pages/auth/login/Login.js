@@ -3,7 +3,7 @@ import './Login.css'
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { loginUser } from '../../../app/user/userSlice';
+import { activateUserLoggedIn, loginUser } from '../../../app/user/userSlice';
 //import { State } from 'ionicons/dist/types/stencil-public-runtime';
 
 const Login = () => {
@@ -22,10 +22,12 @@ const Login = () => {
     let userCredentials={
       email,password
     }
+    console.log(userCredentials)
     dispatch(loginUser(userCredentials)).then((result)=>{
       if(result.payload){
             setEmail('');
             setPassword('');
+            dispatch(activateUserLoggedIn(true))
             navigate('/');
 
       }
@@ -116,7 +118,5 @@ const Login = () => {
     </form>
   );
 }
-
-
 
 export default Login

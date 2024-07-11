@@ -39,6 +39,9 @@ const baseUserSchema = new Schema({
         type: String,
         required: true
     },
+    refreshToken: {
+        type: String,
+    }
 }, options);
 
 module.exports = mongoose.model('BaseUser', baseUserSchema);

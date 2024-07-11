@@ -23,8 +23,11 @@ import UserFlow from "./pages/auth/signup/UserFlow";
 import Test from "./tests/Test";
 import AppointmentRecords from "./pages/appointment_records/appointment_records";
 import Career from "./pages/departments/career/Career";
+import { useSelector } from "react-redux";
 
 function App() {
+  const isUserLogged = useSelector((state) => state.user.isUserLogged);
+
   return (
     <Router>
       <NavigationBar />
@@ -53,7 +56,7 @@ function App() {
 
           <Route path="/career" element={<Career />} />
           <Route path="/psychological" element={<Psychological />} />
-          <Route path="/appointment" element={<Appointment />} />
+          {isUserLogged && <Route path="/appointment" element={<Appointment />} />}
           <Route path="/test" element={<Test />} />
           <Route
             path="/view-profile"
