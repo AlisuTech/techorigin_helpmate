@@ -8,5 +8,8 @@ export const store = configureStore({
         user:userSlice,
         serviceProvider:serviceProviderSlice,
         appointment: appointmentSlice, // Add the appointment slice
-    }
+    },
+    
 })
+
+export default store;
