@@ -23,7 +23,7 @@ app.use('/users', require('./routes/userRoutes'))
 app.use('/serviceProviders', require('./routes/serviceProviderRoutes'))
 
 app.use('/auth', require('./routes/authRoutes'));
-app.use('/appointments', require('./routes/appointmentRoutes'))
+app.use('/appointments', verifyJWT, require('./routes/appointmentRoutes'))
 
 mongoose.connection.once('open', () => {
     console.log('Connected to MongoDB')

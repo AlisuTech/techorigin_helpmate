@@ -3,7 +3,8 @@ import "./NavigationBar.css";
 import { Link, useLocation } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
 import profileImage from "../../assets/img/img1_1.jpg"; // Replace with your image path
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { activateUserLoggedIn, logoutUser } from "../../app/user/userSlice";
 
 const NavigationBar = () => {
   const [open, setOpen] = useState(false);
@@ -11,6 +12,13 @@ const NavigationBar = () => {
   const [visible, setVisible] = useState(true);
   const location = useLocation();
   const isUserLogged = useSelector((state) => state.user.isUserLogged);
+  const dispatch = useDispatch()
+
+  const handleLogout = () => {
+    dispatch(activateUserLoggedIn(false))
+    dispatch(logoutUser())
+    // dispatch('/login')
+  }
 
   const handleLinkClick = () => {
     setOpen(false); // Close the mobile menu when a link is clicked
@@ -107,6 +115,14 @@ const NavigationBar = () => {
               )}
               {isUserLogged && (
                 <Link
+                  to="/appointment"
+                  className="block px-4 py-2 text-sm text-gray-700"
+                >
+                  Appointments
+                </Link>
+              )}
+              {isUserLogged && (
+                <Link
                   to="/profile"
                   className="block px-4 py-2 text-sm text-gray-700"
                 >
@@ -123,7 +139,8 @@ const NavigationBar = () => {
               )}
               {isUserLogged && (
                 <Link
-                  to="/logout"
+                  to="/"
+                  onClick={handleLogout}
                   className="block px-4 py-2 text-sm text-gray-700"
                 >
                   Logout
@@ -221,7 +238,7 @@ const NavigationBar = () => {
               )}
               {!isUserLogged && (
                 <Link
-                  to="/logout"
+                  to="/"
                   className="block px-4 py-2 text-sm text-gray-700"
                 >
                   Logout
