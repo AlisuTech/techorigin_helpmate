@@ -23,13 +23,13 @@ const loginUser = asyncHandler(async (req, res) => {
     return res.status(401).json({ message: 'Invalid Password' });
   }
 
-  const accessToken = jwt.sign({ userId: user._id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '5m' });
-  const refreshToken = jwt.sign({ userId: user._id }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: '7d' });
+  const accessToken = jwt.sign({ userId: user._id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: process.env.EXPIRES_IN_MIN });
+  const refreshToken = jwt.sign({ userId: user._id }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: process.env.EXPIRES_IN_DAY });
 
   user.refreshToken = refreshToken;
   await user.save();
 
-  res.json({ accessToken, refreshToken });
+  res.json({ accessToken, refreshToken, user: {id: user._id, email:user.email} });
 });
 
 // @desc Refresh token

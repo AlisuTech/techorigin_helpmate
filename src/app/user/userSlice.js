@@ -17,10 +17,12 @@ export const signupUser = createAsyncThunk(
 export const loginUser = createAsyncThunk(
   'user/loginUser',
   async(userCredentials)=>{
-    const request = await axios.post(`${ROOT_API}/user/login`, userCredentials);
-    const response = await request.data.data;
-    localStorage.setItem('user', JSON.stringify(response));
-    return response;
+    const res = await axios.post(`${ROOT_API}/auth/login`, userCredentials);
+    console.log("inside post")
+    const data = res.data
+    // const response = await res.data.data;
+    localStorage.setItem('user', JSON.stringify(data));
+    return data;
 
   }
 );
@@ -30,10 +32,18 @@ const userSlice = createSlice({
   initialState: {
     loading: false,
     user: null,
+    isUserLogged: false,
     status: 'idle',
     error: null,
   },
-  reducers: {},
+  reducers: {
+    activateUserLoggedIn(state, action) {
+      state.isUserLogged = action.payload;
+    },
+    deactivateUserLoggedIn(state) {
+      state.isUserLogged = false;
+    }
+  },
   extraReducers: (builder) => {
     builder
       .addCase(signupUser.pending, (state) => {
@@ -74,4 +84,5 @@ const userSlice = createSlice({
 
 });
 
+export const { activateUserLoggedIn, deactivateUserLoggedIn } = userSlice.actions;
 export default userSlice.reducer;
