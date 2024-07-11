@@ -79,9 +79,6 @@ const userSlice = createSlice({
   reducers: {
     activateUserLoggedIn(state, action) {
       state.isUserLogged = action.payload;
-    },
-    deactivateUserLoggedIn(state) {
-      state.isUserLogged = false;
     }
   },
   extraReducers: (builder) => {

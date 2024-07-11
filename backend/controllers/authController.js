@@ -48,7 +48,7 @@ const refreshToken = asyncHandler(async (req, res) => {
     return res.status(403).json({ message: 'Invalid refresh token' });
   }
 
-  const accessToken = jwt.sign({ userId: user._id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '5m' });
+  const accessToken = jwt.sign({ userId: user._id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: process.env.EXPIRES_IN_MIN });
   res.json({ accessToken });
 
 });
