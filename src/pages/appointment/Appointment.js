@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { appointmentSchema } from "../../validations/appointmentValidation";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-import { getDepartmentsAndServiceProvider } from "../../services/categoryService";
 import "./Appointment.css";
 import Photo2 from "../../assets/psychological/Photo2.jpeg";
 import { createAppointment } from "../../app/appointment/appointmentSlice";
@@ -24,18 +23,6 @@ const Appointment = () => {
   });
   const selectedDepartment = watch("department");
 
-  // useEffect(() => {
-  //   const fetchDepartmentsAndServiceProviders = () => {
-  //     const data = getDepartmentsAndServiceProvider;
-  //     const uniqueDepartments = [
-  //       ...new Set(data.map((item) => item.department)),
-  //     ];
-  //     setDepartments(uniqueDepartments);
-  //     setServiceProviders(data);
-  //   };
-
-  //   fetchDepartmentsAndServiceProviders();
-  // }, []);
   useEffect(() => {
     dispatch(fetchDepartmentsAndServiceProviders());
   }, [dispatch]);
@@ -52,6 +39,9 @@ const Appointment = () => {
       : [];
   }, [serviceProviders, selectedDepartment]);
 
+  useEffect(() => {
+    console.log("Filtered Service Providers:", filteredServiceProviders);
+  }, [filteredServiceProviders, selectedDepartment]);
 
   const onSubmit = (data) => {
     if (!userId) {
@@ -81,7 +71,7 @@ const Appointment = () => {
 
   return (
     <>
-      <div class="grid md:grid-cols-2 grid-cols-1 gap-4 p-5 border-yellow">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-4 p-5 border-yellow">
         <div className="border-green ">
           <div className="border-green">
             <h2 className="text-3xl font-bold mb-4">Appointment Booking</h2>
@@ -121,7 +111,7 @@ const Appointment = () => {
                     {...register("department")}
                   >
                     <option value="">Select Department</option>
-                    {departments.map((department, index) => (
+                    {departments.filter(department => department).map((department, index) => (
                       <option key={index} value={department}>
                         {department}
                       </option>
@@ -141,9 +131,9 @@ const Appointment = () => {
                     {filteredServiceProviders.map((serviceProvider, index) => (
                       <option
                         key={index}
-                        value={serviceProvider.serviceProvider._id}
+                        value={serviceProvider?._id} // Safely access _id
                       >
-                        {serviceProvider.serviceProvider}
+                        {serviceProvider?.firstName} {serviceProvider?.lastName}
                       </option>
                     ))}
                   </select>
@@ -183,7 +173,6 @@ const Appointment = () => {
                 </div>
               </div>
               <div className="flex space-x-4 mt-4">
-                {/* <PayButton amount={70} /> */}
                 <button
                   type="submit"
                   className="bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400 transition"

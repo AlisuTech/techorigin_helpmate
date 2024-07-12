@@ -1,12 +1,22 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import axiosInstance from './axiosInstance';
 const ROOT_API = `http://localhost:5024`
 
 export const signupUser = createAsyncThunk(
   'user/signup',
+  // async (userData, { rejectWithValue }) => {
+  //   try {
+  //     const response = await axios.post(`${ROOT_API}/users`, userData);
+  //     return response.data;
+  //   } catch (error) {
+  //     return rejectWithValue(error.response.data);
+  //   }
+  // }
+
   async (userData, { rejectWithValue }) => {
     try {
-      const response = await axios.post(`${ROOT_API}/users`, userData);
+      const response = await axiosInstance.post('/users', userData);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response.data);
@@ -16,12 +26,44 @@ export const signupUser = createAsyncThunk(
 
 export const loginUser = createAsyncThunk(
   'user/loginUser',
-  async(userCredentials)=>{
-    const request = await axios.post(`${ROOT_API}/user/login`, userCredentials);
-    const response = await request.data.data;
-    localStorage.setItem('user', JSON.stringify(response));
-    return response;
+  // async(userCredentials)=>{
+  //   const res = await axios.post(`${ROOT_API}/auth/login`, userCredentials);
+  //   console.log("inside post")
+  //   const data = res.data
+  //   // const response = await res.data.data;
+  //   localStorage.setItem('user', JSON.stringify(data));
+  //   return data;
 
+  // }
+
+  async(userCredentials)=>{
+    const res = await axiosInstance.post(`/auth/login`, userCredentials);
+    console.log("inside post")
+    const data = res.data
+    // const response = await res.data.data;
+    localStorage.setItem('user', JSON.stringify(data));
+    // localStorage.removeItem('user');
+    return data;
+
+  }
+);
+
+export const logoutUser = createAsyncThunk(
+  '/',
+  async (_, { rejectWithValue }) => {
+    try {
+      const user = JSON.parse(localStorage.getItem('user'));
+      if (user && user.refreshToken) {
+        await axiosInstance.post('/auth/logout', { token: user.refreshToken });
+        console.log("token removed")
+        localStorage.removeItem('user');
+        return true;
+      } else {
+        return rejectWithValue('No user logged in');
+      }
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
   }
 );
 

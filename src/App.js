@@ -27,6 +27,8 @@ import { useSelector } from "react-redux";
 import PrivateRoute from "./components/privateRoute/PrivateRoute";
 
 function App() {
+  const isUserLogged = useSelector((state) => state.user.isUserLogged);
+
   return (
     <Router>
       <NavigationBar />
