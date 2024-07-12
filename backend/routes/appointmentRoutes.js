@@ -1,18 +1,19 @@
 const express = require('express')
 const router = express.Router()
 const appointmentController = require('../controllers/appointmentController')
+const verifyToken = require('../middleware/authMiddleware')
+
 
 router.route('/')
-    .post(appointmentController.createNewAppointment)
-    .get(appointmentController.getAllAppointments)
+    .post(verifyToken, appointmentController.createNewAppointment)
+    .get(verifyToken, appointmentController.getAllAppointments)
 
 
-router.route('/user/:userId')
-    .get(appointmentController.getAppointmentsByUser)
+router.route('/users/:userId')
+    .get(verifyToken, appointmentController.getAppointmentsByUser)
 
 
 router.route('/:id')
-    .delete(appointmentController.deleteAppointment)
-
+    .delete(verifyToken, appointmentController.deleteAppointment)
 
 module.exports = router

@@ -30,10 +30,27 @@ const userSlice = createSlice({
   initialState: {
     loading: false,
     user: null,
+    userInfo: localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null,
+    isUserLogged: false,
     status: 'idle',
     error: null,
   },
-  reducers: {},
+  reducers: {
+    setUser: (state, action) => {
+      console.log('use is: ' +state.user)
+      state.user = action.payload;
+      state.userInfo = action.payload;
+      state.isUserLogged = true;
+    },
+    clearUser: (state,action) => {
+      state.userInfo = null;
+      state.user = action.payload;
+      state.isUserLogged = false;
+    },
+    activateUserLoggedIn(state, action) {
+      state.isUserLogged = action.payload;
+    }
+  },
   extraReducers: (builder) => {
     builder
       .addCase(signupUser.pending, (state) => {
@@ -74,4 +91,5 @@ const userSlice = createSlice({
 
 });
 
+export const { activateUserLoggedIn, deactivateUserLoggedIn, setUser, clearUser } = userSlice.actions;
 export default userSlice.reducer;

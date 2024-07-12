@@ -23,6 +23,8 @@ import UserFlow from "./pages/auth/signup/UserFlow";
 import Test from "./tests/Test";
 import AppointmentRecords from "./pages/appointment_records/appointment_records";
 import Career from "./pages/departments/career/Career";
+import { useSelector } from "react-redux";
+import PrivateRoute from "./components/privateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -53,7 +55,13 @@ function App() {
 
           <Route path="/career" element={<Career />} />
           <Route path="/psychological" element={<Psychological />} />
-          <Route path="/appointment" element={<Appointment />} />
+          
+          {/* {Private Routes} */}
+          <Route path="" element={<PrivateRoute />}>
+            <Route path="/appointment" element={<Appointment />}/>
+            <Route path="/userss-dashboard" element={<Header></Header>}></Route>
+          </Route>
+          
           <Route path="/test" element={<Test />} />
           <Route
             path="/view-profile"
@@ -62,7 +70,7 @@ function App() {
 
           <Route path="/userss-dashboard" element={<Header></Header>}></Route>
           <Route path="/appointment-records" element={<AppointmentRecords></AppointmentRecords>}></Route>
-          <Route path="/userss-dashboard" element={<Header></Header>}></Route>
+          
           <Route
             path="/service_provider_profile"
             element={<ServiceProviderProfile />}

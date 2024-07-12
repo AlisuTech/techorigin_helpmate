@@ -7,19 +7,17 @@ import { useForm } from "react-hook-form";
 import { getDepartmentsAndServiceProvider } from "../../services/categoryService";
 import "./Appointment.css";
 import Photo2 from "../../assets/psychological/Photo2.jpeg";
-import PayButton from "../../components/button/PayButton";
 import { createAppointment } from "../../app/appointment/appointmentSlice";
 import { fetchDepartmentsAndServiceProviders } from "../../app/serviceProvider/serviceProviderSlice";
+import Loader from "../../components/Loader";
 
 const Appointment = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  // const [departments, setDepartments] = useState([]);
-  // const [serviceProviders, setServiceProviders] = useState([]);
-  const { serviceProviders, departments, status, error } = useSelector((state) => state.serviceProvider);
-  // const userId = useSelector((state) => state.user.user._id);
-  const userId = "j";
-
+  const { serviceProviders, departments } = useSelector((state) => state.serviceProvider);
+  const { status, error, loading } = useSelector((state) => state.appointment);
+  const user = useSelector((state) => state.user.user);
+  const userId = user ? user.id : null;
 
   const { register, handleSubmit, watch } = useForm({
     resolver: yupResolver(appointmentSchema),
@@ -43,17 +41,16 @@ const Appointment = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    dispatch(fetchDepartmentsAndServiceProviders());
-  }, [dispatch]);
+    console.log("Fetched Service Providers:", serviceProviders);
+    console.log("Fetched Departments:", departments);
+    console.log("User ID:", userId);
+  }, [serviceProviders, departments, userId]);
 
-  useEffect(() => {
-    console.log("Service Providers:", serviceProviders);
-    console.log("Departments:", departments);
-  }, [serviceProviders, departments]);
-
-  const filteredServiceProviders = serviceProviders ? serviceProviders.filter(
-    (item) => item.department === selectedDepartment
-  ) : [];
+  const filteredServiceProviders = useMemo(() => {
+    return serviceProviders 
+      ? serviceProviders.filter((item) => item.department === selectedDepartment)
+      : [];
+  }, [serviceProviders, selectedDepartment]);
 
 
   const onSubmit = (data) => {
@@ -63,15 +60,22 @@ const Appointment = () => {
     }
     const appointmentData = { ...data, userId };
     console.log('Appointment Data:', appointmentData);  // Log the appointment data
-    dispatch(createAppointment(appointmentData));
-    navigate("/appointment");
+    dispatch(createAppointment(appointmentData)).then((result) => {
+      if (result.error) {
+        console.error("Error creating appointment:", result.error);
+      } else {
+        navigate("/appointment");
+      }
+    });
   };
 
   if (status === 'loading') {
+    console.log("loading")
     return <div>Loading...</div>;
   }
 
   if (status === 'failed') {
+    console.log("failed")
     return <div>Error: {error}</div>;
   }
 
@@ -198,6 +202,7 @@ const Appointment = () => {
                 >
                   Cancel
                 </button>
+                {loading && <Loader />}
               </div>
             </form>
           </div>

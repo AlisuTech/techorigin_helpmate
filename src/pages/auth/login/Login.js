@@ -1,36 +1,48 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Login.css'
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { loginUser } from '../../../app/user/userSlice';
+import { activateUserLoggedIn, loginUser, setUser } from '../../../app/user/userSlice';
+import Loader from '../../../components/Loader';
 //import { State } from 'ionicons/dist/types/stencil-public-runtime';
 
 const Login = () => {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  // const [error, setError] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  // redux state
-  const {loading, error} = useSelector((state)=>state.user);
-
+  const { loading, error } = useSelector((state) => state.user);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const handleLoginEvent=(e)=>{
-    e.preventDefault();
-    let userCredentials={
-      email,password
-    }
-    dispatch(loginUser(userCredentials)).then((result)=>{
-      if(result.payload){
-            setEmail('');
-            setPassword('');
-            navigate('/');
 
+  // useEffect(() => {
+  //   if (userInfo){
+  //     navigate('/')
+  //   }
+  // }, [navigate, userInfo])
+
+  const handleLoginEvent = (e) => {
+    e.preventDefault();
+    let userCredentials = {
+      email,
+      password,
+    };
+    console.log("User credentials:", userCredentials);
+    dispatch(loginUser(userCredentials)).then((result) => {
+      if (result.payload) {
+        setEmail('');
+        setPassword('');
+        console.log("User payload:", result.payload.userInfo); // Properly log the payload
+        dispatch(setUser(result.payload.user));
+        navigate('/');
+      } else {
+        console.error("Login failed:", result.error);
       }
-    })
-  }
+    }).catch((error) => {
+      console.error("Error in loginUser thunk:", error);
+    });
+  };
 
 
 
@@ -91,8 +103,9 @@ const Login = () => {
                   <p className="forgot">Forgot Password?</p>
                 </div>
                 <button type='submit' className="login-button">
-                  {loading? 'Loading...':'Login'}
+                  {/* {loading? 'Loading...':'Login'} */}Login
                 </button>
+                {loading && <Loader />}
                 {error && (
                   <div className='error' role='alert'>{error}</div>
                 )}
