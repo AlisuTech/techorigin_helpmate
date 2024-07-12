@@ -1,0 +1,186 @@
+.edit-profile-main-div {
+    background-color: #f8f9fa;
+}
+
+.user-dashboard-top-div {
+    position: sticky;
+    top: 0;
+    height: auto;
+    background-color: #f8f9fa;
+
+}
+
+.user-dashboard-container {
+    background-color: white !important;
+    height: auto !important;
+}
+
+.user-dashboard-row {
+    justify-content: center;
+    background-color: #3d52a067;
+    padding: 10px;
+    height: auto;
+}
+
+.user-dashboard-column {
+    height: auto;
+    background-color: white;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    padding: 20px 0;
+}
+
+.edit-profile-image-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-dashboard-img-column-div {
+    height: 120px;
+    width: 120px;
+    background-color: gray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 70px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.edit-photo {
+    background-color: white;
+    border: 1px solid #3D52a0;
+    height: 25px;
+    width: 25px;
+    color: #3D52a0;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+.edit-photo:hover {
+    cursor: pointer;
+}
+
+.edit-profile-div-head-text {
+    text-align: center;
+    color: #3D52a0;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 30px 0 20px 0;
+}
+
+.user-dashboard-profile {
+    text-align: center;
+}
+
+.edit-profile-div {
+    display: flex;
+    /* text-align: center; */
+    font-size: 15px;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin: 10px 0;
+    align-items: center;
+}
+
+.edit-profile-text-title {
+    display: flex;
+    align-items: center;
+    text-align: start;
+    color: gray;
+}
+
+.edit-profile-input {
+    text-align: end;
+    padding-right: 15px;
+}
+
+.edit-profile-input-div{
+    position: relative;
+    background-color: white;
+}
+
+.edit-profile-icon {
+    color: #3D52a0;
+    font-size: 13px;
+    position: absolute;
+    bottom: -5px;
+    right: 5px;
+}
+
+.edit-profile-icon:hover {
+    cursor: pointer;
+}
+
+.change-user-password- {
+    /* border: 1px solid grey; */
+    border: 1px solid #3D52a0;
+    width: 65%;
+    border-radius: 5px;
+}
+
+.edit-password-dive {
+    /* text-align: center; */
+    font-size: 15px;
+    padding: 0 20px;
+    margin-bottom: 25px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    height: 30px;
+}
+
+.edit-profile-appointment-btn {
+    display: flex;
+    background-color: #3D52a0;
+    /* padding: 10px; */
+    border-radius: 5px;
+    /* position: fixed;
+    bottom: 0;
+    right: 0; */
+}
+
+.edit-profile-bottom-div {
+    display: flex;
+    justify-content: flex-end;
+    margin: 40px 20px 15px 20px;
+}
+
+.edit-profile-save {
+    background-color: #3D52a0;
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    margin-right: 10px
+}
+
+.edit-profile-save:hover{
+    background-color: #B9E8F8;
+    color: #3D52a0;
+    border: 2px solid #3D52a0;
+}
+
+.edit-profile-cancel {
+    /* background-color: #3D52a0; */
+    padding: 10px 25px;
+    font-size: 15px;
+    color: red;
+    border: 2px solid #3D52a0;
+}
+
+.edit-profile-cancel:hover {
+    background-color: red;
+    color: white;
+    border: 2px solid #3D52a0;
+}

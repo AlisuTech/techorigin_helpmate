@@ -8,8 +8,6 @@ import doc_2 from "../../../assets/medicalPage/Doc_2.png";
 import doc_3 from "../../../assets/medicalPage/Doc_3.png";
 import { Col, Container, Row } from "react-bootstrap";
 import { Carousel } from "react-bootstrap";
-// import Carousel from "react-bootstrap/Carousel";
-// import ExampleCarouselImage from "components/ExampleCarouselImage";
 
 const Medical = () => {
   return (
@@ -24,8 +22,8 @@ const Medical = () => {
                 <p>Better Life </p>
               </div>
               <p class="writeup_two">
-                <span>A problem shared is a problem</span> <br />
-                <span>half solved</span>
+                <p>A problem shared is a problem</p>
+                <p>half solved</p>
               </p>
               <p>
                 <button class="book-appointment">Book an Appointment</button>
@@ -97,14 +95,14 @@ const Medical = () => {
           <Row className="green-row-div">
             <Col sm={12} md={6} lg={3} xl={3} className="div-col1-bg">
               <div className="table-row-flex">
-                <p class="div1_icons">
+                <p className="div1_icons">
                   <i class="fa fa-sticky-note"></i>
                 </p>
                 <div>
                   <p class="div1_bold">100% Confidential</p>
                   <div class="div1_light">
                     <p>
-                      Discover the unseen potential of HelpMate, <br />
+                      Discover the unseen potential of HelpMate,
                       where discretion meets innovation.
                     </p>
                   </div>
@@ -113,36 +111,32 @@ const Medical = () => {
             </Col>
             <Col sm={12} md={6} lg={4} xl={4} className="div-col2-bg">
               <div className="table-row-flex">
-                <span class="div1_icons">
+                <p className="div1_icons">
                   <i class="fa fa-users"></i>
-                </span>
+                </p>
                 <div>
-                  <span class="div1_bold">Qualified Team</span>
-                  <br></br>
+                  <p class="div1_bold">Qualified Team</p>
                   <div class="div1_light">
-                    <span>Experience exceptional treatment</span>
-                    <span>
-                      with our team of dedicated, quality doctors. Your health,
-                    </span>
-                    <span>our priority!</span>
+                    <p>
+                      Experience exceptional treatment with our team of
+                      dedicated, quality doctors. Your health,our priority!
+                    </p>
                   </div>
                 </div>
               </div>
             </Col>
             <Col sm={12} md={12} lg={4} xl={4} className="div-col3-bg">
               <div className="table-row-flex">
-                <span class="div1_icons">
+                <p class="div1_icons">
                   <i class="fa fa-umbrella"></i>
-                </span>
+                </p>
                 <div>
-                  <span class="div1_bold">Book an Appointment</span>
-                  <br></br>
+                  <p class="div1_bold">Book an Appointment</p>
                   <div class="div1_light">
-                    <span>Go through the seamless process</span>
-                    <span>
-                      of booking an appointment with our user-friendly
-                    </span>
-                    <span>website.</span>
+                    <p>
+                      Go through the seamless process of booking an appointment
+                      with our user-friendly website.
+                    </p>
                   </div>
                 </div>
               </div>

@@ -85,7 +85,7 @@
 }
 
 .login-button {
-    width: 100%;
+    width: 100% !important;
     background-color: #3D52a0;
     color: white;
     border: none;
@@ -117,6 +117,7 @@
 }
 
 .create-account {
+    color: gray !important;
     font-size: 13px !important;
 }
 

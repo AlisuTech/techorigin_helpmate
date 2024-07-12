@@ -113,10 +113,10 @@ const NavigationBar = () => {
                   Login
                 </Link>
                 <Link
-                  to="/profile"
+                  to="/user-profile"
                   className="block px-4 py-2 text-sm text-gray-700"
                 >
-                  Edit Profile
+                  View Profile
                 </Link>
                 <Link
                   to="/settings"

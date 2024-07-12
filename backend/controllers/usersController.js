@@ -96,6 +96,8 @@ const updateUser = asyncHandler(async(req,res)=>{
     const user = await userSchema.create(updateModel).lean().exec()
 })
 
+// const updatePassword = asyncHandler ()
+
 module.exports = {
     createNewUser,
     fetchUser,
