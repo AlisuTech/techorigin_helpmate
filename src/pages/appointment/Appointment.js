@@ -54,21 +54,21 @@ const Appointment = () => {
       if (result.error) {
         console.error("Error creating appointment:", result.error);
       } else {
-        navigate("/appointment");
+        navigate("/user-dashboard");
       }
     });
   };
 
-  if (status === 'loading') {
-    console.log("loading")
-    return <div>Loading...</div>;
-  }
+  // if (status === 'loading') {
+  //   console.log("loading")
+  //   return <div>Loading...</div>;
+  // }
 
-  if (status === 'failed') {
-    console.log("failed")
-    // return <div>Error: {error}</div>;
-    return <div>Error: {JSON.stringify(error)}</div>;
-  }
+  // if (status === 'failed') {
+  //   console.log("failed")
+  //   // return <div>Error: {error}</div>;
+  //   return <div>Error: {JSON.stringify(error)}</div>;
+  // }
 
   return (
     <>
@@ -192,8 +192,9 @@ const Appointment = () => {
                 >
                   Cancel
                 </button>
-                {loading && <Loader />}
               </div>
+              {loading && <Loader />}
+
             </form>
           </div>
         </div>

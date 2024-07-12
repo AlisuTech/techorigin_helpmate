@@ -36,15 +36,15 @@ const loginUser = asyncHandler(async (req, res) => {
 // @route POST /auth/refresh
 // @access Public
 const refreshToken = asyncHandler(async (req, res) => {
-  const { token } = req.body;
-  if (!token) {
+  const { refreshToken } = req.body;
+  if (!refreshToken) {
     return res.status(400).json({ message: 'Refresh token is required' });
   }
 
 
-  const decoded = jwt.verify(token, process.env.REFRESH_TOKEN_SECRET);
+  const decoded = jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET);
   const user = await User.findById(decoded.userId).exec();
-  if (!user || user.refreshToken !== token) {
+  if (!user || user.refreshToken !== refreshToken) {
     return res.status(403).json({ message: 'Invalid refresh token' });
   }
 
