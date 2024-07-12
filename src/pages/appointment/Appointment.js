@@ -66,7 +66,8 @@ const Appointment = () => {
 
   if (status === 'failed') {
     console.log("failed")
-    return <div>Error: {error}</div>;
+    // return <div>Error: {error}</div>;
+    return <div>Error: {JSON.stringify(error)}</div>;
   }
 
   return (

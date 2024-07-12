@@ -13,7 +13,7 @@ export const signupUser = createAsyncThunk(
   //     return rejectWithValue(error.response.data);
   //   }
   // }
-
+ 
   async (userData, { rejectWithValue }) => {
     try {
       const response = await axiosInstance.post('/users', userData);

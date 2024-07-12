@@ -13,7 +13,7 @@ const stripe_2 = require('./routes/stripe')
 
 const connectDB = require('./config/dbConn')
 const mongoose = require('mongoose')
-const verifyJWT = require('./middleware/authMiddleware')
+// const verifyJWT = require('./middleware/authMiddleware')
 
 connectDB()
 app.use(express.static('public'));
