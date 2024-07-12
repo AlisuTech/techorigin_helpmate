@@ -76,13 +76,31 @@ const userSlice = createSlice({
     isUserLogged: false,
     status: 'idle',
     error: null,
+    error2: false,
   },
   reducers: {
+    signInStart: (state) => {
+      state.loading = true;
+    },
+    signInSuccess: (state, action) => {
+      state.user = action.payload;
+      state.loading = false;
+      state.error = false;
+    },
+    signInFailure: (state, action) => {
+      state.loading = false;
+      state.error = action.payload;
+      state.error2 = action.payload;
+    },
     setUser: (state, action) => {
       console.log('use is: ' +state.user)
       state.user = action.payload;
       state.userInfo = action.payload;
       state.isUserLogged = true;
+      state.loading = false;
+      state.error = null;
+      state.error2 = false;
+      state.status = 'idle';
     },
     clearUser: (state,action) => {
       state.userInfo = null;
@@ -105,16 +123,19 @@ const userSlice = createSlice({
       .addCase(signupUser.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.payload;
+        state.error2 = false;
       })
       .addCase(loginUser.pending, (state)=>{
         state.loading =true;
         state.user = null;
-        state.error =null;
+        state.error = null;
+        state.error2 = false;
       })
       .addCase(loginUser.fulfilled,(state,action)=>{
         state.loading = false;
         state.user = action.payload;
         state.error = null;
+        state.error2 = false;
 
       })
       .addCase(loginUser.rejected,(state,action)=>{
@@ -124,9 +145,11 @@ const userSlice = createSlice({
         console.log(action.error.message);
         if(action.error.message === 'Request failed with status code 401'){
           state.error = 'Access denied! invalid Credentials';
+          state.error2 = false
         }
         else{
           state.error = action.error.message;
+          state.error2 = false;
         }
         
       })
@@ -134,5 +157,13 @@ const userSlice = createSlice({
 
 });
 
-export const { activateUserLoggedIn, deactivateUserLoggedIn, setUser, clearUser } = userSlice.actions;
+export const {
+  signInStart,
+  signInSuccess,
+  signInFailure,
+  activateUserLoggedIn,
+  deactivateUserLoggedIn,
+  setUser,
+  clearUser 
+} = userSlice.actions;
 export default userSlice.reducer;

@@ -3,7 +3,7 @@ import './Login.css'
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { activateUserLoggedIn, loginUser, setUser } from '../../../app/user/userSlice';
+import { activateUserLoggedIn, loginUser, setUser, signInFailure, signInStart } from '../../../app/user/userSlice';
 import Loader from '../../../components/Loader';
 //import { State } from 'ionicons/dist/types/stencil-public-runtime';
 
@@ -11,7 +11,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const { loading, error } = useSelector((state) => state.user);
+  const { loading, error, error2 } = useSelector((state) => state.user);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -23,6 +23,7 @@ const Login = () => {
   // }, [navigate, userInfo])
 
   const handleLoginEvent = (e) => {
+    dispatch(signInStart())
     e.preventDefault();
     let userCredentials = {
       email,
@@ -38,9 +39,12 @@ const Login = () => {
         navigate('/');
       } else {
         console.error("Login failed:", result.error);
+        dispatch(signInFailure(result.message))
+        return;
       }
     }).catch((error) => {
       console.error("Error in loginUser thunk:", error);
+      dispatch(signInFailure(error))
     });
   };
 
