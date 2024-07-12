@@ -31,11 +31,11 @@
   background-color: yellow;
 }
 
-a {
+nav a {
   color: white !important;
 }
 
-a:hover {
+nav a:hover {
   color: #B9E8F8 !important;
   transition: color 0.3s ease-in-out;
 }
@@ -79,6 +79,24 @@ div.active {
 .dropdown-menu a {
   color: white;
   transition: background-color 0.3s;
+}
+
+.dropdown-menu-2 {
+  background-color: transparent !important;
+  border-radius: 9999px !important;
+  font-weight: 700 !important;
+  /* border-width: 1px; */
+}
+
+/* Hide the default arrow */
+.custom-toggle::after {
+  display: none !important;
+}
+
+/* Custom arrow styles */
+.custom-arrow {
+  margin-left: 8px; /* Adjust as needed */
+  /* You can add more styles here to match your design */
 }
 
 

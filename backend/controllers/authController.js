@@ -23,32 +23,32 @@ const loginUser = asyncHandler(async (req, res) => {
     return res.status(401).json({ message: 'Invalid Password' });
   }
 
-  const accessToken = jwt.sign({ userId: user._id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '5m' });
-  const refreshToken = jwt.sign({ userId: user._id }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: '7d' });
+  const accessToken = jwt.sign({ userId: user._id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: process.env.EXPIRES_IN_MIN });
+  const refreshToken = jwt.sign({ userId: user._id }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: process.env.EXPIRES_IN_DAY });
 
   user.refreshToken = refreshToken;
   await user.save();
 
-  res.json({ accessToken, refreshToken });
+  res.json({ accessToken, refreshToken, user: {id: user._id, email:user.email} });
 });
 
 // @desc Refresh token
 // @route POST /auth/refresh
 // @access Public
 const refreshToken = asyncHandler(async (req, res) => {
-  const { token } = req.body;
-  if (!token) {
+  const { refreshToken } = req.body;
+  if (!refreshToken) {
     return res.status(400).json({ message: 'Refresh token is required' });
   }
 
 
-  const decoded = jwt.verify(token, process.env.REFRESH_TOKEN_SECRET);
+  const decoded = jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET);
   const user = await User.findById(decoded.userId).exec();
-  if (!user || user.refreshToken !== token) {
+  if (!user || user.refreshToken !== refreshToken) {
     return res.status(403).json({ message: 'Invalid refresh token' });
   }
 
-  const accessToken = jwt.sign({ userId: user._id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '5m' });
+  const accessToken = jwt.sign({ userId: user._id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: process.env.EXPIRES_IN_MIN });
   res.json({ accessToken });
 
 });

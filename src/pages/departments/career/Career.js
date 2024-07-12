@@ -26,16 +26,16 @@ const Career = () => {
 
       <div className="special-offercontainer">
         <div className="special-oferr">
-          <h1>Special Offer</h1>
+          <h1>Special Offers</h1>
         </div>
         <div>
-          <h1>50% less of every purchase</h1>
-          <p>Lorem ipsum door hddj jfjjf fjfjf jff</p>
+          <h1>10% Discount On Your First Booking </h1>
+          <p>use Helpmate at an affordable rate far below booking a physical session </p>
         </div>
 
         <div>
-          <h1>50% less of every purchase</h1>
-          <p>Lorem ipsum door hddj jfjjf fjfjf jff</p>
+          <h1>Get A Free Booking </h1>
+          <p>Help wants to care for your Emotional and phychological needs for free</p>
         </div>
       </div>
 
@@ -67,7 +67,7 @@ const Career = () => {
                 <img src={academics} alt="" className="coachpics" />
                   </div>
 
-                <div><h1>How to stay progressive </h1> 
+                <div><h1>Achieving Academic excellence</h1> 
                 <p>in knowledge and SOCIAL LIFE while attaining good grades through your academics</p>
                 </div>
                    
@@ -80,7 +80,7 @@ const Career = () => {
                 <div>{" "}
                 <img src={investment} alt="" className="coachpics" />
               </div>
-                <div><h1>How to stay progressive </h1> 
+                <div><h1>How to plan for the with proper investment </h1> 
                 <p>in knowledge and SOCIAL LIFE while attaining good grades through your academics</p>
                 </div>
                
@@ -91,7 +91,7 @@ const Career = () => {
                 <div>{" "}
                 <img src={business} alt="" className="coachpics" /></div>
               
-                <div><h1>How to stay progressive </h1> 
+                <div><h1>Man your business </h1> 
                 <p>in knowledge and SOCIAL LIFE while attaining good grades through your academics</p>
                 </div>
             </div>
@@ -103,7 +103,7 @@ const Career = () => {
                 <div>{" "}
                 <img src={Family} alt="" className="coachpics" />
               </div>
-                <div><h1>How to stay progressive </h1> 
+                <div><h1>Maximise time and grow with Family </h1> 
                 <p>in knowledge and SOCIAL LIFE while attaining good grades through your academics</p>
                 </div>
             </div>
@@ -171,7 +171,7 @@ const Career = () => {
               {" "}
               <img src={councel} alt="" className="teampics" />
             </div>
-            <h1>Jerry Otuwa</h1>
+            <h1>Hauwa Zainab</h1>
             <p>sit amet, consectetur adipisicing elit. Pariatur dolores</p>
           </div>
         </div>

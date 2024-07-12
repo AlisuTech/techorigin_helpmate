@@ -23,8 +23,12 @@ import Test from "./tests/Test";
 import AppointmentRecords from "./pages/appointment_records/appointment_records";
 import Career from "./pages/departments/career/Career";
 import UsersProfile from "./pages/profile/userprofile/userprofile";
+import { useSelector } from "react-redux";
+import PrivateRoute from "./components/privateRoute/PrivateRoute";
 
 function App() {
+  const isUserLogged = useSelector((state) => state.user.isUserLogged);
+
   return (
     <Router>
       <NavigationBar />
@@ -63,8 +67,16 @@ function App() {
 
           <Route path="/psychological" element={<Psychological />} />
 
+
           <Route path="/appointment" element={<Appointment />} />
 
+          
+          {/* {Private Routes} */}
+          <Route path="" element={<PrivateRoute />}>
+            <Route path="/appointment" element={<Appointment />}/>
+            <Route path="/userss-dashboard" element={<Header></Header>}></Route>
+          </Route>
+          
           <Route path="/test" element={<Test />} />
 
           {/* <Route path="/userss-dashboard" element={<Header></Header>}></Route> */}
@@ -76,6 +88,9 @@ function App() {
 
           {/* <Route path="/userss-dashboard" element={<Header></Header>}></Route> */}
 
+          <Route path="/userss-dashboard" element={<Header></Header>}></Route>
+          <Route path="/appointment-records" element={<AppointmentRecords></AppointmentRecords>}></Route>
+          
           <Route
             path="/service_provider_profile"
             element={<ServiceProviderProfile />}

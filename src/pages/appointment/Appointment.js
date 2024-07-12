@@ -1,60 +1,47 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { appointmentSchema } from "../../validations/appointmentValidation";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-import { getDepartmentsAndServiceProvider } from "../../services/categoryService";
 import "./Appointment.css";
 import Photo2 from "../../assets/psychological/Photo2.jpeg";
-import PayButton from "../../components/button/PayButton";
 import { createAppointment } from "../../app/appointment/appointmentSlice";
 import { fetchDepartmentsAndServiceProviders } from "../../app/serviceProvider/serviceProviderSlice";
+import Loader from "../../components/Loader";
 
 const Appointment = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  // const [departments, setDepartments] = useState([]);
-  // const [serviceProviders, setServiceProviders] = useState([]);
-  const { serviceProviders, departments, status, error } = useSelector((state) => state.serviceProvider);
-  // const userId = useSelector((state) => state.user.user._id);
-  const userId = "j";
-
+  const { serviceProviders, departments } = useSelector((state) => state.serviceProvider);
+  const { status, error, loading } = useSelector((state) => state.appointment);
+  const user = useSelector((state) => state.user.user);
+  const userId = user ? user.id : null;
 
   const { register, handleSubmit, watch } = useForm({
     resolver: yupResolver(appointmentSchema),
   });
   const selectedDepartment = watch("department");
 
-  // useEffect(() => {
-  //   const fetchDepartmentsAndServiceProviders = () => {
-  //     const data = getDepartmentsAndServiceProvider;
-  //     const uniqueDepartments = [
-  //       ...new Set(data.map((item) => item.department)),
-  //     ];
-  //     setDepartments(uniqueDepartments);
-  //     setServiceProviders(data);
-  //   };
-
-  //   fetchDepartmentsAndServiceProviders();
-  // }, []);
   useEffect(() => {
     dispatch(fetchDepartmentsAndServiceProviders());
   }, [dispatch]);
 
   useEffect(() => {
-    dispatch(fetchDepartmentsAndServiceProviders());
-  }, [dispatch]);
+    console.log("Fetched Service Providers:", serviceProviders);
+    console.log("Fetched Departments:", departments);
+    console.log("User ID:", userId);
+  }, [serviceProviders, departments, userId]);
+
+  const filteredServiceProviders = useMemo(() => {
+    return serviceProviders 
+      ? serviceProviders.filter((item) => item.department === selectedDepartment)
+      : [];
+  }, [serviceProviders, selectedDepartment]);
 
   useEffect(() => {
-    console.log("Service Providers:", serviceProviders);
-    console.log("Departments:", departments);
-  }, [serviceProviders, departments]);
-
-  const filteredServiceProviders = serviceProviders ? serviceProviders.filter(
-    (item) => item.department === selectedDepartment
-  ) : [];
-
+    console.log("Filtered Service Providers:", filteredServiceProviders);
+  }, [filteredServiceProviders, selectedDepartment]);
 
   const onSubmit = (data) => {
     if (!userId) {
@@ -63,21 +50,29 @@ const Appointment = () => {
     }
     const appointmentData = { ...data, userId };
     console.log('Appointment Data:', appointmentData);  // Log the appointment data
-    dispatch(createAppointment(appointmentData));
-    navigate("/appointment");
+    dispatch(createAppointment(appointmentData)).then((result) => {
+      if (result.error) {
+        console.error("Error creating appointment:", result.error);
+      } else {
+        navigate("/user-dashboard");
+      }
+    });
   };
 
-  if (status === 'loading') {
-    return <div>Loading...</div>;
-  }
+  // if (status === 'loading') {
+  //   console.log("loading")
+  //   return <div>Loading...</div>;
+  // }
 
-  if (status === 'failed') {
-    return <div>Error: {error}</div>;
-  }
+  // if (status === 'failed') {
+  //   console.log("failed")
+  //   // return <div>Error: {error}</div>;
+  //   return <div>Error: {JSON.stringify(error)}</div>;
+  // }
 
   return (
     <>
-      <div class="grid md:grid-cols-2 grid-cols-1 gap-4 p-5 border-yellow">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-4 p-5 border-yellow">
         <div className="border-green ">
           <div className="border-green">
             <h2 className="text-3xl font-bold mb-4">Appointment Booking</h2>
@@ -117,7 +112,7 @@ const Appointment = () => {
                     {...register("department")}
                   >
                     <option value="">Select Department</option>
-                    {departments.map((department, index) => (
+                    {departments.filter(department => department).map((department, index) => (
                       <option key={index} value={department}>
                         {department}
                       </option>
@@ -137,9 +132,9 @@ const Appointment = () => {
                     {filteredServiceProviders.map((serviceProvider, index) => (
                       <option
                         key={index}
-                        value={serviceProvider.serviceProvider._id}
+                        value={serviceProvider?._id} // Safely access _id
                       >
-                        {serviceProvider.serviceProvider}
+                        {serviceProvider?.firstName} {serviceProvider?.lastName}
                       </option>
                     ))}
                   </select>
@@ -179,7 +174,6 @@ const Appointment = () => {
                 </div>
               </div>
               <div className="flex space-x-4 mt-4">
-                {/* <PayButton amount={70} /> */}
                 <button
                   type="submit"
                   className="bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400 transition"
@@ -199,6 +193,8 @@ const Appointment = () => {
                   Cancel
                 </button>
               </div>
+              {loading && <Loader />}
+
             </form>
           </div>
         </div>
