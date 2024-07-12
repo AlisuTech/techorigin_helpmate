@@ -13,8 +13,6 @@ import ServiceProviderProfile from "./pages/profile/serviceProvider/ServiceProvi
 import ServiceProviderDashboard from "./pages/auth/serviceProvider/dashboard/Dashboard";
 import ServiceProviderList from "./components/cards/serviceProvider/ServiceProviderList";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import Header from "./pages/auth/users/dashboard_components/header";
-// import UserDashboard from "./pages/auth/users/dashboard/userDashboard";
 import DashBoard from "./pages/auth/serviceProvider/dashboard/Dashboard";
 import CheckoutSuccess from "./components/payment/CheckoutSuccess";
 import NotFound from "./pages/errors/NotFound";
@@ -35,11 +33,6 @@ function App() {
       <div className="pt-[100px]">
         <Routes>
           <Route path="/" element={<HomePage />} />
-
-          {/* <Route
-            path="/user-dashboard"
-            element={<UserDashboard></UserDashboard>}
-          ></Route> */}
 
           <Route
             path="/service_provider"
@@ -71,24 +64,17 @@ function App() {
           <Route path="/appointment" element={<Appointment />} />
 
           
-          {/* {Private Routes} */}
           <Route path="" element={<PrivateRoute />}>
             <Route path="/appointment" element={<Appointment />}/>
-            <Route path="/userss-dashboard" element={<Header></Header>}></Route>
           </Route>
           
           <Route path="/test" element={<Test />} />
-
-          {/* <Route path="/userss-dashboard" element={<Header></Header>}></Route> */}
 
           <Route
             path="/appointment-records"
             element={<AppointmentRecords></AppointmentRecords>}
           ></Route>
 
-          {/* <Route path="/userss-dashboard" element={<Header></Header>}></Route> */}
-
-          <Route path="/userss-dashboard" element={<Header></Header>}></Route>
           <Route path="/appointment-records" element={<AppointmentRecords></AppointmentRecords>}></Route>
           
           <Route

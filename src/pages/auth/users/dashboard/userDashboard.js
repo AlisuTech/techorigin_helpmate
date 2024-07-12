@@ -19,6 +19,7 @@ const UserDashboard = () => {
               <div className="edit-profile-image-div">
                 <div className="user-dashboard-img-column-div">
                   <p>BH</p>
+                  
                   <div className="edit-photo">
                     <i class="fa-solid fa-pen edit-profile-icon-img"></i>
                   </div>
