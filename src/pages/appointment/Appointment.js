@@ -141,14 +141,14 @@ const Appointment = () => {
                 </div>
               </div>
 
-              <div>
+              {/* <div>
                 <h3 className="text-lg font-semibold">Payment Details</h3>
                 <label className="block mt-2">
                   <input type="checkbox" className="mr-2" />
                   Credit/Debit Card
                 </label>
-              </div>
-              <div>
+              </div> */}
+              {/* <div>
                 <label className="block text-lg">
                   Do you want a free three session trial?
                 </label>
@@ -172,7 +172,7 @@ const Appointment = () => {
                     No
                   </label>
                 </div>
-              </div>
+              </div> */}
               <div className="flex space-x-4 mt-4">
                 <button
                   type="submit"
