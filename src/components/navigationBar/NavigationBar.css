@@ -82,10 +82,30 @@ div.active {
 }
 
 .dropdown-menu-2 {
-  background-color: transparent !important;
+  background-color: white !important;
   border-radius: 9999px !important;
+  color: black !important;
   font-weight: 700 !important;
+  border: none !important;
   /* border-width: 1px; */
+}
+
+.btn2-check:checked+.btn2, .btn2.active, .btn2.show, .btn2:first-child:active, :not(.btn2-check)+.btn2:active {
+  background-color: white !important;
+}
+
+.menu-2 {
+  background-color: white !important;
+  color: black !important;
+}
+
+.menu-2 a {
+  color: black !important;
+}
+
+.menu-2 a:hover {
+  background-color: white !important;
+  color: black !important;
 }
 
 /* Hide the default arrow */

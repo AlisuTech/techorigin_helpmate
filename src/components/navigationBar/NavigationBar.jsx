@@ -31,6 +31,10 @@ const NavigationBar = () => {
   }, [prevScrollPos]);
 
   useEffect(() => {
+    console.log("Is User Logged In:", isUserLogged);
+  }, [isUserLogged]);
+
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
@@ -99,12 +103,12 @@ const NavigationBar = () => {
           <Dropdown.Toggle
             variant="success"
             id="dropdown-basic"
-            className="custom-toggle dropdown-menu-2"
+            className="custom-toggle dropdown-menu-2 btn2"
           >
             Menu <i className="fa-solid fa-angle-down custom-arrow"></i>
           </Dropdown.Toggle>
-          <Dropdown.Menu className="border-yellow menu">
-            <Dropdown.Item href="#/action-1" className="item">
+          <Dropdown.Menu className="border-yellow menu-2">
+            <Dropdown.Item href="#/action-1" className="item-2">
               {!isUserLogged && (
                 <Link
                   to="/login"
