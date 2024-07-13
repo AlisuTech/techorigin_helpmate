@@ -17,7 +17,6 @@ const NavigationBar = () => {
   const handleLogout = () => {
     dispatch(activateUserLoggedIn(false))
     dispatch(logoutUser())
-    // dispatch('/login')
   }
 
   const handleLinkClick = () => {
@@ -29,10 +28,6 @@ const NavigationBar = () => {
     setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
     setPrevScrollPos(currentScrollPos);
   }, [prevScrollPos]);
-
-  useEffect(() => {
-    console.log("Is User Logged In:", isUserLogged);
-  }, [isUserLogged]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
