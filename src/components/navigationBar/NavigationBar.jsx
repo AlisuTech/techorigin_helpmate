@@ -214,43 +214,61 @@ const NavigationBar = () => {
             </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
+
         <Dropdown className="dropdown-menu-2">
           <Dropdown.Toggle
             variant="success"
             id="dropdown-basic"
-            className="custom-toggle dropdown-menu-2"
+            className="custom-toggle dropdown-menu-2 btn2"
           >
             Menu <i className="fa-solid fa-angle-down custom-arrow"></i>
           </Dropdown.Toggle>
-          <Dropdown.Menu className="border-yellow menu">
-            <Dropdown.Item href="#/action-1" className="item">
-              {isUserLogged && (
+          <Dropdown.Menu className="border-yellow menu-2 ">
+            <Dropdown.Item href="#/action-1" className="item-2">
+              {!isUserLogged && (
                 <Link
                   to="/login"
-                  className="block px-4 py-2 text-sm text-gray-700"
+                  className={
+                    location.pathname === "/login" ? "active-2 block px-4 py-2 text-sm text-gray-700" : "block px-4 py-2 text-sm text-gray-700"
+                  }
                 >
                   Login
                 </Link>
               )}
-              {!isUserLogged && (
+              {isUserLogged && (
                 <Link
-                  to="/profile"
-                  className="block px-4 py-2 text-sm text-gray-700"
+                  to="/appointment"
+                  className={
+                    location.pathname === "/appointment" ? "active-2 block px-4 py-2 text-sm text-gray-700" : "block px-4 py-2 text-sm text-gray-700"
+                  }
                 >
-                  Edit Profile
+                  Appointments
                 </Link>
               )}
-              {!isUserLogged && (
+              {isUserLogged && (
+                <Link
+                  to="/user-profile"
+                  className={
+                    location.pathname === "/user-profile" ? "active-2 block px-4 py-2 text-sm text-gray-700" : "block px-4 py-2 text-sm text-gray-700"
+                  }
+                >
+                  View Profile
+                </Link>
+              )}
+              {isUserLogged && (
                 <Link
                   to="/settings"
-                  className="block px-4 py-2 text-sm text-gray-700"
+                  className={
+                    location.pathname === "/settings" ? "active-2 block px-4 py-2 text-sm text-gray-700" : "block px-4 py-2 text-sm text-gray-700"
+                  }
                 >
                   Settings
                 </Link>
               )}
-              {!isUserLogged && (
+              {isUserLogged && (
                 <Link
                   to="/"
+                  onClick={handleLogout}
                   className="block px-4 py-2 text-sm text-gray-700"
                 >
                   Logout
