@@ -54,7 +54,7 @@ const Appointment = () => {
       if (result.error) {
         console.error("Error creating appointment:", result.error);
       } else {
-        navigate("/user-dashboard");
+        navigate("/appointment-records");
       }
     });
   };
