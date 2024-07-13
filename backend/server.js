@@ -13,7 +13,6 @@ const stripe_2 = require('./routes/stripe')
 
 const connectDB = require('./config/dbConn')
 const mongoose = require('mongoose')
-// const verifyJWT = require('./middleware/authMiddleware')
 
 connectDB()
 app.use(express.static('public'));
@@ -27,12 +26,6 @@ app.use('/serviceProviders', serviceProviderRoutes);
 app.use('/auth', authRoutes);
 app.use('/appointment', appointmentRoutes);
 app.use('/serviceProviders', serviceProviderRoutes);
-
-// app.use('/users', require('./routes/userRoutes'))
-// app.use('/serviceProviders', require('./routes/serviceProviderRoutes'))
-
-// app.use('/auth', require('./routes/authRoutes'));
-// app.use('/appointments', verifyJWT, require('./routes/appointmentRoutes'))
 
 mongoose.connection.once('open', () => {
     console.log('Connected to MongoDB')
