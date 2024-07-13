@@ -111,6 +111,12 @@ div.active {
   font-size:medium;
 }
 
+.active-2 {
+  color: black !important;
+  font-size:medium;
+  font-weight: bold;
+}
+
 .menu-2 a {
   transition: color 0.3s, font-size 0.3s;
 }

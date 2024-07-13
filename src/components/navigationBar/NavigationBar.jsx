@@ -112,7 +112,9 @@ const NavigationBar = () => {
               {!isUserLogged && (
                 <Link
                   to="/login"
-                  className="block px-4 py-2 text-sm text-gray-700"
+                  className={
+                    location.pathname === "/login" ? "active-2 block px-4 py-2 text-sm text-gray-700" : "block px-4 py-2 text-sm text-gray-700"
+                  }
                 >
                   Login
                 </Link>
@@ -120,7 +122,9 @@ const NavigationBar = () => {
               {isUserLogged && (
                 <Link
                   to="/appointment"
-                  className="block px-4 py-2 text-sm text-gray-700"
+                  className={
+                    location.pathname === "/appointment" ? "active-2 block px-4 py-2 text-sm text-gray-700" : "block px-4 py-2 text-sm text-gray-700"
+                  }
                 >
                   Appointments
                 </Link>
@@ -128,7 +132,9 @@ const NavigationBar = () => {
               {isUserLogged && (
                 <Link
                   to="/user-profile"
-                  className="block px-4 py-2 text-sm text-gray-700"
+                  className={
+                    location.pathname === "/user-profile" ? "active-2 block px-4 py-2 text-sm text-gray-700" : "block px-4 py-2 text-sm text-gray-700"
+                  }
                 >
                   View Profile
                 </Link>
@@ -136,7 +142,9 @@ const NavigationBar = () => {
               {isUserLogged && (
                 <Link
                   to="/settings"
-                  className="block px-4 py-2 text-sm text-gray-700"
+                  className={
+                    location.pathname === "/settings" ? "active-2 block px-4 py-2 text-sm text-gray-700" : "block px-4 py-2 text-sm text-gray-700"
+                  }
                 >
                   Settings
                 </Link>
