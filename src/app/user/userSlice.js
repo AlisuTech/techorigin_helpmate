@@ -73,7 +73,7 @@ const userSlice = createSlice({
     loading: false,
     user: null,
     userInfo: localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null,
-    isUserLogged: false,
+    isUserLogged: localStorage.getItem('user') ? true : false,
     status: 'idle',
     error: null,
   },

@@ -21,8 +21,8 @@ import Test from "./tests/Test";
 import AppointmentRecords from "./pages/appointment_records/appointment_records";
 import Career from "./pages/departments/career/Career";
 import UsersProfile from "./pages/profile/userprofile/userprofile";
-import { useSelector } from "react-redux";
 import PrivateRoute from "./components/privateRoute/PrivateRoute";
+import { useSelector } from "react-redux";
 
 function App() {
   const isUserLogged = useSelector((state) => state.user.isUserLogged);
@@ -33,65 +33,27 @@ function App() {
       <div className="pt-[100px]">
         <Routes>
           <Route path="/" element={<HomePage />} />
-
-          <Route
-            path="/service_provider"
-            element={<ServiceProviderDashboard />}
-          />
-
           <Route path="/login" element={<Login />} />
-
           <Route path="/signup" element={<Signup />} />
-
           <Route path="/user-flow" element={<UserFlow />} />
-
-          <Route
-            path="/signup-service_provider"
-            element={<ServiceProvider />}
-          />
-
+          <Route path="/signup-service_provider" element={<ServiceProvider />} />
           <Route path="/medical" element={<Medical />} />
-
           <Route path="/checkout-success" element={<CheckoutSuccess />} />
-
           <Route path="/serv" element={<ServiceProviderList />} />
-
           <Route path="/career" element={<Career />} />
-
           <Route path="/psychological" element={<Psychological />} />
-
-
-          <Route path="/appointment" element={<Appointment />} />
-
-          
-          <Route path="" element={<PrivateRoute />}>
-            <Route path="/appointment" element={<Appointment />}/>
-          </Route>
-          
           <Route path="/test" element={<Test />} />
 
-          <Route
-            path="/appointment-records"
-            element={<AppointmentRecords></AppointmentRecords>}
-          ></Route>
+          {/* Ensure private routes are wrapped in PrivateRoute */}
+          <Route path="" element={<PrivateRoute />}>
+            <Route path="/appointment" element={<Appointment />} />
+            <Route path="/appointment-records" element={<AppointmentRecords />} />
+            <Route path="/service_provider_profile" element={<ServiceProviderProfile />} />
+            <Route path="/dashboard" element={<DashBoard />} />
+            <Route path="/user-profile" element={<UsersProfile />} />
+          </Route>
 
-          <Route path="/appointment-records" element={<AppointmentRecords></AppointmentRecords>}></Route>
-          
-          <Route
-            path="/service_provider_profile"
-            element={<ServiceProviderProfile />}
-          />
-
-          <Route
-            path="/service_provider_profile"
-            element={<ServiceProviderProfile />}
-          />
-
-          <Route path="/dashboard" element={<DashBoard />} />
           <Route path="*" element={<NotFound />} />
-
-          <Route path="/user-profile" element={<UsersProfile></UsersProfile>}></Route>
-
         </Routes>
         <Footer />
       </div>
