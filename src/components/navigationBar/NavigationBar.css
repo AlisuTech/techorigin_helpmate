@@ -97,15 +97,22 @@ div.active {
 .menu-2 {
   background-color: white !important;
   color: black !important;
+  width: 202px;
+
 }
 
 .menu-2 a {
   color: black !important;
+  background-color: white !important;
 }
 
 .menu-2 a:hover {
-  background-color: white !important;
   color: black !important;
+  font-size:medium;
+}
+
+.menu-2 a {
+  transition: color 0.3s, font-size 0.3s;
 }
 
 /* Hide the default arrow */

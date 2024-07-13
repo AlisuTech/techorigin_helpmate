@@ -107,7 +107,7 @@ const NavigationBar = () => {
           >
             Menu <i className="fa-solid fa-angle-down custom-arrow"></i>
           </Dropdown.Toggle>
-          <Dropdown.Menu className="border-yellow menu-2">
+          <Dropdown.Menu className="border-yellow menu-2 ">
             <Dropdown.Item href="#/action-1" className="item-2">
               {!isUserLogged && (
                 <Link
