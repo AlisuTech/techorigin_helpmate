@@ -33,7 +33,7 @@ const Login = () => {
       if (result.payload) {
         setEmail('');
         setPassword('');
-        console.log("User payload:", result.payload.userInfo); // Properly log the payload
+        console.log("User payload:", result.payload); 
         dispatch(setUser(result.payload.user));
         navigate('/');
       } else {
@@ -107,7 +107,7 @@ const Login = () => {
                 </button>
                 {loading && <Loader />}
                 {error && (
-                  <div className='error' role='alert'>{error}</div>
+                  <div className='error' role='alert'>{typeof error === 'string' ? error : 'AN error occured'}</div>
                 )}
 
                 <br></br>
