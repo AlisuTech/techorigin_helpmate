@@ -8,6 +8,8 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@hookform/resolvers": "^3.6.0",
     "@reduxjs/toolkit": "^2.2.5",
+    "@relume_io/relume-tailwind": "^0.3.0",
+    "@relume_io/relume-ui": "^0.3.0",
     "@stripe/react-stripe-js": "^2.7.2",
     "@stripe/stripe-js": "^3.5.0",
     "@testing-library/jest-dom": "^5.17.0",
@@ -60,6 +62,7 @@
   },
   "devDependencies": {
     "@hookform/devtools": "^4.3.1",
-    "tailwindcss": "^3.4.3"
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.5.3"
   }
 }

@@ -4,6 +4,7 @@ import Login from "./pages/auth/login/Login";
 import Signup from "./pages/auth/signup/Signup";
 import HomePage from "./pages/homepage/HomePage";
 import NavigationBar from "./components/navigationBar/NavigationBar";
+import {Navbar1} from "./components/navigationBar/Navbar1";
 import Footer from "./components/footer/Footer";
 import Psychological from "./pages/departments/psychological/Psychological";
 import Appointment from "./pages/appointment/Appointment";
@@ -29,8 +30,8 @@ function App() {
 
   return (
     <Router>
-      <NavigationBar />
-      <div className="pt-[100px]">
+      <Navbar1 />
+      <div >
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<Login />} />
