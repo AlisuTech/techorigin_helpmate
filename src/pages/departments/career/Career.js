@@ -171,7 +171,7 @@ const Career = () => {
               {" "}
               <img src={councel} alt="" className="teampics" />
             </div>
-            <h1>Hauwa Zainab</h1>
+            <h1>Hauwa Zain</h1>
             <p>sit amet, consectetur adipisicing elit. Pariatur dolores</p>
           </div>
         </div>
